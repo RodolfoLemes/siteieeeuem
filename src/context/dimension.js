@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react'
 
-const DimensionContext = createContext({ width: window.innerWidth, height: window.innerHeight })
+const DimensionContext = createContext({ width: 0, height: 0 })
 
 export const DimensionProvider = ({ children }) => {
 
@@ -9,7 +9,6 @@ export const DimensionProvider = ({ children }) => {
 
     useEffect(() => {
         const handleResize = () => {
-            console.log(window.innerWidth)
             setWidth(window.innerWidth)
             setHeight(window.innerHeight)
         }
