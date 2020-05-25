@@ -1,3 +1,6 @@
+export var membersNumber = 36
+export var projectsNumber = 17
+
 export const Dones = [
     {
         title: 'RRS',

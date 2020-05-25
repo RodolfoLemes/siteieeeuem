@@ -1,6 +1,7 @@
 .headerView {
     display: flex;
     align-items: center;
+    background-color: #F1F4FD;
 }
 
 .headerBtn {
@@ -16,4 +17,10 @@
 .textBtn {
     margin-top: 0px;
     margin-bottom: 0px;
+    font-family: 'FuturaHv';
+}
+
+@font-face {
+    font-family: 'FuturaHv';
+    src: url('../../assets/fonts/futura-heavy.ttf');
 }

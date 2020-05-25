@@ -1,3 +1,86 @@
 .container {
     background-color:#F1F4FD;
 }
+
+.page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageProject {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    background-color:#F1F4FD;
+    box-shadow: 0px 8px 24px rgba(50, 50, 71, 0.2), 0px 6px 12px rgba(50, 50, 71, 0.2);
+}
+
+.smallCardsView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.smallCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    box-shadow: 0px 8px 24px rgba(50, 50, 71, 0.2), 0px 6px 12px rgba(50, 50, 71, 0.2);
+}
+
+.smallCardText {
+    font-family: 'FuturaHv';
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #292E56;
+}
+
+.blackCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    box-shadow: -2px -4px 12px rgba(255, 255, 255, 0.12), 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.projectTitle {
+    font-family: 'FuturaHv';
+    color: #292E56;
+}
+
+.projectTopView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectBottomView {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectImg {
+    max-width: 80%;
+    height: auto;
+}
+
+@font-face {
+    font-family: 'FuturaHv';
+    src: url('../../assets/fonts/futura-heavy.ttf');
+}

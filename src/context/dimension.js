@@ -4,8 +4,8 @@ const DimensionContext = createContext({ width: 0, height: 0 })
 
 export const DimensionProvider = ({ children }) => {
 
-    const [width, setWidth] = useState(window.innerHeight)
-    const [height, setHeight] = useState(window.innerWidth)
+    const [width, setWidth] = useState(window.innerWidth)
+    const [height, setHeight] = useState(window.innerHeight)
 
     useEffect(() => {
         const handleResize = () => {

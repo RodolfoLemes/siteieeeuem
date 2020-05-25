@@ -15,19 +15,19 @@ function Header() {
           <img src={require('../../assets/headerLogo.png')} style={{ height: width/16, width: width/16 }} alt='Logo Student Branch IEEE UEM' />
         </div>
         <Button style={{ height: height/20, flex: 1, marginLeft: width/80 }} component={Link} to='/home'>
-          <p className='textBtn' style={{ fontSize: height/50 }}>HOME</p>
+          <p className='textBtn' style={{ color: '#292E56', fontSize: height/50 }}>HOME</p>
         </Button>
         <Button style={{ height: height/20, flex: 1, marginLeft: width/80 }} component={Link} to='/events'>
-          <p className='textBtn' style={{ fontSize: height/50 }}>EVENTOS</p>
+          <p className='textBtn' style={{ color: '#A0A8B7', fontSize: height/50 }}>EVENTOS</p>
         </Button>
         <Button style={{ height: height/20, flex: 1, marginLeft: width/80 }} component={Link} to='/store'>
-          <p className='textBtn' style={{ fontSize: height/50 }}>LOJA</p>
+          <p className='textBtn' style={{ color: '#A0A8B7', fontSize: height/50 }}>LOJA</p>
         </Button>
         <Button style={{ height: height/20, flex: 1, marginLeft: width/80 }} component={Link} to='/blog'>
-          <p className='textBtn' style={{ fontSize: height/50 }}>BLOG</p>
+          <p className='textBtn' style={{ color: '#A0A8B7', fontSize: height/50 }}>BLOG</p>
         </Button>
         <Button style={{ height: height/20, flex: 1, marginLeft: width/80 }} component={Link} to='/archives'>
-          <p className='textBtn' style={{ fontSize: height/50 }}>ARQUIVOS</p>
+          <p className='textBtn' style={{ color: '#A0A8B7', fontSize: height/50 }}>ARQUIVOS</p>
         </Button>
         <Button style={{ height: height/20, flex: 1, marginLeft: width/80, borderRadius: height/20, backgroundColor: '#292E56' }}>
           <p className='textBtn' style={{ fontSize: height/50, color: "#ffffff" }}> CONTATO </p>
