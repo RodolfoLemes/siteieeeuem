@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Button } from '@material-ui/core';
+
 import './Home.css';
+import Header from '../../components/Header/Header'
+
+const height = window.innerHeight;
+const width = window.innerWidth;
 
 function Home() {
+
   return (
-    <div className="Home">
-      <h1>Tela Home</h1>
+    <div className='container' style={{ height: height, width: width }}>
+      <Header />
     </div>
   );
 }
 
 export default Home
+

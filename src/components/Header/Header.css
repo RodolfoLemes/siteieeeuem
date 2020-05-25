@@ -1,0 +1,19 @@
+.headerView {
+    display: flex;
+    align-items: center;
+}
+
+.headerBtn {
+    margin-left: 100px;
+}
+
+.headerRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.textBtn {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
