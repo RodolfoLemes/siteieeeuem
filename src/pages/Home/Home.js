@@ -23,7 +23,7 @@ function Home() {
       <input 
         type="image" 
         src={next ? arrowRight : arrowLeft} 
-        style={{ height: height/6, width: width/5 }} 
+        style={{ height: height/10, width: width/8 }} 
         onClick={clickHander}
       />
     )
@@ -48,17 +48,23 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className='page' style={{ height: height*(7/8) , width: width, backgroundColor:'#292E56' }}>
+      <div className='pageProject' style={{ height: height*(7/8) , width: width, backgroundColor:'#292E56' }}>
+        <div className='projectTopView' style={{ height: height/12, width: width }}>
+          <p className='doneTitle' style={{ fontSize: height/17 }}>FEITOS</p>
+        </div>
         <Carousel
+          width={width}
+          height={height*(7/8)}
           showStatus={false} 
           showThumbs={false}
-          renderArrowNext={(clickHander) => arrowCarrousel(true, clickHander)}
-          renderArrowPrev={(clickHander) => arrowCarrousel(false, clickHander)}
+          showArrows={false}
+          /* renderArrowNext={(clickHander) => arrowCarrousel(true, clickHander)}
+          renderArrowPrev={(clickHander) => arrowCarrousel(false, clickHander)} */
         >
           { Dones.map(element => (
               <div 
                 className='blackCard' 
-                style={{ height: height/1.5, width: width/4, marginLeft: width/20, marginRight: width/20, backgroundColor: '#292E56' }}
+                style={{ height: height/1.7, width: width/4, marginLeft: width/20, marginRight: width/20, backgroundColor: '#292E56' }}
               >
                 <h1>{element.title}</h1>
                 <p>{element.description}</p>

@@ -61,6 +61,11 @@
     color: #292E56;
 }
 
+.doneTitle {
+    font-family: 'FuturaHv';
+    color: #F1F4FD;
+}
+
 .projectTopView {
     display: flex;
     flex-direction: column;
@@ -78,6 +83,15 @@
 .projectImg {
     max-width: 80%;
     height: auto;
+}
+
+.carousel .slide {
+    display: flex;
+    flex-direction: row;
+    height: 75vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #292E56;
 }
 
 @font-face {
