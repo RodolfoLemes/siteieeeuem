@@ -17,18 +17,58 @@ import arrowRight from '../../assets/arrowRight.svg'
 function Home() {
   const { width, height } = useContext(DimensionContext)
 
+  function sliceDones() {
+    const slicedDones = []
+
+    let cont = 0
+    let buffer = {}
+    Dones.map((element, index) => {
+      if(cont === 0) {
+        buffer.title1 = element.title
+        buffer.description1 = element.description
+        cont++
+        if(index + 1 === Dones.length) {
+          slicedDones.push(buffer)
+        }
+      } else {
+        buffer.title2 = element.title
+        buffer.description2 = element.description
+        slicedDones.push(buffer)
+        buffer = {}
+        cont = 0
+      }
+
+      return true
+    })
+
+    return slicedDones
+  }
 
   function arrowCarrousel(next, clickHander) {
+    const arrowStyles = {
+      position: 'absolute',
+      zIndex: 2,
+      top: 'calc(50% - 15px)',
+      width: height/10,
+      height: width/8,
+      cursor: 'pointer',
+    };
+
+    const leftRight = next ? { right : 15 } : { left: 15 } 
     return (
-      <input 
+      <input
+        className='arrows'
         type="image" 
-        src={next ? arrowRight : arrowLeft} 
-        style={{ height: height/10, width: width/8 }} 
+        src={next ? arrowRight : arrowLeft}
+        alt='setas' 
+        style={{ ...arrowStyles, ...leftRight }}
         onClick={clickHander}
       />
     )
   }
 
+  const newDones = sliceDones()
+  
   return (
     <div className='container' style={{ height: 3.5*height, width: width }}>
       <Header />
@@ -58,16 +98,25 @@ function Home() {
           showStatus={false} 
           showThumbs={false}
           showArrows={false}
-          /* renderArrowNext={(clickHander) => arrowCarrousel(true, clickHander)}
-          renderArrowPrev={(clickHander) => arrowCarrousel(false, clickHander)} */
+          renderArrowNext={(clickHander) => arrowCarrousel(true, clickHander)}
+          renderArrowPrev={(clickHander) => arrowCarrousel(false, clickHander)}
         >
-          { Dones.map(element => (
-              <div 
-                className='blackCard' 
-                style={{ height: height/1.7, width: width/4, marginLeft: width/20, marginRight: width/20, backgroundColor: '#292E56' }}
-              >
-                <h1>{element.title}</h1>
-                <p>{element.description}</p>
+          { newDones.map(element => (
+              <div>
+                <div 
+                  className='blackCard' 
+                  style={{ height: height/1.7, width: width/4, marginLeft: width/20, marginRight: width/20, backgroundColor: '#292E56' }}
+                >
+                  <h1>{element.title1}</h1>
+                  <p>{element.description1}</p>
+                </div>
+                <div 
+                  className='blackCard' 
+                  style={{ height: height/1.7, width: width/4, marginLeft: width/20, marginRight: width/20, backgroundColor: '#292E56' }}
+                >
+                  <h1>{element.title2}</h1>
+                  <p>{element.description2}</p>
+                </div>
               </div>
             )) 
           }
@@ -87,8 +136,8 @@ function Home() {
           <div className='projectBottomView' style={{ height: height*(3/8), width: width }}>
             { Projects.map(element => (
                 <div className='smallCard' style={{ height: height/3.5, width: height/3.5, margin: height/21 }}>
-                  <p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>element.title</p>
-                  <img className='projectImg' src={logoPAH}/>
+                  <p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{element.title}</p>
+                  <img className='projectImg' alt={element.title + 'logo'}src={logoPAH}/>
                 </div>
               )) 
             }
@@ -113,7 +162,7 @@ function Home() {
         <Iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5178.181616037239!2d-51.940431957759465!3d-23.405310627994336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd132b414a555%3A0x70df0f705ab5b5ab!2sUEM%20Bloco%20D67!5e0!3m2!1spt-BR!2sbr!4v1590444587401!5m2!1spt-BR!2sbr"
           frameborder="0"
-          style="border:0;"
+          style={{ border:0 }}
           allowfullscreen="" 
           aria-hidden="false" 
           tabindex="0"
