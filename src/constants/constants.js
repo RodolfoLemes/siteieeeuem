@@ -24,5 +24,21 @@ export const Projects = [
     {
         title: 'Lapidando Jóias',
         img: ''
-    }
+    },
+    {
+        title: 'cu',
+        img: ''
+    },
+    {
+        title: 'bunda',
+        img: ''
+    },
+    {
+        title: 'Altas Habilidades',
+        img: ''
+    },
+    {
+        title: 'Lapidando Jóias',
+        img: ''
+    },
 ]
