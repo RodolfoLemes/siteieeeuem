@@ -13,6 +13,7 @@ import IEEEdesc from '../../assets/Group_70.svg'
 import logoPAH from '../../assets/LOGO_PAH.png'
 import arrowLeft from '../../assets/arrowLeft.svg'
 import arrowRight from '../../assets/arrowRight.svg'
+import { SportsRugbySharp } from '@material-ui/icons';
 
 function Home() {
   const { width, height } = useContext(DimensionContext)
@@ -173,7 +174,7 @@ function Home() {
           <div></div>
       </div>
           
-      <div ref={refMembers}>
+      <div className='pageProject' ref={refMembers} style={{ height: height*(7/8) , width: width }}>
         <p>Div dos membros</p>
       </div>
 
