@@ -41,13 +41,13 @@
 
 .smallCardText {
     font-family: 'FuturaHv';
-    margin-top: 0px;
+    margin-top: 20px;
     margin-bottom: 0px;
     color: #292E56;
 }
 
 .itemImg {
-    max-width: 80%;
+    max-width: 60%;
     height: auto;
     border-radius: 50%;
 }

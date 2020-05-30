@@ -49,10 +49,9 @@ function Events() {
   return (
     <div className="Events">
       <Header />
-      <Calendar 
+      <Calendar
         onChange={(data) => setDate(data)}
         value={date}
-        tileContent={tileContent}
       />
       
     </div>
