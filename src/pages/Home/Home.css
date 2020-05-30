@@ -145,8 +145,13 @@
 	outline: inherit;
 }
 
+
 footer {
     margin-top: auto;
+}
+
+*:focus {
+    outline: none;
 }
 
 @font-face {

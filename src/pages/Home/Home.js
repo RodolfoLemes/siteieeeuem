@@ -6,14 +6,13 @@ import Iframe from 'react-iframe'
 import { Dones, Projects, projectsNumber, membersNumber } from '../../constants/constants'
 import { urlMap } from '../../constants/urls'
 import Header from '../../components/Header/Header'
+import ExpansiveCards from '../../components/ExpansiveCards/ExpansiveCards'
 import DimensionContext from '../../context/dimension'
 import './Home.css'
 
 import IEEEdesc from '../../assets/Group_70.svg'
-import logoPAH from '../../assets/LOGO_PAH.png'
 import arrowLeft from '../../assets/arrowLeft.svg'
 import arrowRight from '../../assets/arrowRight.svg'
-import { SportsRugbySharp } from '@material-ui/icons';
 
 function Home() {
   const { width, height } = useContext(DimensionContext)
@@ -21,7 +20,8 @@ function Home() {
   const refProjects = useRef()
   const refMembers = useRef()
 
-  const [expand, isExpand] = useState(false)
+  const [expandProject, isExpandProject] = useState(false)
+  const [expandMember, isExpandMember] = useState(false)
 
   function sliceDones() {
     const slicedDones = []
@@ -74,8 +74,7 @@ function Home() {
   }
   
   const newDones = sliceDones()
-  console.log(height*(7/8)+Math.ceil(Projects.length/3)*height/3)
-  console.log(height*(7/8))
+  
   return (
     <div className='container' style={{ width: width }}>
       <Header />
@@ -136,66 +135,43 @@ function Home() {
         </Carousel>
       </div>
       
-      <div ref={refProjects} className='pageProject' style={{ height: expand ? height*(7/8)+Math.ceil((Projects.length-6)/3)*height*8/21 : height*(7/8), width: width }}>
-        <div className='projectTopView' style={{ height: height/10, width: width }}>
-          <p className='projectTitle' style={{ fontSize: height/17 }}>PROJETOS</p>
-        </div>
-        <div className='projectBottomView' style={{ height: expand ? height*(6/8)+Math.ceil((Projects.length-6)/3)*height*8/21 : height*(6/8), width: width }}>
-          { Projects.map((element, index) => {
-            if(!expand) {
-              if(index <= 5) {
-                return (<React.Fragment key={index}>
-                          <div className='smallCard' style={{ height: height/3.5, width: height/3.5, margin: height/21 }}>
-                            <p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{element.title}</p>
-                            <img className='projectImg' alt={element.title + 'logo'} src={element.img}/>
-                          </div>
-                          { (index + 1) % 3 === 0 
-                            ? (<div className='break'></div>)
-                            : (null)
-                          }
-                        </React.Fragment>)
-              } else {
-                return (null)
-              }
-            } else {
-              return (<React.Fragment key={index}>
-                        <div className='smallCard' style={{ height: height/3.5, width: height/3.5, margin: height/21 }}>
-                          <p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{element.title}</p>
-                          <img className='projectImg' alt={element.title + 'logo'} src={element.img}/>
-                        </div>
-                        { (index + 1) % 3 === 0 
-                          ? (<div className='break'></div>)
-                          : (null)
-                        }
-                      </React.Fragment>)
-            }
-          })}
-        </div>
-      </div>
-      
-      <div>
-        <button style={{ height: 50, width: 100 }} onClick={() => isExpand(!expand)} value="clica em mim" />
+      <ExpansiveCards
+        ref={refProjects} 
+        nameItens='PROJETOS'
+        itens={Projects}
+        expand={expandProject}
+        onClick={() => {refProjects.current.scrollIntoView({behavior: 'instant'}); isExpandProject(!expandProject)}}
+        itensPerLine={3}
+        itensWithoutExpansive={6}
+      />
+
+      <div style={{ height: height/40, width, backgroundColor:'#292E56' }}>
       </div>
 
-      <div className='pageProject' ref={refMembers} style={{ height: height*(7/8) , width: width }}>
-        <p>Div dos membros</p>
-      </div>
+      <ExpansiveCards 
+        ref={refMembers} 
+        nameItens='MEMBROS'
+        itens={Projects}
+        expand={expandMember}
+        onClick={() => {refMembers.current.scrollIntoView({behavior: 'instant'}); isExpandMember(!expandMember)}}
+        itensPerLine={3}
+        itensWithoutExpansive={5}
+      />
 
       <footer style={{ height: height*(7/8) , width: width, backgroundColor:'#292E56' }}>
         <div className='projectTopView' style={{ height: height/12, width: width }}>
           <p className='doneTitle' style={{ fontSize: height/17 }}>CONTATO</p>
         </div>
         <div style={{ height: height*(6/8), width: width, backgroundColor: '#aaa' }}>
-        <Iframe 
-          src={urlMap}
-          frameborder="0"
-          style={{ border:0 }}
-          allowfullscreen="" 
-          aria-hidden="false" 
-          tabindex="0"
-          width="640" 
-          height="480">
-        </Iframe>
+          <Iframe 
+            src={urlMap}
+            frameborder="10"
+            allowfullscreen="" 
+            aria-hidden="false" 
+            tabindex="0"
+            width="640" 
+            height="480">
+          </Iframe>
         </div>
       </footer>
 
