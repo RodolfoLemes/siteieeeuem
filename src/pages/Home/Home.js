@@ -13,6 +13,7 @@ import IEEEdesc from '../../assets/Group_70.svg'
 import logoPAH from '../../assets/LOGO_PAH.png'
 import arrowLeft from '../../assets/arrowLeft.svg'
 import arrowRight from '../../assets/arrowRight.svg'
+import { SportsRugbySharp } from '@material-ui/icons';
 
 function Home() {
   const { width, height } = useContext(DimensionContext)
@@ -176,10 +177,10 @@ function Home() {
         <button style={{ height: 50, width: 100 }} onClick={() => isExpand(!expand)} value="clica em mim" />
       </div>
 
-      {/* <div ref={refMembers}>
+      <div className='pageProject' ref={refMembers} style={{ height: height*(7/8) , width: width }}>
         <p>Div dos membros</p>
       </div>
- */}
+
       <footer style={{ height: height*(7/8) , width: width, backgroundColor:'#292E56' }}>
         <div className='projectTopView' style={{ height: height/12, width: width }}>
           <p className='doneTitle' style={{ fontSize: height/17 }}>CONTATO</p>
