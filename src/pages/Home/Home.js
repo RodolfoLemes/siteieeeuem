@@ -1,12 +1,11 @@
 import React, { useContext, useState, useRef } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import Iframe from 'react-iframe'
 
 import { Dones, Projects, projectsNumber, membersNumber } from '../../constants/constants'
-import { urlMap } from '../../constants/urls'
 import Header from '../../components/Header/Header'
 import ExpansiveCards from '../../components/ExpansiveCards/ExpansiveCards'
+import Footer from '../../components/Footer/Footer'
 import DimensionContext from '../../context/dimension'
 import './Home.css'
 
@@ -158,44 +157,7 @@ function Home() {
         itensWithoutExpansive={5}
       />
 
-      <footer style={{ height: height*(7/8) , width: width, backgroundColor:'#292E56' }}>
-        <div className='projectTopView' style={{ height: height/12, width: width }}>
-          <p className='doneTitle' style={{ fontSize: height/17 }}>CONTATO</p>
-        </div>
-        <div className='contactBottomView' style={{ height: height*(6/8), width: width }}>
-          <div className='contactBottomLeftView'>
-            <div className='contactSubtitleView'>
-              <p className='contactSubtitleText'>FALE CONOSCO</p>
-            </div>
-            <textarea className='contactEmailInput'
-            type='text'
-            placeholder='Digite seu e-mail'
-            ></textarea>
-            <textarea className='contactMessageInput'
-            placeholder='Nos envie uma mensagem!'></textarea>
-            <button className='contactSendButton'
-            value='Enviar'>Enviar</button>
-          </div>
-          <div className='contactBottomRightView'>
-            <div className='corner-wrapper'>
-              <Iframe
-                src={urlMap}
-                frameborder="0"
-                style={{ border: 0 }}
-                allowfullscreen="" 
-                aria-hidden="false" 
-                tabindex="0"
-                width='100%'
-                height='100%'>
-              </Iframe>
-            </div>
-            <p className='contactBottomRightText' style={{ marginTop: '2%' }}>Universidade Estadual de Maringá</p>
-            <p className='contactBottomRightText'>Avenida Colombo, 5970</p>
-            <p className='contactBottomRightText'>ieeeuem@gmail.com</p>
-          </div>
-        </div>
-      </footer>
-
+      <Footer />
     </div>
   );
 }

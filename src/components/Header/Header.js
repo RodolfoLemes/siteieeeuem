@@ -16,8 +16,8 @@ function Header() {
         <div>
           <img src={require('../../assets/headerLogo.png')} style={{ height: width/16, width: width/16 }} alt='Logo Student Branch IEEE UEM' />
         </div>
-        <Button style={{ height: height/20, flex: 1, marginLeft: width/80 }} component={Link} to='/home'>
-          <p className='textBtn' style={{ color: pathname === '/home' ? '#292E56' : '#A0A8B7', fontSize: height/50 }}>HOME</p>
+        <Button style={{ height: height/20, flex: 1, marginLeft: width/80 }} component={Link} to='/'>
+          <p className='textBtn' style={{ color: pathname === '/' ? '#292E56' : '#A0A8B7', fontSize: height/50 }}>HOME</p>
         </Button>
         <Button style={{ height: height/20, flex: 1, marginLeft: width/80 }} component={Link} to='/events'>
           <p className='textBtn' style={{ color: pathname === '/events' ? '#292E56' : '#A0A8B7', fontSize: height/50 }}>EVENTOS</p>

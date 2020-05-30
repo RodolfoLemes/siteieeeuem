@@ -145,94 +145,9 @@
 	outline: inherit;
 }
 
-.contactBottomView {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+body {
+    overflow-x: hidden;
 }
-
-.contactBottomLeftView {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    height: 80%;
-    width: 35vw;
-    margin-right: 5vw;
-}
-
-.contactSubtitleText {
-    font-family: 'FuturaHv';
-    font-size: 4vh;
-    color: #F1F4FD;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.contactSubtitleView {
-    height: 15%;
-    width: 100%;
-}
-
-.contactEmailInput {
-    height: 7%;
-    width: 90%;
-    resize: none;
-    margin-bottom: 5%;
-    padding-top: 3%;
-    padding-left: 5%;
-    padding-right: 5%;
-    border-width: 0;
-    border-radius: 20px;
-}
-
-.contactMessageInput {
-    display: flex;
-    vertical-align: top;
-    height: 40%;
-    width: 90%;
-    resize: none;
-    padding: 5%;
-    border-width: 0;
-    border-radius: 20px;
-}
-
-.contactSendButton {
-    height: 10%;
-    width: 30%;
-    font-family: 'FuturaHv';
-    font-size: 2.2vh;
-    color: #F1F4FD;
-    background-color: #344EA9;
-    margin-top: 5%;
-    border-width: 0;
-    border-radius: 20px;
-}
-
-.contactBottomRightView {
-    display: flex;
-    flex-direction: column;
-    height: 80%;
-    width: 35vw;
-}
-
-.contactBottomRightText {
-    font-family: 'FuturaHv';
-    font-size: 2vh;
-    color: #F1F4FD;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.corner-wrapper {
-    display: block;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-    transform: translateZ(0px);
-    border: 3px solid #eee;
-  }
 
 footer {
     margin-top: auto;
