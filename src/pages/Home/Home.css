@@ -1,4 +1,7 @@
 .container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     background-color:#F1F4FD;
 }
 
@@ -136,6 +139,10 @@
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+}
+
+footer {
+    margin-top: auto;
 }
 
 @font-face {

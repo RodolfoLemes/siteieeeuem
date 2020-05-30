@@ -73,9 +73,10 @@ function Home() {
   }
   
   const newDones = sliceDones()
-  
+  console.log(height*(7/8)+Math.ceil(Projects.length/3)*height/3)
+  console.log(height*(7/8))
   return (
-    <div className='container' style={{ height: 3.5*height, width: width }}>
+    <div className='container' style={{ width: width }}>
       <Header />
 
       <div className='page' style={{ height: height*(7/8) , width: width }}>
@@ -134,18 +135,18 @@ function Home() {
         </Carousel>
       </div>
       
-      <div ref={refProjects} className='pageProject' style={{ height: height*(7/8) , width: width }}>
+      <div ref={refProjects} className='pageProject' style={{ height: expand ? height*(7/8)+Math.ceil((Projects.length-6)/3)*height*8/21 : height*(7/8), width: width }}>
         <div className='projectTopView' style={{ height: height/10, width: width }}>
           <p className='projectTitle' style={{ fontSize: height/17 }}>PROJETOS</p>
         </div>
-        <div className='projectBottomView' style={{ height: height*(6/8), width: width }}>
+        <div className='projectBottomView' style={{ height: expand ? height*(6/8)+Math.ceil((Projects.length-6)/3)*height*8/21 : height*(6/8), width: width }}>
           { Projects.map((element, index) => {
             if(!expand) {
               if(index <= 5) {
-                return (<React.Fragment>
+                return (<React.Fragment key={index}>
                           <div className='smallCard' style={{ height: height/3.5, width: height/3.5, margin: height/21 }}>
                             <p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{element.title}</p>
-                            <img className='projectImg' alt={element.title + 'logo'}src={logoPAH}/>
+                            <img className='projectImg' alt={element.title + 'logo'} src={element.img}/>
                           </div>
                           { (index + 1) % 3 === 0 
                             ? (<div className='break'></div>)
@@ -156,10 +157,10 @@ function Home() {
                 return (null)
               }
             } else {
-              return (<React.Fragment>
+              return (<React.Fragment key={index}>
                         <div className='smallCard' style={{ height: height/3.5, width: height/3.5, margin: height/21 }}>
                           <p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{element.title}</p>
-                          <img className='projectImg' alt={element.title + 'logo'}src={logoPAH}/>
+                          <img className='projectImg' alt={element.title + 'logo'} src={element.img}/>
                         </div>
                         { (index + 1) % 3 === 0 
                           ? (<div className='break'></div>)
@@ -168,16 +169,18 @@ function Home() {
                       </React.Fragment>)
             }
           })}
-          { !expand ? (<input type='button' onClick={() => isExpand(true)} value="clica em mim" />) : (null) }
-          </div>
-          <div></div>
+        </div>
       </div>
-          
-      <div ref={refMembers}>
-        <p>Div dos membros</p>
+      
+      <div>
+        <button style={{ height: 50, width: 100 }} onClick={() => isExpand(!expand)} value="clica em mim" />
       </div>
 
-      <div className='page' style={{ height: height*(7/8) , width: width, backgroundColor:'#292E56' }}>
+      {/* <div ref={refMembers}>
+        <p>Div dos membros</p>
+      </div>
+ */}
+      <footer style={{ height: height*(7/8) , width: width, backgroundColor:'#292E56' }}>
         <div className='projectTopView' style={{ height: height/12, width: width }}>
           <p className='doneTitle' style={{ fontSize: height/17 }}>CONTATO</p>
         </div>
@@ -193,7 +196,7 @@ function Home() {
           height="480">
         </Iframe>
         </div>
-      </div>
+      </footer>
 
     </div>
   );
