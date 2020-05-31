@@ -2,7 +2,7 @@ import React, { useContext, useState, useRef } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
-import { Dones, Projects, projectsNumber, membersNumber } from '../../constants/constants'
+import { Chapters, Dones, Projects, projectsNumber, membersNumber } from '../../constants/constants'
 import Header from '../../components/Header/Header'
 import ExpansiveCards from '../../components/ExpansiveCards/ExpansiveCards'
 import Footer from '../../components/Footer/Footer'
@@ -47,6 +47,33 @@ function Home() {
     })
 
     return slicedDones
+	}
+	
+	function sliceChapters() {
+    const slicedChapters = []
+
+    let cont = 0
+    let buffer = {}
+    Chapters.map((element, index) => {
+      if(cont === 0) {
+        buffer.title1 = element.title
+        buffer.description1 = element.description
+        cont++
+        if(index + 1 === Dones.length) {
+          slicedChapters.push(buffer)
+        }
+      } else {
+        buffer.title2 = element.title
+        buffer.description2 = element.description
+        slicedChapters.push(buffer)
+        buffer = {}
+        cont = 0
+      }
+
+      return true
+    })
+
+    return slicedChapters
   }
 
   function arrowCarrousel(next, clickHander) {
@@ -72,7 +99,8 @@ function Home() {
     )
   }
   
-  const newDones = sliceDones()
+	const newDones = sliceDones()
+	const newChapters = sliceChapters()
   
   return (
     <div className='container' style={{ width: width }}>
@@ -144,7 +172,39 @@ function Home() {
         itensWithoutExpansive={6}
       />
 
-      <div style={{ height: height/40, width, backgroundColor:'#292E56' }}>
+			<div className='pageProject' style={{ height: height*(7/8) , width: width, backgroundColor:'#292E56' }}>
+        <div className='projectTopView' style={{ height: height/12, width: width }}>
+          <p className='doneTitle' style={{ fontSize: height/17 }}>ÁREAS DE ATUAÇÃO</p>
+        </div>
+        <Carousel
+          width={width*0.9}
+          height={height*(7/8)}
+          showStatus={false} 
+          showThumbs={false}
+          showArrows={false}
+          renderArrowNext={(clickHander) => arrowCarrousel(true, clickHander)}
+          renderArrowPrev={(clickHander) => arrowCarrousel(false, clickHander)}
+        >
+          { newChapters.map((element, index) => (
+              <div key={index} className='carouselSlideView'>
+                <div 
+                  className='blackCard' 
+                  style={{ height: height/1.7, width: width/4, marginLeft: width/20, marginRight: width/20, backgroundColor: '#292E56' }}
+                >
+                  <h1 className='blackCardTitle'>{element.title1}</h1>
+                  <p className='blackCardText'>{element.description1}</p>
+                </div>
+                <div 
+                  className='blackCard'
+                  style={{ height: height/1.7, width: width/4, marginLeft: width/20, marginRight: width/20, backgroundColor: '#292E56' }}
+                >
+                  <h1 className='blackCardTitle'>{element.title2}</h1>
+                  <p className='blackCardText'>{element.description2}</p>
+                </div>
+              </div>
+            )) 
+          }
+        </Carousel>
       </div>
 
       <ExpansiveCards 
