@@ -63,15 +63,16 @@
 }
 
 .contactSendButton {
-  height: 10%;
-  width: 30%;
-  font-family: 'FuturaHv';
-  font-size: 2.2vh;
-  color: #F1F4FD;
-  background-color: #344EA9;
-  margin-top: 5%;
-  border-width: 0;
-  border-radius: 20px;
+    height: 10%;
+    width: 30%;
+    font-family: 'FuturaHv';
+    font-size: 2.2vh;
+    color: #F1F4FD;
+    cursor: pointer;
+    background-color: #344EA9;
+    margin-top: 5%;
+    border-width: 0;
+    border-radius: 20px;
 }
 
 .contactBottomRightView {

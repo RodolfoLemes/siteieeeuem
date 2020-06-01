@@ -1,6 +1,7 @@
-.dot {
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    display: inline-block;
+.Events {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	width: 100vw;
+	background-color: #F1F4FD;
 }

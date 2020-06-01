@@ -9,6 +9,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "nodemailer": "^6.4.8",
+    "lottie-web-react": "^1.0.3",
     "material-ui-icons": "^1.0.0-beta.36",
     "prop-types": "^15.7.2",
     "ra-data-json-server": "^3.5.5",
