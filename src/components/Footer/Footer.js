@@ -52,7 +52,7 @@ function Footer() {
 					</div>
 					<p className='contactBottomRightText' style={{ marginTop: '2%' }}>Universidade Estadual de Maringá</p>
 					<p className='contactBottomRightText'>Avenida Colombo, 5970</p>
-					<a className='contactBottomRightText' href="mailto:ieeeuem@gmail.com" target="_blank">ieeeuem@gmail.com</a>
+					<p className='contactBottomRightText'>ieeeuem@gmail.com</p>
 					<a className='contactBottomRightText' href='https://www.instagram.com/ieeeuem/' target="_blank">Instagram IEEE UEM</a>
 				</div>
 			</div>

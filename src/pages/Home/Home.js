@@ -214,7 +214,7 @@ function Home() {
         expand={expandMember}
         onClick={() => {refMembers.current.scrollIntoView({behavior: 'instant'}); isExpandMember(!expandMember)}}
         itensPerLine={3}
-        itensWithoutExpansive={5}
+        itensWithoutExpansive={6}
       />
 
       <Footer />
