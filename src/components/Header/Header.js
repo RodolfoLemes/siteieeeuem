@@ -35,10 +35,10 @@ function Header() {
           <p className='textBtn' style={{ fontSize: height/50, color: "#ffffff" }}> CONTATO </p>
         </Button>
         <div className='headerRight' style={{ height: height/8, flex: 5, marginRight: width/80 }}>
-          <Button>
+          <Button component={Link} to='/store'>
             <ShoppingCart style={{ height: height/25, width: height/25 }}/>
           </Button>
-          <Button>
+          <Button component={Link} to='/user'>
             <AccountCircle style={{ height: height/25, width: height/25 }}/>
           </Button>
         </div>

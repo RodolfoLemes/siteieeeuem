@@ -1,5 +1,5 @@
-export var membersNumber = 36
-export var projectsNumber = 17
+export var membersNumber = 34
+export var projectsNumber = 16
 
 export const Chapters = [
   {
@@ -25,18 +25,31 @@ export const Chapters = [
 ]
 
 export const Dones = [
-    {
-        title: 'RRS',
-        description: 'Evento que ocorreu sei la o que eu não sei o que estou digitando so estou digitando para ocupar espaço e ter um texto.'
-    },
-    {
-        title: 'IEEEXTREME',
-        description: 'Evento top de programação top que reuniu só os tops para programar tops'
-    }, 
-    {
-        title: 'Algo',
-        description: 'Eu fiz algo aqui e só estou escrevendo para encher linguiça'
-    }
+	{
+		title: 'RRS 2019',
+		description: 'A Reunião dos Ramos da Seção Sul-Brasil (RRS) do ano de 2019 foi promovida pelo IEEE UEM. Nesse encontro maravilhoso, ramos de todo o sul do Brasil passaram 3 dias conosco, em uma busca incansável por formas de melhorar a comunidade ramo estudantil IEEE, e forncer o melhor para a humanidade.'
+},
+	{
+		title: 'IEEEXTREME 12.0',
+		description: 'Nossa equipe programadora de plantão se aventurou em 24 horas seguidas de programação. Competimos com o mundo inteiro em uma das maiores maratonas de programação do mundo, e alcançamos a 29ª colocação no Brasil.'
+	}, 
+	{
+		title: 'PAH Caso de Sucesso',
+		description: 'Nosso projeto Projeto Altas Habilidades recebeu uma mensão honrosa, como projeto Caso de Sucesso, pela sua contribuição para a comunidade. Através do PAH, crianças e adolescentes com altas habilidades/superdotação são auxiliadas para se desenvolverem mais, aprimorando suas habilidades, a fim de que um dia se tornem proficionais brasileiros e brilhantes'
+	},
+	{
+		title: 'App IEEE UEM Caso de Sucesso',
+		description: 'Inovamos na forma de gerenciar nossos membros e colaboradores: desenvolvemos um aplicativo que facilita nossa comunicação. O projeto foi reconhecido como Caso de Sucesso, e então estamos criando a segunda versão: ainda melhor!'
+	},
+	{
+		title: 'Concurso de Fotografias',
+		description: 'Vencemos em 1º lugar o concurso de fotografias promovido em toda a América Latina. Nossa foto: um pedido de socorro por Amazonas.'
+	},
+	{
+		title: 'Concurso de Website',
+		description: 'Conquistamos a 2ª posição de melhor site no concurso promovido na América Latina, em 2017. Dessa vez, reformamos nosso site por completo: agora buscamos o 1º lugar global! :D'
+	},
+
 ]
 
 export const Projects = [
