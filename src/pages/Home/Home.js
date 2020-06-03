@@ -1,8 +1,9 @@
-import React, { useContext, useState, useRef } from 'react'
+import React, { useContext, useState, useRef, useEffect } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
-import { Chapters, Dones, Projects, projectsNumber, membersNumber } from '../../constants/constants'
+import api from '../../utils/api'
+import { Chapters, Dones, membersNumber } from '../../constants/constants'
 import Header from '../../components/Header/Header'
 import ExpansiveCards from '../../components/ExpansiveCards/ExpansiveCards'
 import Footer from '../../components/Footer/Footer'
@@ -19,20 +20,36 @@ function Home() {
   const refProjects = useRef()
   const refMembers = useRef()
 
+  const [projects, setProjects] = useState([])
+  const [dones, setDones] = useState([])
   const [expandProject, isExpandProject] = useState(false)
   const [expandMember, isExpandMember] = useState(false)
 
-  function sliceDones() {
+  useEffect(() => {
+    async function fetchData() {
+      const response = await Promise.all([
+        api.get('/project'),
+        api.get('/done')
+      ])
+
+      setProjects(response[0].data)
+      setDones(sliceDones(response[1].data))
+    }
+
+    fetchData()
+  }, [])
+
+  function sliceDones(dones) {
     const slicedDones = []
 
     let cont = 0
     let buffer = {}
-    Dones.map((element, index) => {
+    dones.map((element, index) => {
       if(cont === 0) {
         buffer.title1 = element.title
         buffer.description1 = element.description
         cont++
-        if(index + 1 === Dones.length) {
+        if(index + 1 === dones.length) {
           slicedDones.push(buffer)
         }
       } else {
@@ -99,7 +116,7 @@ function Home() {
     )
   }
   
-	const newDones = sliceDones()
+	//const newDones = sliceDones()
 	const newChapters = sliceChapters()
   
   return (
@@ -115,7 +132,7 @@ function Home() {
             <div className='smallCard' style={{ height: height/3.5, width: height/3.5, marginBottom: height*(2/21) }}>
               <p className='smallCardText' style={{ fontSize: width/80 }}>Projetos em</p>
               <p className='smallCardText' style={{ fontSize: width/80 }}>andamento</p>
-              <p className='smallCardText' style={{ fontSize: width/30, marginTop:height/30 }}>{ projectsNumber }</p>
+              <p className='smallCardText' style={{ fontSize: width/30, marginTop:height/30 }}>{ projects.length }</p>
             </div>
           </button>
           <button className='btn' onClick={() => refMembers.current.scrollIntoView({behavior: 'smooth'})}>
@@ -140,7 +157,7 @@ function Home() {
           renderArrowNext={(clickHander) => arrowCarrousel(true, clickHander)}
           renderArrowPrev={(clickHander) => arrowCarrousel(false, clickHander)}
         >
-          { newDones.map((element, index) => (
+          { dones.map((element, index) => (
               <div key={index} className='carouselSlideView'>
                 <div 
                   className='blackCard' 
@@ -165,7 +182,7 @@ function Home() {
       <ExpansiveCards
         ref={refProjects} 
         nameItens='PROJETOS'
-        itens={Projects}
+        itens={projects}
         expand={expandProject}
         onClick={() => {refProjects.current.scrollIntoView({behavior: 'instant'}); isExpandProject(!expandProject)}}
         itensPerLine={3}
@@ -210,7 +227,7 @@ function Home() {
       <ExpansiveCards 
         ref={refMembers} 
         nameItens='MEMBROS'
-        itens={Projects}
+        itens={projects}
         expand={expandMember}
         onClick={() => {refMembers.current.scrollIntoView({behavior: 'instant'}); isExpandMember(!expandMember)}}
         itensPerLine={3}

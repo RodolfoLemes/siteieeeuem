@@ -1,20 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Calendar from 'react-calendar'
 
-import { events } from '../../constants/eventsDates'
+import api from '../../utils/api'
 import Header from '../../components/Header/Header'
 import number2month from '../../utils/number2month.js'
 
-import './Calendar.css';
+import './Events.css';
 
-function dateExists(date) {
+function dateExists(date, events) {
   let data = new Date(date)
   let [day, month, year] = [data.getDate(), data.getMonth(), data.getFullYear()]
 
   let finds = events.filter(element => {
-    if(element.date.getFullYear() === year) {
-      if(element.date.getMonth() === month) {
-        if(element.date.getDate() === day) {
+    let date = new Date(element.date)
+    if(date.getFullYear() === year) {
+      if(date.getMonth() === month) {
+        if(date.getDate() === day) {
           return true
         }
       }
@@ -26,13 +27,14 @@ function dateExists(date) {
   else return undefined
 }
 
-function monthExists(date) {
+function monthExists(date, events) {
   let data = new Date(date)
   let [month, year] = [data.getMonth(), data.getFullYear()]
 
   let finds = events.filter(element => {
-    if(element.date.getFullYear() === year) {
-      if(element.date.getMonth() === month) {
+    let date = new Date(element.date)
+    if(date.getFullYear() === year) {
+      if(date.getMonth() === month) {
         return true
       }
     }
@@ -53,15 +55,31 @@ const colorDots = {
 
 function Events() {
   const [date, setDate] = useState(new Date())
-  
+  const [events, setEvents] = useState([])
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await api.get('event', {
+        params: {
+          filter: {
+            date
+          }
+        }
+      })
+      setEvents(response.data)
+    }
+
+    fetchData()
+  }, [date])
+
   function tileContent({ date, view }){ 
-    var elements = dateExists(date)
+    var elements = dateExists(date, events)
     
     if(elements.length > 0){
       return (
         <React.Fragment >
           <div className='dotsView'>
-            { elements.map((element, index) => <span key={index} className="dot" style={{ backgroundColor: colorDots[element.event] }}></span>) }
+            { elements.map((element, index) => <span key={index} className="dot" style={{ backgroundColor: colorDots[element.chapter] }}></span>) }
           </div>
         </React.Fragment>
       )
@@ -69,13 +87,13 @@ function Events() {
   }
 
   function createDatesInfo() {
-    var elements = monthExists(date)
+    var elements = monthExists(date, events)
 
     if(elements.length > 0){
       return (
         <React.Fragment>
             { elements.map((element, index) => (
-              <div key={index} className='eventsCard' style={{ backgroundColor: colorDots[element.event] }}>
+              <div key={index} className='eventsCard' style={{ backgroundColor: colorDots[element.chapter] }}>
                 <div className='eventsCardDate'>
                   <p className='eventsCardDateFont'>{new Date(element.date).getDate()}</p>
                   <p className='eventsCardDateFont'>{number2month(new Date(element.date).getMonth())}</p>
@@ -101,6 +119,7 @@ function Events() {
 					next2Label={null}
 					prev2Label={null}
           calendarType='US'
+          onActiveStartDateChange={value => setDate(value.activeStartDate)}
         />
         <div className='eventsCardView'>
 						{createDatesInfo()}

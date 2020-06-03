@@ -1,0 +1,7 @@
+.Blog {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100vw;
+    background-color: #f1f4fd;
+}
