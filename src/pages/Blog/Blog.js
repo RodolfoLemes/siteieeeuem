@@ -44,7 +44,7 @@ function Blog() {
     <div className="Blog">
       <Header />
 
-      <div className='pageItem' style={{ height: heightComponents.page(), width: width, marginTop: 20, marginBottom: 20, backgroundColor: backgroundColor['IEEE'] }}>
+      <div className='pageItem' style={{ height: heightComponents.page(), width: width, marginTop: 20, paddingBottom: 20, backgroundColor: backgroundColor['IEEE'] }}>
         <div className='itemTopView' style={{ height: height/10, width: width }}>
           <p className='itemTitle' style={{ fontSize: height/17, color: '#f1f4fd' }}>IEEE</p>
         </div>
@@ -53,11 +53,15 @@ function Blog() {
             if(!expand) {
               if(index < seilaExpansive) {
                   return (<React.Fragment key={index}>
-                          <div className='smallCard' style={{ height: height/3.5, width: width/3, margin: height/21 }}>
-                              <p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{ element.title }</p>
-                              <div style={{ display: 'flex', flexDirection: 'row' }}>
-                                <p>{element.description}</p>
-                                <img className='itemImg' alt={element.title + 'logo'} src={ element.img } style={{ height: 50, width: 50 }}/>
+                          <div className='smallCard' style={{ height: height/3.5, width: width/3, margin: height/21, backgroundColor: '#f1f4fd', justifyContent: 'flex-start' }}>
+                              <div style={{ height: '30%', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{ element.title }</p>
+                              </div>
+                              <div style={{ display: 'flex', flexDirection: 'row', height: '50%', width: '100%', justifyContent:'center', alignItems: 'center' }}>
+                                <div style={{ height: '100%', width: '55%', marginRight: '5%' }}>
+                                  <p style={{ height: '100%', width: '100%', wordWrap: 'break-word', textAlign: 'justify' }}>{element.description}</p>
+                                </div>
+                                <img className='itemImg' alt={element.title + 'logo'} src={ element.img } style={{ height: height/6.5, width: height/6.5, borderRadius: 30 }}/>
                               </div>
                           </div>
                           { (index + 1) % seilaPerLine === 0 
@@ -70,12 +74,16 @@ function Blog() {
               }
             } else {
               return (<React.Fragment key={index}>
-                          <div className='smallCard' style={{ height: height/3.5, width: height/3.5, margin: height/21 }}>
-                            <p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{ element.title }</p>
-                            <div>
-                                <p>{element.description}</p>
-                                <img className='itemImg' alt={element.title + 'logo'} src={ element.img }/>
-                            </div>
+                          <div className='smallCard' style={{ height: height/3.5, width: width/3, margin: height/21, backgroundColor: '#f1f4fd', justifyContent: 'flex-start' }}>
+                              <div style={{ height: '30%', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{ element.title }</p>
+                              </div>
+                              <div style={{ display: 'flex', flexDirection: 'row', height: '50%', width: '100%', justifyContent:'center', alignItems: 'center' }}>
+                                <div style={{ height: '100%', width: '55%', marginRight: '5%' }}>
+                                  <p style={{ height: '100%', width: '100%', wordWrap: 'break-word', textAlign: 'justify' }}>{element.description}</p>
+                                </div>
+                                <img className='itemImg' alt={element.title + 'logo'} src={ element.img } style={{ height: height/6.5, width: height/6.5, borderRadius: 30 }}/>
+                              </div>
                           </div>
                           { (index + 1) % seilaPerLine === 0 
                             ? (<div className='break'></div>)
@@ -95,6 +103,8 @@ function Blog() {
           />
         </div>
       </div>
+
+      
 
       <Footer />
     </div>

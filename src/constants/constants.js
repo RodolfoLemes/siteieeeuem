@@ -9,7 +9,7 @@ export const Chapters = [
 	},
 	{
 		title: 'Internet das Coisas (IOT)',
-		description: 'Temos 2 projetos que trabalham com IOT',
+		description: 'Temos 2 projetos que trabalham com IOTnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn',
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1590602578/site-ieee-uem/CS_UEM_zqwskj.svg'
   },
   {
