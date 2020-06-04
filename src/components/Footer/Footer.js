@@ -13,8 +13,14 @@ function isEmail(email) {
   return re.test(email);
 }
 
-function Footer() {
+function Footer(props) {
 	const { width, height } = useContext(DimensionContext)
+
+	if(props.blogPage) {
+		var { blogPage } = props
+	} else {
+		var blogPage = false
+	}
 
 	const [email, setEmail] = useState('')
 	const [msg, setMsg] = useState('')
@@ -35,13 +41,13 @@ function Footer() {
 			}
 		}
 	}
-
+	
 	return (
 		<footer style={{ height: height*(7/8) , width: width, backgroundColor:'#292E56' }}>
-			<div className='contactTopView' style={{ height: height/12, width: width }}>
+			<div className='contactTopView' style={{ height: height/12, width: blogPage ? width*0.9 : width, marginRight: blogPage ? width*0.2 : 0  }}>
 				<p className='contactTitle' style={{ fontSize: height/17 }}>CONTATO</p>
 			</div>
-			<div className='contactBottomView' style={{ height: height*(6/8), width: width }}>
+			<div className='contactBottomView' style={{ height: height*(6/8), width: blogPage ? width*0.9 : width, marginRight: blogPage ? width*0.2 : 0 }}>
 				<div className='contactBottomLeftView'>
 					<div className='contactSubtitleView'>
 						<p className='contactSubtitleText'>FALE CONOSCO</p>

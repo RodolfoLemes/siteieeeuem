@@ -172,7 +172,7 @@
 	width: 30vw;
 	margin-left: 4vw;
 	padding-bottom: 3vh;
-  overflow: auto;
+  	overflow: auto;
 }
 
 div::-webkit-scrollbar {

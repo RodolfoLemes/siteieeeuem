@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import Calendar from 'react-calendar'
+import { ClockLoader } from 'react-spinners'
 
+import DimensionContext from '../../context/dimension'
 import api from '../../utils/api'
 import Header from '../../components/Header/Header'
 import number2month from '../../utils/number2month.js'
@@ -54,8 +56,11 @@ const colorDots = {
 }
 
 function Events() {
+  const { height } = useContext(DimensionContext)
+
   const [date, setDate] = useState(new Date())
   const [events, setEvents] = useState([])
+  const [loading, isLoading] = useState(false)
 
   useEffect(() => {
     async function fetchData() {
@@ -67,6 +72,7 @@ function Events() {
         }
       })
       setEvents(response.data)
+      isLoading(true)
     }
 
     fetchData()
@@ -119,10 +125,16 @@ function Events() {
 					next2Label={null}
 					prev2Label={null}
           calendarType='US'
-          onActiveStartDateChange={value => setDate(value.activeStartDate)}
+          onActiveStartDateChange={value => {isLoading(false); setDate(value.activeStartDate)}}
         />
-        <div className='eventsCardView'>
-						{createDatesInfo()}
+        <div className='eventsCardView' style={ !loading ? { justifyContent: 'center' } : null }>
+						{ !loading 
+            ? <ClockLoader
+                size={height/7}
+                color={"#344ea9"}
+                loading={true}
+              /> 
+            : createDatesInfo()}
         </div>
       </div>
     </div>

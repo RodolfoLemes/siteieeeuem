@@ -1,4 +1,4 @@
-import React, { useContext, useState, useRef } from 'react'
+import React, { useContext, useState, useRef, forwardRef } from 'react'
 
 import DimensionContext from '../../context/dimension'
 import ArrowBottom from '../../assets/arrowBottom.svg'
@@ -34,7 +34,7 @@ function ExpansiveBlog(props) {
 			: height*(6/8)
 		}
 	}
-  
+
   function expansiveClick() {
     ref.current.scrollIntoView({behavior: 'instant'}); 
     isExpand(!expand)
@@ -42,11 +42,11 @@ function ExpansiveBlog(props) {
   }
 
   return (
-    <div ref={ref} className='pageItem' style={{ height: heightComponents.page(), width: width, marginTop: 20, paddingBottom: 20, backgroundColor: backgroundColor[nameItens] }}>
-        <div className='itemTopView' style={{ height: height/10, width: width }}>
+    <div ref={ref} className='pageItem' style={{ height: heightComponents.page(), width: width, paddingBottom: 20, backgroundColor: backgroundColor[nameItens] }}>
+        <div className='itemTopView' style={{ height: height/10, width: width*0.9, paddingRight: width*0.1 }}>
           <p className='itemTitle' style={{ fontSize: height/17, color: '#f1f4fd' }}>{ nameItens }</p>
         </div>
-        <div className='itemBottomView' style={{ height: heightComponents.bottomView(), width: width }}>
+        <div className='itemBottomView' style={{ height: heightComponents.bottomView(), width: width*0.9, paddingRight: width*0.1 }}>
         { itens.map((element, index) => {
             if(!expand) {
               if(index < itensWithoutExpansive) {
@@ -91,7 +91,7 @@ function ExpansiveBlog(props) {
             }
         })}
         </div>
-        <div className='buttonView'>
+        <div className='buttonViewBlog'>
           <input
             type="image" 
             src={expand ? ArrowTop : ArrowBottom}
@@ -104,4 +104,4 @@ function ExpansiveBlog(props) {
   )
 }
 
-export default ExpansiveBlog 
+export default ExpansiveBlog

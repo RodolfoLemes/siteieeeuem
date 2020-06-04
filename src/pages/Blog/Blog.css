@@ -5,3 +5,46 @@
     width: 100vw;
     background-color: #f1f4fd;
 }
+
+.stickyButtons {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    top: 30vh;
+    right: 4vw;
+    height: 50vh;
+    width: 10vw;
+    
+}
+
+.buttonViewBlog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7.5vh;
+    width: 90vw;
+    padding-right: 10vw;
+    margin-top: 10px;
+}
+
+.chapterButtons {
+    display: block;
+    cursor: pointer;
+    height: 5vh;
+    width: 7vw;
+    border-radius: 2.5vh;
+    border-width: 0;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-family: 'FuturaHv';
+    font-size: 2.5vh;
+    color: #f1f4fd;
+    box-shadow: -1px -2px 12px rgba(255, 255, 255, 0.05), 1px 2px 18px rgba(0, 0, 0, 0.2), inset -1px -2px 6px rgba(0, 0, 0, 0.2), inset 1px 2px 6px rgba(255, 255, 255, 0.05);
+}
+
+@font-face {
+	font-family: 'FuturaHv';
+	src: url('../../assets/fonts/futura-heavy.ttf');
+}

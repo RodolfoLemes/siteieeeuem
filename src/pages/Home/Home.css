@@ -126,6 +126,9 @@
 .blackCardText {
 	font-family: 'Roboto';
 	text-align: justify;
+	white-space: -webkit-pre-wrap;
+	word-wrap: break-word;
+	word-break: break-all;
 	color: #F1F4FD;
 }
 
