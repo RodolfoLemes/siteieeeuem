@@ -35,8 +35,8 @@ function ExpansiveCards(props, ref) {
 					if(!expand) {
 						if(index < itensWithoutExpansive) {
 								return (<React.Fragment key={index}>
-												<div className='smallCard' style={{ height: height/3.5, width: height/3.5, margin: height/21 }}>
-													<p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{ element.title }</p>
+												<div className='smallCard' style={{ height: height/3.5, width: height/3.5, margin: height/21, backgroundColor: element.special ? '#000' : '#abc' }}>
+													<p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{ element.title || element.name }</p>
 													<img className='itemImg' alt={element.title + 'logo'} src={ element.img }/>
 												</div>
 												{ (index + 1) % itensPerLine === 0 
@@ -49,8 +49,8 @@ function ExpansiveCards(props, ref) {
 						}
 					} else {
 						return (<React.Fragment key={index}>
-												<div className='smallCard' style={{ height: height/3.5, width: height/3.5, margin: height/21 }}>
-													<p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{ element.title }</p>
+												<div className='smallCard' style={{ height: height/3.5, width: height/3.5, margin: height/21, backgroundColor: element.special ? '#000' : '#abc' }}>
+													<p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{ element.title || element.name }</p>
 													<img className='itemImg' alt={element.title + 'logo'} src={ element.img }/>
 												</div>
 												{ (index + 1) % itensPerLine === 0 

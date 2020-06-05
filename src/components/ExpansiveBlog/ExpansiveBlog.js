@@ -12,10 +12,10 @@ const backgroundColor = {
   BIOENG: "#2D3142"
 }
 
-function ExpansiveBlog(props) {
+function ExpansiveBlog(props, ref) {
   const { width, height } = useContext(DimensionContext)
 
-  const ref = useRef()
+  const refDiv = useRef()
   
   const [expand, isExpand] = useState(false)
 
@@ -36,14 +36,14 @@ function ExpansiveBlog(props) {
 	}
 
   function expansiveClick() {
-    ref.current.scrollIntoView({behavior: 'instant'}); 
+    refDiv.current.scrollIntoView({behavior: 'instant'}); 
     isExpand(!expand)
     if(props.onClick) props.onClick()
   }
 
   return (
-    <div ref={ref} className='pageItem' style={{ height: heightComponents.page(), width: width, paddingBottom: 20, backgroundColor: backgroundColor[nameItens] }}>
-        <div className='itemTopView' style={{ height: height/10, width: width*0.9, paddingRight: width*0.1 }}>
+    <div ref={refDiv} className='pageItem' style={{ height: heightComponents.page(), width: width, paddingBottom: 20, backgroundColor: backgroundColor[nameItens] }}>
+        <div ref={ref} className='itemTopView' style={{ height: height/10, width: width*0.9, paddingRight: width*0.1 }}>
           <p className='itemTitle' style={{ fontSize: height/17, color: '#f1f4fd' }}>{ nameItens }</p>
         </div>
         <div className='itemBottomView' style={{ height: heightComponents.bottomView(), width: width*0.9, paddingRight: width*0.1 }}>
@@ -104,4 +104,4 @@ function ExpansiveBlog(props) {
   )
 }
 
-export default ExpansiveBlog
+export default forwardRef(ExpansiveBlog)

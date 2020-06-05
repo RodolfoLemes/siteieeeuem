@@ -5,7 +5,7 @@ import { HashLoader, DotLoader } from 'react-spinners'
 
 
 import api from '../../utils/api'
-import { Chapters, Dones, membersNumber } from '../../constants/constants'
+import { Chapters, Dones, membersNumber, Members } from '../../constants/constants'
 import Header from '../../components/Header/Header'
 import ExpansiveCards from '../../components/ExpansiveCards/ExpansiveCards'
 import Footer from '../../components/Footer/Footer'
@@ -133,7 +133,7 @@ function Home() {
         <div className='smallCardsView' style={{ height: height/1.5, width: height/3, marginLeft: height*(2/21) }}>
           <button className='btn' onClick={() => refProjects.current.scrollIntoView({behavior: 'smooth'})}>
             <div className='smallCard' style={{ height: height/3.5, width: height/3.5, marginBottom: height*(2/21) }}>
-              { projects.length == 0 
+              { projects.length === 0 
                 ? <HashLoader
                     size={height/12}
                     color={"#344ea9"}
@@ -149,7 +149,7 @@ function Home() {
           </button>
           <button className='btn' onClick={() => refMembers.current.scrollIntoView({behavior: 'smooth'})}>
             <div className='smallCard' style={{ height: height/3.5, width: height/3.5 }}>
-              { projects.length == 0 
+              { projects.length === 0 
                 ? <HashLoader
                     size={height/12}
                     color={"#344ea9"}
@@ -166,7 +166,7 @@ function Home() {
         </div>
       </div>
       
-      { projects.length == 0
+      { projects.length === 0
         ? (
           <div 
             style={{ 
@@ -270,7 +270,7 @@ function Home() {
             <ExpansiveCards 
               ref={refMembers} 
               nameItens='MEMBROS'
-              itens={projects}
+              itens={Members}
               expand={expandMember}
               onClick={() => {refMembers.current.scrollIntoView({behavior: 'instant'}); isExpandMember(!expandMember)}}
               itensPerLine={3}

@@ -1,0 +1,68 @@
+.Archives {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f1f4fd;
+}
+
+.stickyButtonsArchives {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 30vh;
+    right: 4vw;
+    height: 10vh;
+    width: 70vw;
+}
+
+.chapterButtonsSelected {
+    cursor: pointer;
+    display: block;
+    height: 6vh;
+    width: 9vw;
+    border-radius: 3vh;
+    border-width: 0;
+    margin: 1vw;
+    font-family: 'FuturaHv';
+    font-size: 2.5vh;
+    color: #f1f4fd;
+    box-shadow: -1px -2px 12px rgba(255, 255, 255, 0.05), 1px 2px 18px rgba(0, 0, 0, 0.2), inset -1px -2px 6px rgba(0, 0, 0, 0.2), inset 1px 2px 6px rgba(255, 255, 255, 0.05);
+    transition: .3s;
+}
+
+.chapterButtonsUnselected {
+    cursor: pointer;
+    display: block;
+    height: 5vh;
+    width: 8vw;
+    border-radius: 2.5vh;
+    border-width: 0;
+    margin: 1vw;
+    font-family: 'FuturaHv';
+    font-size: 2.5vh;
+    color: #f1f4fd;
+    box-shadow: -1px -2px 12px rgba(255, 255, 255, 0.05), 1px 2px 18px rgba(0, 0, 0, 0.2), inset -1px -2px 6px rgba(0, 0, 0, 0.2), inset 1px 2px 6px rgba(255, 255, 255, 0.05);
+    transition: .3s;
+}
+
+.iframeContainer {
+  display: flex;
+  height: 70vh;
+  width: 60vw;
+  align-items: center;
+  justify-content: center;
+  background-color: #344EA9;
+  border-radius: 30px;
+}
+
+.iframeContainerChildren {
+  display: flex;
+  height: 60vh;
+  width: 54vw;
+  background-color: white;
+  border-radius: 30px;
+}

@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     background-color: #F1F4FD;
+    z-index: 2;
 }
 
 .headerBtn {

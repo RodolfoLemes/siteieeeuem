@@ -34,6 +34,192 @@ export const Chapters = [
   },
 ]
 
+export const Members = [
+  {
+		name: 'Alex Seide',
+		chapter: 'CS',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331572/site-ieee-uem/Membros/1_oyxmdo.jpg'
+	},
+	{
+		name: 'Alexandre Becker',
+		chapter: 'IEEE',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331573/site-ieee-uem/Membros/2_ulrrjs.jpg'
+  },
+  {
+		name: 'Bernardo Leal',
+		chapter: 'RAS',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331576/site-ieee-uem/Membros/3_v46zra.png'
+  },
+  {
+		name: 'Daniel Kato',
+    chapter: 'RAS',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331573/site-ieee-uem/Membros/5_j6mdxt.jpg'
+  },
+  {
+		name: 'Emanuel Romeiro',
+    chapter: 'PES',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331573/site-ieee-uem/Membros/6_zfc0rf.png'
+  },
+  {
+		name: 'Emily Miyuki',
+    chapter: 'PES',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331571/site-ieee-uem/Membros/7_zsktkt.jpg'
+  },
+  {
+		name: 'Erika Harumi',
+    chapter: 'RAS',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331573/site-ieee-uem/Membros/8_td7f5q.png'
+  },
+  {
+		name: 'Fernando Koiti',
+		chapter: 'RAS',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331571/site-ieee-uem/Membros/9_m4gelj.png'
+  },
+  {
+		name: 'Gabriel Tavares',
+		chapter: 'PES',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331572/site-ieee-uem/Membros/10_lgcyaf.png'
+  },
+  {
+		name: 'Gabriel Brandão',
+    chapter: 'CS',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331573/site-ieee-uem/Membros/11_grvq5u.png'
+  },
+  {
+		name: 'Ishedale Sousa',
+    chapter: 'PES',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331574/site-ieee-uem/Membros/12_yiznnh.jpg'
+  },
+  {
+		name: 'Janaína Cera',
+		chapter: 'CS',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331573/site-ieee-uem/Membros/13_aodk96.jpg'
+  },
+  {
+		name: 'Jean Lucca',
+    chapter: 'CS',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331572/site-ieee-uem/Membros/14_bfcqp0.png'
+  },
+  {
+		name: 'Jéssica Mariane',
+    chapter: 'PES',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331572/site-ieee-uem/Membros/15_r2sksx.jpg'
+  },
+  {
+		name: 'Joaquim Pereira',
+		chapter: 'RAS',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331575/site-ieee-uem/Membros/16_qu0vb6.png'
+  },
+  {
+		name: 'Lara Conradi',
+    chapter: 'RAS',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331577/site-ieee-uem/Membros/17_nbydni.jpg'
+  },
+  {
+		name: 'Leonardo Armelin',
+    chapter: 'CS',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331573/site-ieee-uem/Membros/18_qwky8q.png'
+  },
+  {
+		name: 'Leonardo Peruci',
+		chapter: 'CS',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331572/site-ieee-uem/Membros/19_xue8i5.jpg'
+  },
+  {
+		name: 'Leonichel Guimarães',
+    chapter: 'CS',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331576/site-ieee-uem/Membros/20_nxn0cq.jpg'
+  },
+  {
+		name: 'Luan Crozatti',
+    chapter: 'CS',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331573/site-ieee-uem/Membros/21_jiuk2y.jpg'
+  },
+  {
+		name: 'Lucas Força',
+    chapter: 'RAS',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331575/site-ieee-uem/Membros/22_rnda42.png'
+  },
+  {
+		name: 'Lucas Bento',
+    chapter: 'RAS',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331575/site-ieee-uem/Membros/23_qejotj.jpg'
+  },
+  {
+		name: 'Lucas Langowski',
+		chapter: 'RAS',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331576/site-ieee-uem/Membros/24_hiwlhu.png'
+  },
+  {
+		name: 'Marlon Goulart',
+		chapter: 'CS',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331575/site-ieee-uem/Membros/25_hhkv2b.png'
+  },
+  {
+		name: 'Mateus Osmarin',
+		chapter: 'CS',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331577/site-ieee-uem/Membros/26_hlflzw.png'
+  },
+  {
+		name: 'Milena Masquietto',
+    chapter: 'RAS',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331574/site-ieee-uem/Membros/27_x5htgj.jpg'
+  },
+  {
+    name: 'Murilo Pires',
+    chapter: 'RAS',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331570/site-ieee-uem/Membros/28_hvobyo.jpg'
+  },
+  {
+    name: 'Murilo Romagnolli',
+    chapter: 'RAS',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331573/site-ieee-uem/Membros/29_h7wrdz.jpg'
+  },
+  {
+    name: 'Nathália Ferreira',
+    chapter: 'PES',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331573/site-ieee-uem/Membros/30_i6xfrg.jpg'
+  },
+  {
+    name: 'Raquel Delgado',
+    chapter: 'PES',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331576/site-ieee-uem/Membros/31_onqqed.jpg'
+  },
+  {
+    name: 'Rodolfo Lemes',
+    chapter: 'CS',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331572/site-ieee-uem/Membros/32_vqsspa.png'
+  },
+  {
+    name: 'Sandra Sanches',
+    chapter: 'RAS',
+    special: true,
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591331586/site-ieee-uem/Membros/33_gqwbqm.png'
+  },
+  {
+    name: 'Thiago Shiroshima',
+    chapter: 'RAS',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1591336331/site-ieee-uem/Membros/34_vlsayh.jpg'
+  },
+]
+
 export const Dones = [
 	{
 		title: 'RRS 2019',

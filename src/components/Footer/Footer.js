@@ -19,7 +19,7 @@ function Footer(props) {
 	if(props.blogPage) {
 		var { blogPage } = props
 	} else {
-		var blogPage = false
+		blogPage = false
 	}
 
 	const [email, setEmail] = useState('')
@@ -84,7 +84,7 @@ function Footer(props) {
 					<p className='contactBottomRightText' style={{ marginTop: '2%' }}>Universidade Estadual de Maringá</p>
 					<p className='contactBottomRightText'>Avenida Colombo, 5970</p>
 					<p className='contactBottomRightText'>ieeeuem@gmail.com</p>
-					<a className='contactBottomRightText' href='https://www.instagram.com/ieeeuem/' target="_blank">Instagram IEEE UEM</a>
+					<a className='contactBottomRightText' href='https://www.instagram.com/ieeeuem/'>Instagram IEEE UEM</a>
 				</div>
 			</div>
 		</footer>

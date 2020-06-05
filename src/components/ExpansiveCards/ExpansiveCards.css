@@ -47,7 +47,10 @@
 }
 
 .itemImg {
-    max-width: 60%;
+    display: block;
+    max-height: 15vh;
+    max-width: 15vh;
     height: auto;
+    width: auto;
     border-radius: 50%;
 }

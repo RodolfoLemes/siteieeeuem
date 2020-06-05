@@ -31,7 +31,7 @@ function Header() {
         <Button style={{ height: height/20, flex: 1, marginLeft: width/80 }} component={Link} to='/archives'>
           <p className='textBtn' style={{ color: pathname === '/archives' ? '#292E56' : '#A0A8B7', fontSize: height/50 }}>ARQUIVOS</p>
         </Button>
-        <Button style={{ height: height/20, flex: 1, marginLeft: width/80, borderRadius: height/20, backgroundColor: '#292E56' }}>
+        <Button style={{ height: height/20, flex: 1, marginLeft: width/65, borderRadius: height/20, backgroundColor: '#292E56' }}>
           <p className='textBtn' style={{ fontSize: height/50, color: "#ffffff" }}> CONTATO </p>
         </Button>
         <div className='headerRight' style={{ height: height/8, flex: 5, marginRight: width/80 }}>
