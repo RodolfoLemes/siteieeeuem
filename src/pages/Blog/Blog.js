@@ -10,20 +10,25 @@ import './Blog.css';
 function Blog() {
 
   const [folder, setFolder] = useState('IEEE')
-  const handleScroll = (event) => {
-      const position = window.pageYOffset;
 
-      if(position >= 1 && position <= 500) {
-        setFolder('IEEE')
-      } else if(position > 500 && position <= 1351) {
-        setFolder('RAS')
-      } else if(position > 1351 && position <= 2152) {
-        setFolder('PES')
-      } else if(position > 2152 && position <= 2860) {
-        setFolder('CS')
-      } else if(position > 2860) {
-        setFolder('BIOENG')
-      }
+  const handleScroll = (event) => {
+    const position = window.pageYOffset;
+    const scrollHeight = document.getElementsByClassName('Blog')[0].scrollHeight
+    var current = position / scrollHeight
+
+    if(current < 0.1243801652892562) {
+      setFolder('IEEE')
+    } else if(current >= 0.1243801652892562 && current < 0.2754132231404959) {
+      setFolder('RAS')
+    } else if(current >= 0.2754132231404959 && current < 0.42768595041322316) {
+      setFolder('PES')
+    } else if(current >= 0.42768595041322316 && current < 0.5799586776859504) {
+      setFolder('CS')
+    } else if(current >= 0.5799586776859504 && current < 0.7456611570247934) {
+      setFolder('BIOENG')
+    } else {
+      setFolder('')
+    }
 
   };
 
