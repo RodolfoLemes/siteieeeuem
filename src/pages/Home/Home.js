@@ -5,7 +5,7 @@ import { HashLoader, DotLoader } from 'react-spinners'
 
 
 import api from '../../utils/api'
-import { Chapters, Dones, membersNumber, Members } from '../../constants/constants'
+import { Chapters } from '../../constants/constants'
 import Header from '../../components/Header/Header'
 import ExpansiveCards from '../../components/ExpansiveCards/ExpansiveCards'
 import Footer from '../../components/Footer/Footer'
@@ -24,6 +24,7 @@ function Home() {
 
   const [projects, setProjects] = useState([])
   const [dones, setDones] = useState([])
+  const [members, setMembers] = useState([])
   const [expandProject, isExpandProject] = useState(false)
   const [expandMember, isExpandMember] = useState(false)
 
@@ -31,11 +32,13 @@ function Home() {
     async function fetchData() {
       const response = await Promise.all([
         api.get('/project'),
-        api.get('/done')
+        api.get('/done'),
+        api.get('/member')
       ])
 
       setProjects(response[0].data)
       setDones(sliceDones(response[1].data))
+      setMembers(response[2].data)
     }
 
     fetchData()
@@ -78,7 +81,7 @@ function Home() {
         buffer.title1 = element.title
         buffer.description1 = element.description
         cont++
-        if(index + 1 === Dones.length) {
+        if(index + 1 === Chapters.length) {
           slicedChapters.push(buffer)
         }
       } else {
@@ -142,7 +145,7 @@ function Home() {
                   : (<React.Fragment>
                       <p className='smallCardText' style={{ fontSize: width/80 }}>Projetos em</p>
                       <p className='smallCardText' style={{ fontSize: width/80 }}>andamento</p>
-                      <p className='smallCardText' style={{ fontSize: width/30, marginTop:height/30 }}>{projects.length}</p>
+                      <p className='smallCardText' style={{ fontSize: width/30, marginTop:height/30 }}>{ projects.length }</p>
                     </React.Fragment> 
                 )}
             </div>
@@ -157,7 +160,7 @@ function Home() {
                   />
                   : (<React.Fragment>
                       <p className='smallCardText' style={{ fontSize: width/80 }}>Membros</p>
-                      <p className='smallCardText' style={{ fontSize: width/30, marginTop:height/30 }}>{ membersNumber }</p>
+                      <p className='smallCardText' style={{ fontSize: width/30, marginTop:height/30 }}>{ members.length }</p>
                     </React.Fragment> 
                 )}
               
@@ -270,7 +273,7 @@ function Home() {
             <ExpansiveCards 
               ref={refMembers} 
               nameItens='MEMBROS'
-              itens={Members}
+              itens={members}
               expand={expandMember}
               onClick={() => {refMembers.current.scrollIntoView({behavior: 'instant'}); isExpandMember(!expandMember)}}
               itensPerLine={3}
