@@ -1,8 +1,14 @@
+.pageFooter {
+  height: 87.5vh;
+  width: 100vw;
+}
+
 .contactTopView {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 10vh;
 }
 
 .contactTitle {
@@ -15,6 +21,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 75vh;
 }
 
 .contactBottomLeftView {
@@ -98,4 +105,65 @@
   border-radius: 20px;
   transform: translateZ(0px);
   border: 0px solid #eee;
+}
+
+.socialMediaFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+  width: 100vw;
+}
+
+.socialMediaFooterIcon {
+  height: 32px;
+  width: auto;
+  color: #f1f4fd;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+@media (max-width: 768px) {
+  .contactBottomView {
+    flex-direction: column;
+  }
+
+  .contactBottomLeftView {
+    height: 80%;
+    width: 80%;
+    margin-right: 0;
+  }
+
+  .contactBottomRightView {
+    align-items: center;
+    justify-content: flex-end;
+    height: 20%;
+    width: 80%;
+    margin-bottom: 2%;
+  }
+
+  .contactSendButton {
+    height: 10%;
+    border-radius: 40px;
+  }
+
+  .contactSubtitleView {
+    margin-top: 5%;
+    margin-bottom: 1%;
+    height: 10%;
+  }
+
+  .contactSubtitleText {
+    font-size: 3.5vh;
+  }
+
+  .contactEmailInput {
+    height: 7%;
+    padding-top: 3%;
+  }
+
+  .corner-wrapper {
+    display: none;
+  }
 }

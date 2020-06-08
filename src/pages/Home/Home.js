@@ -3,8 +3,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { HashLoader, DotLoader } from 'react-spinners'
 
-
 import api from '../../utils/api'
+import shuffle from '../../utils/shuffle'
 import { Chapters } from '../../constants/constants'
 import Header from '../../components/Header/Header'
 import ExpansiveCards from '../../components/ExpansiveCards/ExpansiveCards'
@@ -38,7 +38,7 @@ function Home() {
 
       setProjects(response[0].data)
       setDones(sliceDones(response[1].data))
-      setMembers(response[2].data)
+      setMembers(shuffle(response[2].data))
     }
 
     fetchData()
@@ -126,49 +126,50 @@ function Home() {
 	const newChapters = sliceChapters()
   
   return (
-    <div className='container' style={{ width: width }}>
+    <div className='container'>
       <Header />
-      
-      <div className='page' style={{ height: height*(7/8) , width: width }}>
-        <div className='bigCard' style={{ height: height/1.5, width: width/2 }}>
-          <img src={IEEEdesc} alt="ieeedesc" style={{ height: height/1.8, width: width/2.2 }}/>
-        </div>
-        <div className='smallCardsView' style={{ height: height/1.5, width: height/3, marginLeft: height*(2/21) }}>
-          <button className='btn' onClick={() => refProjects.current.scrollIntoView({behavior: 'smooth'})}>
-            <div className='smallCard' style={{ height: height/3.5, width: height/3.5, marginBottom: height*(2/21) }}>
-              { projects.length === 0 
-                ? <HashLoader
-                    size={height/12}
-                    color={"#344ea9"}
-                    loading={true}
-                  />
-                  : (<React.Fragment>
-                      <p className='smallCardText' style={{ fontSize: width/80 }}>Projetos em</p>
-                      <p className='smallCardText' style={{ fontSize: width/80 }}>andamento</p>
-                      <p className='smallCardText' style={{ fontSize: width/30, marginTop:height/30 }}>{ projects.length }</p>
-                    </React.Fragment> 
-                )}
-            </div>
-          </button>
-          <button className='btn' onClick={() => refMembers.current.scrollIntoView({behavior: 'smooth'})}>
-            <div className='smallCard' style={{ height: height/3.5, width: height/3.5 }}>
-              { projects.length === 0 
-                ? <HashLoader
-                    size={height/12}
-                    color={"#344ea9"}
-                    loading={true}
-                  />
-                  : (<React.Fragment>
-                      <p className='smallCardText' style={{ fontSize: width/80 }}>Membros</p>
-                      <p className='smallCardText' style={{ fontSize: width/30, marginTop:height/30 }}>{ members.length }</p>
-                    </React.Fragment> 
-                )}
-              
-            </div>
-          </button>
+      <div className='page'>
+        <div className='pageFlex'>
+          <div className='bigCard'>
+            <img className='bigCardImg' src={IEEEdesc} alt="ieeedesc"/>
+          </div>
+          <div className='smallCardsView'>
+            <button className='btn' onClick={() => refProjects.current.scrollIntoView({behavior: 'smooth'})}>
+              <div className='smallCard'>
+                { projects.length === 0 
+                  ? <HashLoader
+                      size={height/12}
+                      color={"#344ea9"}
+                      loading={true}
+                    />
+                    : (<React.Fragment>
+                        <p className='smallCardText'>Projetos em</p>
+                        <p className='smallCardText'>andamento</p>
+                        <p id='smallCardNumber' className='smallCardText'>{ projects.length }</p>
+                      </React.Fragment> 
+                  )}
+              </div>
+            </button>
+            <button className='btn' onClick={() => refMembers.current.scrollIntoView({behavior: 'smooth'})}>
+              <div className='smallCard'>
+                { projects.length === 0 
+                  ? <HashLoader
+                      size={height/12}
+                      color={"#344ea9"}
+                      loading={true}
+                    />
+                    : (<React.Fragment>
+                        <p className='smallCardText'>Membros</p>
+                        <p id='smallCardNumber' className='smallCardText'>{ members.length }</p>
+                      </React.Fragment> 
+                  )}
+                
+              </div>
+            </button>
+          </div>
         </div>
       </div>
-      
+
       { projects.length === 0
         ? (
           <div 
@@ -190,84 +191,96 @@ function Home() {
           )
         : (
           <React.Fragment>
-            <div className='pageProject' style={{ height: height*(7/8) , width: width, backgroundColor:'#292E56' }}>
-              <div className='projectTopView' style={{ height: height/12, width: width }}>
-                <p className='doneTitle' style={{ fontSize: height/17 }}>FEITOS</p>
+            <div className='page'>
+              <div className='pageProject' style={{ height: height*(7/8) , width: width, backgroundColor:'#292E56' }}>
+                <div className='projectTopView' style={{ height: height/12, width: width }}>
+                  <p className='doneTitle'>FEITOS</p>
+                </div>
+                <Carousel
+                  width={width*0.9}
+                  height={height*(7/8)}
+                  showStatus={false} 
+                  showThumbs={false}
+                  showArrows={false}
+                  renderArrowNext={width > 768 ? (clickHander) => arrowCarrousel(true, clickHander) : () => null}
+                  renderArrowPrev={width > 768 ? (clickHander) => arrowCarrousel(false, clickHander) : () => null}
+                >
+                  { dones.map((element, index) => (
+                      <React.Fragment>
+                        <div key={index} className='carouselSlideView'>
+                          <div 
+                            className='blackCard' 
+                            style={{ backgroundColor: '#292E56' }}
+                          >
+                            <h1 className='blackCardTitle'>{element.title1}</h1>
+                            <p className='blackCardText'>{element.description1}</p>
+                          </div>
+                          { width > 768 
+                            ? (<div 
+                                className='blackCard'
+                                style={{ backgroundColor: '#292E56' }}
+                              >
+                                <h1 className='blackCardTitle'>{element.title2}</h1>
+                                <p className='blackCardText'>{element.description2}</p>
+                              </div>)
+                            : (null) }
+                        </div>
+                      </React.Fragment>
+                    )) 
+                  }
+                </Carousel>
               </div>
-              <Carousel
-                width={width*0.9}
-                height={height*(7/8)}
-                showStatus={false} 
-                showThumbs={false}
-                showArrows={false}
-                renderArrowNext={(clickHander) => arrowCarrousel(true, clickHander)}
-                renderArrowPrev={(clickHander) => arrowCarrousel(false, clickHander)}
-              >
-                { dones.map((element, index) => (
-                    <div key={index} className='carouselSlideView'>
-                      <div 
-                        className='blackCard' 
-                        style={{ height: height/1.7, width: width/4, marginLeft: width/20, marginRight: width/20, backgroundColor: '#292E56' }}
-                      >
-                        <h1 className='blackCardTitle'>{element.title1}</h1>
-                        <p className='blackCardText'>{element.description1}</p>
-                      </div>
-                      <div 
-                        className='blackCard'
-                        style={{ height: height/1.7, width: width/4, marginLeft: width/20, marginRight: width/20, backgroundColor: '#292E56' }}
-                      >
-                        <h1 className='blackCardTitle'>{element.title2}</h1>
-                        <p className='blackCardText'>{element.description2}</p>
-                      </div>
-                    </div>
-                  )) 
-                }
-              </Carousel>
             </div>
-            
+
             <ExpansiveCards
               ref={refProjects} 
               nameItens='PROJETOS'
               itens={projects}
               expand={expandProject}
               onClick={() => {refProjects.current.scrollIntoView({behavior: 'instant'}); isExpandProject(!expandProject)}}
-              itensPerLine={3}
+              itensPerLine={width > 768 ? 3 : 2}
               itensWithoutExpansive={6}
             />
 
-            <div className='pageProject' style={{ height: height*(7/8) , width: width, backgroundColor:'#292E56' }}>
-              <div className='projectTopView' style={{ height: height/12, width: width }}>
-                <p className='doneTitle' style={{ fontSize: height/17 }}>ÁREAS DE ATUAÇÃO</p>
+            <div className='page'>
+              <div className='pageProject' style={{ height: height*(7/8) , width: width, backgroundColor:'#292E56' }}>
+                <div className='projectTopView' style={{ height: height/12, width: width }}>
+                  <p className='doneTitle'>ÁREAS DE ATUAÇÃO</p>
+                </div>
+                <Carousel
+                  width={width*0.9}
+                  height={height*(7/8)}
+                  showStatus={false} 
+                  showThumbs={false}
+                  showArrows={false}
+                  renderArrowNext={width > 768 ? (clickHander) => arrowCarrousel(true, clickHander) : () => null}
+                  renderArrowPrev={width > 768 ? (clickHander) => arrowCarrousel(false, clickHander) : () => null}
+                >
+                  { newChapters.map((element, index) => (
+                      <React.Fragment>
+                        <div key={index} className='carouselSlideView'>
+                          <div 
+                            className='blackCard' 
+                            style={{ backgroundColor: '#292E56' }}
+                          >
+                            <h1 className='blackCardTitle'>{element.title1}</h1>
+                            <p className='blackCardText'>{element.description1}</p>
+                          </div>
+                          { width > 768
+                            ? (<div 
+                                className='blackCard'
+                                style={{ backgroundColor: '#292E56' }}
+                              >
+                                <h1 className='blackCardTitle'>{element.title2}</h1>
+                                <p className='blackCardText'>{element.description2}</p>
+                              </div>)
+                            : (null) }
+                        </div>
+                      </React.Fragment>
+                    )) 
+                  }
+                </Carousel>
               </div>
-              <Carousel
-                width={width*0.9}
-                height={height*(7/8)}
-                showStatus={false} 
-                showThumbs={false}
-                showArrows={false}
-                renderArrowNext={(clickHander) => arrowCarrousel(true, clickHander)}
-                renderArrowPrev={(clickHander) => arrowCarrousel(false, clickHander)}
-              >
-                { newChapters.map((element, index) => (
-                    <div key={index} className='carouselSlideView'>
-                      <div 
-                        className='blackCard' 
-                        style={{ height: height/1.7, width: width/4, marginLeft: width/20, marginRight: width/20, backgroundColor: '#292E56' }}
-                      >
-                        <h1 className='blackCardTitle'>{element.title1}</h1>
-                        <p className='blackCardText'>{element.description1}</p>
-                      </div>
-                      <div 
-                        className='blackCard'
-                        style={{ height: height/1.7, width: width/4, marginLeft: width/20, marginRight: width/20, backgroundColor: '#292E56' }}
-                      >
-                        <h1 className='blackCardTitle'>{element.title2}</h1>
-                        <p className='blackCardText'>{element.description2}</p>
-                      </div>
-                    </div>
-                  )) 
-                }
-              </Carousel>
             </div>
 
             <ExpansiveCards 
@@ -276,12 +289,11 @@ function Home() {
               itens={members}
               expand={expandMember}
               onClick={() => {refMembers.current.scrollIntoView({behavior: 'instant'}); isExpandMember(!expandMember)}}
-              itensPerLine={3}
+              itensPerLine={width > 768 ? 3 : 2}
               itensWithoutExpansive={6}
             />
           </React.Fragment>
         ) }
-
       <Footer />
     </div>
   );

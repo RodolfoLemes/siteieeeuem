@@ -14,30 +14,42 @@ function ExpansiveCards(props, ref) {
 	const heightComponents = {
 		page: () => {
 			return expand 
-				? height*(7/8) + Math.ceil((itens.length-itensWithoutExpansive)/itensPerLine)*height*(8/21) + height/14
-				: height*(7/8) + height/14
+				? height + Math.ceil((itens.length-itensWithoutExpansive)/itensPerLine)*(width*0.15+height*0.06)
+				: height
 		},
 
 		bottomView: () => {
 			return expand 
-			? height*(6/8) + Math.ceil((itens.length-itensWithoutExpansive)/itensPerLine)*height*(8/21)
-			: height*(6/8)
-		}
+			? height*0.75 + Math.ceil((itens.length-itensWithoutExpansive)/itensPerLine)*(width*0.15+height*0.06)
+			: height*0.75
+		},
+
+		pageCellphone: () => {
+			return expand 
+				? height + Math.ceil((itens.length-itensWithoutExpansive)/itensPerLine)*(width*0.3+height*0.06)
+				: height
+		},
+
+		bottomViewCellphone: () => {
+			return expand 
+			? height*0.75 + Math.ceil((itens.length-itensWithoutExpansive)/itensPerLine)*(width*0.3+height*0.06)
+			: height*0.75
+		},
 	}
 
 	return (
-		<div ref={ref} className='pageItem' style={{ height: heightComponents.page(), width: width, marginTop: 20, marginBottom: 20 }}>
-			<div className='itemTopView' style={{ height: height/10, width: width }}>
-				<p className='itemTitle' style={{ fontSize: height/17 }}>{ nameItens }</p>
+		<div ref={ref} className='pageItem' style={{ height: width > 768 ? heightComponents.page() : heightComponents.pageCellphone() }}>
+			<div className='itemTopView'>
+				<p className='itemTitle'>{ nameItens }</p>
 			</div>
-			<div className='itemBottomView' style={{ height: heightComponents.bottomView(), width: width }}>
+			<div className='itemBottomView' style={{ height: width > 768 ? heightComponents.bottomView() : heightComponents.bottomViewCellphone() }}>
 			{ itens.map((element, index) => {
 					if(!expand) {
 						if(index < itensWithoutExpansive) {
 								return (<React.Fragment key={index}>
-												<div className='smallCard' style={{ height: height/3.5, width: height/3.5, margin: height/21 }}>
-													<p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{ element.title || element.name }</p>
-													<img className='itemImg' alt={element.title + 'logo'} src={ element.img }/>
+												<div className='smallCardExpansive'>
+													<p className='smallCardTextExpansive'>{ element.title || element.name }</p>
+													<img className='itemImgExpansive' alt={element.title + 'logo'} src={ element.img }/>
 												</div>
 												{ (index + 1) % itensPerLine === 0 
 													? (<div className='break'></div>)    
@@ -49,9 +61,9 @@ function ExpansiveCards(props, ref) {
 						}
 					} else {
 						return (<React.Fragment key={index}>
-												<div className='smallCard' style={{ height: height/3.5, width: height/3.5, margin: height/21 }}>
-													<p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{ element.title || element.name }</p>
-													<img className='itemImg' alt={element.title + 'logo'} src={ element.img }/>
+												<div className='smallCardExpansive'>
+													<p className='smallCardTextExpansive'>{ element.title || element.name }</p>
+													<img className='itemImgExpansive' alt={element.title + 'logo'} src={ element.img }/>
 												</div>
 												{ (index + 1) % itensPerLine === 0 
 													? (<div className='break'></div>)
@@ -66,8 +78,8 @@ function ExpansiveCards(props, ref) {
 					type="image" 
 					src={expand ? ArrowTop : ArrowBottom}
 					alt='arrows'
-					style={{ height: height/14, width: width/12, cursor: 'pointer' }}
 					onClick={props.onClick}
+					className='arrowButtonExpansive'
 				/>
 			</div>
 		</div>

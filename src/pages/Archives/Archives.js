@@ -57,8 +57,8 @@ function Archives() {
         <div className='iframeContainerChildren'>
           <Iframe 
             src={`https://drive.google.com/embeddedfolderview?id=${folderId[folder]}#list`}
-            height={height*0.7}
-            width={width*0.6}
+            height={height*0.58}
+            width={width*0.88}
             frameBorder="0"
           />
         </div>

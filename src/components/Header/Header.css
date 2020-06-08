@@ -1,27 +1,124 @@
+.useless {
+    display: flex;
+    flex: 1;
+    width: 100vw;
+}
+
 .headerView {
     position: -webkit-sticky; /* Safari */
     position: sticky;
+    height: 12.5vh;
+    width: 100vw;
     top: 0;
     display: flex;
     align-items: center;
     background-color: #F1F4FD;
-    z-index: 2;
+    z-index: 1000;
+}
+
+.headerImg {
+    height: 13vh;
+    width: 12.5vh;
+}
+
+.headerButtonsView {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 67.5vw;
+    height: inherit;
+}
+
+.headerCellphoneButtonsView {
+    display: none;
+}
+
+.headerArrowBottom {
+    cursor: pointer;
+    height: auto;
+    margin-left: 2vw;
+    width: 5vw;
 }
 
 .headerBtn {
-    margin-left: 100px;
+    height: 5vh;
+    width: 10vw;
+    margin-left: 3vw;
+}
+
+.headerContactBtn {
+    height: 5vh;
+    width: 10vw;
 }
 
 .headerRight {
     display: flex;
+    flex: 1;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 1vw;
+    height: inherit;
 }
 
 .textBtn {
+    font-size: 1.25em;
     margin-top: 0px;
     margin-bottom: 0px;
+    color: #F1F4FD;
     font-family: 'FuturaHv';
+}
+
+.headerImgView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    height: inherit;
+    margin-left: 10vw;
+}
+
+.headerIconCellphone {
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .headerView {
+        height: 64px;
+        width: 100vw;
+        top: 0;
+        display: flex;
+        background-color: #344EA9;
+        z-index: 1000;
+    }
+
+    .headerImg {
+        height: auto;
+        width: 40vw;
+    }
+
+    .headerRight {
+        width: 20vw;
+    }
+
+    .headerButtonsView {
+        flex-direction: column;
+        padding-top: 10vh;
+        height: 90vh;
+        background-color: #344EA9;
+    }
+    
+    .pageFlex {
+		flex-direction: column;
+    }
+    
+    .headerCellphoneButtonsView {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 67.5vw;
+        height: inherit;
+    }
 }
 
 @font-face {

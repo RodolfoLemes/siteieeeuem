@@ -26,8 +26,9 @@ function Store() {
   return (
     <div className='Store'>
       <Header />
-      <div style={{ display: 'flex', flexDirection: 'column', height: height*7/8, width: width, justifyContent: 'center', backgroundColor: '#aaa' }}>
-        <div id='animation' style={{ height:height*0.3, width: width*0.4, marginTop: height*0.1 }}>
+      <div className='pageStore'>
+        <p className='maintenceText'>EM MANUTENÇÃO</p>
+        <div className='animation'>
           <Lottie
             options={{
               renderer: renderer,
@@ -42,7 +43,6 @@ function Store() {
             direction={direction}
           />
         </div>
-        <p className='maintenceText'>EM MANUTENÇÃO</p>
       </div>
 
 

@@ -52,7 +52,7 @@
 .iframeContainer {
   display: flex;
   height: 70vh;
-  width: 60vw;
+  width: 100vw;
   align-items: center;
   justify-content: center;
   background-color: #344EA9;
@@ -62,7 +62,23 @@
 .iframeContainerChildren {
   display: flex;
   height: 60vh;
-  width: 54vw;
+  width: 90vw;
   background-color: white;
   border-radius: 30px;
+}
+
+@media (max-width: 768px){
+  .stickyButtonsArchives {
+    width: 100vw;
+    flex-wrap: wrap;
+    background-color: lawngreen;
+  }
+
+  .chapterButtonsSelected {
+    width: 21vw;
+  }
+
+  .chapterButtonsUnselected {
+    width: 20vw;
+  }
 }

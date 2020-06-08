@@ -1,49 +1,135 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Button } from '@material-ui/core';
-import { ShoppingCart, AccountCircle } from '@material-ui/icons';
+import { HomeRounded, EventRounded, StoreRounded, BookRounded, DescriptionRounded, ContactsRounded,
+  MenuRounded, ShoppingCartRounded, AccountCircleRounded } from '@material-ui/icons';
 import { Link, useLocation } from 'react-router-dom'
+import Sidebar from 'react-sidebar'
 
 import DimensionContext from '../../context/dimension'
+import ArrowBottom from '../../assets/arrowBottom.svg'
 import './Header.css';
 
 function Header() {
-  const { width, height } = useContext(DimensionContext)
 
+  const { width, height } = useContext(DimensionContext)
   const { pathname } = useLocation()
 
-  return (
-      <header className='headerView' style={{ height: height/8, width: width }}>
+  const [sidebarOpen, setSidebarOpen] = useState(false)
+
+  function renderSideBar() {
+    return (
+      <div className='headerButtonsView'>
+          <Button className='headerBtn' component={Link} to='/'>
+            <p className='textBtn' style={{ color: pathname === '/' ? '#292E56' : '#f1f4fd' }}>HOME</p>
+          </Button>
+          <Button className='headerBtn' component={Link} to='/events'>
+            <p className='textBtn' style={{ color: pathname === '/events' ? '#292E56' : '#f1f4fd' }}>EVENTOS</p>
+          </Button>
+          <Button className='headerBtn' component={Link} to='/store'>
+            <p className='textBtn' style={{ color: pathname === '/store' ? '#292E56' : '#f1f4fd' }}>LOJA</p>
+          </Button>
+          <Button className='headerBtn' component={Link} to='/blog'>
+            <p className='textBtn' style={{ color: pathname === '/blog' ? '#292E56' : '#f1f4fd' }}>BLOG</p>
+          </Button>
+          <Button className='headerBtn' component={Link} to='/archives'>
+            <p className='textBtn' style={{ color: pathname === '/archives' ? '#292E56' : '#f1f4fd' }}>ARQUIVOS</p>
+          </Button>
+          <Button 
+            className='headerBtn'
+            href={pathname === '/events' || pathname === '/store' || pathname === '/archives' ? '/#footer' : pathname + '#footer'}  
+          >
+            <p className='textBtn'> CONTATO </p>
+          </Button>
+      </div>
+    )
+  }
+
+  if(width > 768) {
+    return (
+      <header className='headerView'>
         <div>
-          <img src={require('../../assets/headerLogo.png')} style={{ height: width/16, width: width/16 }} alt='Logo Student Branch IEEE UEM' />
+          <img 
+            className='headerImg' 
+            src={require('../../assets/headerLogo.png')} 
+            alt='Logo Student Branch IEEE UEM' 
+          />
         </div>
-        <Button style={{ height: height/20, flex: 1, marginLeft: width/80 }} component={Link} to='/'>
-          <p className='textBtn' style={{ color: pathname === '/' ? '#292E56' : '#A0A8B7', fontSize: height/50 }}>HOME</p>
-        </Button>
-        <Button style={{ height: height/20, flex: 1, marginLeft: width/80 }} component={Link} to='/events'>
-          <p className='textBtn' style={{ color: pathname === '/events' ? '#292E56' : '#A0A8B7', fontSize: height/50 }}>EVENTOS</p>
-        </Button>
-        <Button style={{ height: height/20, flex: 1, marginLeft: width/80 }} component={Link} to='/store'>
-          <p className='textBtn' style={{ color: pathname === '/store' ? '#292E56' : '#A0A8B7', fontSize: height/50 }}>LOJA</p>
-        </Button>
-        <Button style={{ height: height/20, flex: 1, marginLeft: width/80 }} component={Link} to='/blog'>
-          <p className='textBtn' style={{ color: pathname === '/blog' ? '#292E56' : '#A0A8B7', fontSize: height/50 }}>BLOG</p>
-        </Button>
-        <Button style={{ height: height/20, flex: 1, marginLeft: width/80 }} component={Link} to='/archives'>
-          <p className='textBtn' style={{ color: pathname === '/archives' ? '#292E56' : '#A0A8B7', fontSize: height/50 }}>ARQUIVOS</p>
-        </Button>
-        <Button style={{ height: height/20, flex: 1, marginLeft: width/65, borderRadius: height/20, backgroundColor: '#292E56' }}>
-          <p className='textBtn' style={{ fontSize: height/50, color: "#ffffff" }}> CONTATO </p>
-        </Button>
-        <div className='headerRight' style={{ height: height/8, flex: 5, marginRight: width/80 }}>
+        <div className='headerButtonsView'>
+          <Button className='headerBtn' component={Link} to='/'>
+            <p className='textBtn' style={{ color: pathname === '/' ? '#292E56' : '#A0A8B7' }}>HOME</p>
+          </Button>
+          <Button className='headerBtn' component={Link} to='/events'>
+            <p className='textBtn' style={{ color: pathname === '/events' ? '#292E56' : '#A0A8B7' }}>EVENTOS</p>
+          </Button>
+          <Button className='headerBtn' component={Link} to='/store'>
+            <p className='textBtn' style={{ color: pathname === '/store' ? '#292E56' : '#A0A8B7' }}>LOJA</p>
+          </Button>
+          <Button className='headerBtn' component={Link} to='/blog'>
+            <p className='textBtn' style={{ color: pathname === '/blog' ? '#292E56' : '#A0A8B7' }}>BLOG</p>
+          </Button>
+          <Button className='headerBtn' component={Link} to='/archives'>
+            <p className='textBtn' style={{ color: pathname === '/archives' ? '#292E56' : '#A0A8B7' }}>ARQUIVOS</p>
+          </Button>
+          <Button 
+            className='headerContactBtn' 
+            style={{ borderRadius: height/20, marginLeft: width*0.03, backgroundColor: '#292e56' }}
+            href={pathname === '/events' || pathname === '/store' || pathname === '/archives' ? '/#footer' : pathname + '#footer'} 
+          >
+            <p className='textBtn'> CONTATO </p>
+          </Button>
+        </div>
+        <div className='headerCellphoneButtonsView'>
+          <Button className='headerBtn' component={Link} to='/'>
+            <p className='textBtn' style={{ color: pathname === '/' ? '#292E56' : '#A0A8B7' }}>HOME</p>
+          </Button>
+        </div>
+        <div className='headerRight'>
           <Button component={Link} to='/store'>
-            <ShoppingCart style={{ height: height/25, width: height/25 }}/>
+            <ShoppingCartRounded style={{ height: height/25, width: height/25, color: '#292E56' }}/>
           </Button>
           <Button component={Link} to='/user'>
-            <AccountCircle style={{ height: height/25, width: height/25 }}/>
+            <AccountCircleRounded style={{ height: height/25, width: height/25, color: '#292E56' }}/>
           </Button>
         </div>
       </header>
-  );
+    )
+  } else {
+    return (
+      <div className='useless'>
+        <Sidebar
+            sidebar={renderSideBar()}
+            open={sidebarOpen}
+            onSetOpen={(open) => setSidebarOpen(open)}
+            styles={{ sidebar: { zIndex: 900 }, overlay: { backgroundColor: 'rgba(0,0,0,0)', zIndex: 800 } }}
+            shadow={false}
+          >
+            <button 
+              onClick={() => setSidebarOpen(true)}
+              style={{ position: 'absolute', zIndex: 2000, width: 64, height: 64, padding: 0, backgroundColor: '#344EA9', borderWidth: 0 }}
+            >
+              <MenuRounded style={{ height: 32, width: 32, color: '#f1f4fd' }}/>
+            </button>
+        </Sidebar>
+        <header className='headerView'>
+          <div className='headerImgView'>
+              <img 
+                className='headerImg' 
+                src={require('../../assets/longLogo.png')} 
+                alt='Logo Student Branch IEEE UEM' 
+              />
+          </div>
+          <div className='headerRight'>
+              <Button component={Link} to='/store'>
+                <ShoppingCartRounded style={{ height: 22, width: 22, color: '#f1f4fd' }}/>
+              </Button>
+              <Button component={Link} to='/user'>
+                <AccountCircleRounded style={{ height: 22, width: 22, color: '#f1f4fd' }}/>
+              </Button>
+          </div>
+        </header>
+      </div>
+    )
+  }
 }
 
 export default Header
