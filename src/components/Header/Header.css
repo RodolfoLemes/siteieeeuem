@@ -82,8 +82,9 @@
     margin: 0;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .headerView {
+        position: fixed;
         height: 64px;
         width: 100vw;
         top: 0;

@@ -46,7 +46,7 @@ function Footer(props) {
 	return (
 		<footer id='footer' className='pageFooter' style={{ backgroundColor:'#292E56' }}>
 			<div className='contactTopView' style={{ width: blogPage ? width*0.9 : width, marginRight: blogPage ? width*0.2 : 0  }}>
-				<p className='contactTitle' style={{ fontSize: height/17 }}>CONTATO</p>
+				<p className='contactTitle'>CONTATO</p>
 			</div>
 			<div className='contactBottomView' style={{ width: blogPage ? width*0.9 : width, marginRight: blogPage ? width*0.2 : 0 }}>
 				<div className='contactBottomLeftView'>
@@ -86,10 +86,10 @@ function Footer(props) {
 					<p className='contactBottomRightText'>Avenida Colombo, 5970</p>
 					<p className='contactBottomRightText'>ieeeuem@gmail.com</p>
 					<div className='socialMediaFooter'>
-						<a className='socialMediaFooterIcon' target="_blank" href='https://www.instagram.com/ieeeuem/'>
+						<a id='instagram' className='socialMediaFooterIcon' target="_blank" href='https://www.instagram.com/ieeeuem/'>
 							<Instagram style={{ height: height/25, width: height/25, color: '#F1F4FD' }}/>
 						</a>
-						<a className='socialMediaFooterIcon' target="_blank" href='https://pt-br.facebook.com/ieeeuem/'>
+						<a id='facebook' className='socialMediaFooterIcon' target="_blank" href='https://pt-br.facebook.com/ieeeuem/'>
 							<Facebook style={{ height: height/25, width: height/25, color: '#F1F4FD' }}/>
 						</a>
 					</div>

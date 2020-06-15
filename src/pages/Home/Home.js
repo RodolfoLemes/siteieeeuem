@@ -192,8 +192,8 @@ function Home() {
         : (
           <React.Fragment>
             <div className='page'>
-              <div className='pageProject' style={{ height: height*(7/8) , width: width, backgroundColor:'#292E56' }}>
-                <div className='projectTopView' style={{ height: height/12, width: width }}>
+              <div className='pageProject'>
+                <div className='projectTopView'>
                   <p className='doneTitle'>FEITOS</p>
                 </div>
                 <Carousel
@@ -243,7 +243,7 @@ function Home() {
             />
 
             <div className='page'>
-              <div className='pageProject' style={{ height: height*(7/8) , width: width, backgroundColor:'#292E56' }}>
+              <div className='pageProject'>
                 <div className='projectTopView' style={{ height: height/12, width: width }}>
                   <p className='doneTitle'>ÁREAS DE ATUAÇÃO</p>
                 </div>
