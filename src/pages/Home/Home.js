@@ -12,7 +12,7 @@ import Footer from '../../components/Footer/Footer'
 import DimensionContext from '../../context/dimension'
 import './Home.css'
 
-import IEEEdesc from '../../assets/Group_70.svg'
+import IEEEdesc from '../../assets/mainImage.svg'
 import arrowLeft from '../../assets/arrowLeft.svg'
 import arrowRight from '../../assets/arrowRight.svg'
 

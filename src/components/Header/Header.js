@@ -99,12 +99,12 @@ function Header() {
             sidebar={renderSideBar()}
             open={sidebarOpen}
             onSetOpen={(open) => setSidebarOpen(open)}
-            styles={{ sidebar: { zIndex: 900, position: 'fixed', overflowY: 'hidden' }, overlay: { backgroundColor: 'rgba(0,0,0,0)', zIndex: 800, content: { height: 300 } } }}
+            styles={{ sidebar: { zIndex: 50, position: 'fixed', overflowY: 'hidden' }, overlay: { backgroundColor: 'rgba(0,0,0,0)', zIndex: 40 } }}
             shadow={false}
           >
             <button 
-              onClick={() => setSidebarOpen(true)}
-              style={{ position: 'fixed', zIndex: 2000, width: 64, height: 64, padding: 0, backgroundColor: '#344EA9', borderWidth: 0 }}
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              style={{ position: 'fixed', zIndex: 60, width: 64, height: 64, padding: 0, backgroundColor: '#344EA9', borderWidth: 0 }}
             >
               <MenuRounded style={{ height: 32, width: 32, color: '#f1f4fd' }}/>
             </button>

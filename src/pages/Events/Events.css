@@ -277,11 +277,12 @@ abbr[title] {
 	}
 
 	.eventsContainer {
+		height: 100vh;
+		margin-top: 8vh;
 		flex-direction: column;
 	}
 
 	.eventsCardView {
-
 		padding-bottom: 0;
 		width: 100%;
 	}

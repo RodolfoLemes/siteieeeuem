@@ -294,3 +294,21 @@ export const Projects = [
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1590602582/site-ieee-uem/Scan_3D-site_nfuu6z.svg'
   },
 ]
+
+export const Courses = [
+  {
+    title: 'Sistema Linux',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/w_250,c_fill,ar_1:1,g_auto,r_max/v1592624913/site-ieee-uem/Curso_-_Sistema_Linux_opn0ys.png',
+    link: 'https://forms.gle/6JwccfUVw53HSn2k9'
+  },
+  {
+    title: 'Word/Excel',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/w_250,c_fill,ar_1:1,g_auto,r_max/v1592624913/site-ieee-uem/Curso_-_Lattes_p63jmg.png',
+    link: 'https://forms.gle/sVAxw2sWMxxWHkoU7'
+  },
+  {
+    title: 'Lattes',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/w_250,c_fill,ar_1:1,g_auto,r_max/v1592624898/site-ieee-uem/Excel_zmwpbz.png',
+    link: 'https://forms.gle/HRH57T8MUaMU7Zkh7'
+  },
+]

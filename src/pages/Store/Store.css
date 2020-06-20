@@ -2,7 +2,7 @@
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
-	background-color:#F1F4FD;
+	background-color:#f1f4fd;
 }
 
 
@@ -11,7 +11,8 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	height: 87.5vh;
+	height: fit-content;
+	min-height: 87.5vh;
 	width: inherit;
 }
 
@@ -37,6 +38,10 @@
 	.animation {
 		margin-top: 5vh;
 		width: 100vw;
+	}
+
+	.pageStore {
+		margin-top: 8vh;
 	}
 }
 
