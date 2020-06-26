@@ -47,10 +47,10 @@ export const Courses = [
     dates: [new Date('2020-07-03T14:00:00')]
   },
   {
-    title: 'Energias Renováveis',
+    title: 'Energia Fotovoltaica',
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593189186/site-ieee-uem/Curso_-_Energias_renov%C3%A1veis_zczo0e.png',
     link: 'https://forms.gle/HRH57T8MUaMU7Zkh7',
-    route: 'energias',
+    route: 'energia',
     dates: [new Date('2020-07-03T19:30:00')]
   },
 ]
