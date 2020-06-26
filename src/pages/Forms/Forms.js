@@ -78,7 +78,7 @@ function Forms() {
                 {Course.dates.map((element, index) => {
                   return (
                     <React.Fragment>
-                      {`${index + 1}° - ${element.getDate()}/${element.getMonth() + 1} as ${element.getHours()}:${element.getMinutes()}h`}
+                      {`${index + 1}° - ${element.getDate()}/${element.getMonth() + 1} as ${element.getHours()}:${element.getMinutes() < 10 ? '0' + element.getMinutes() : element.getMinutes()}h`}
                       <br/>
                     </React.Fragment>
                     )
