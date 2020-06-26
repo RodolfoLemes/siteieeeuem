@@ -8,6 +8,7 @@ import Blog from './pages/Blog/Blog';
 import Events from './pages/Events/Events';
 import Home from './pages/Home/Home';
 import Store from './pages/Store/Store';
+import Forms from './pages/Forms/Forms';
 import User from './pages/User/User';
 
 function Routes() {
@@ -19,7 +20,8 @@ function Routes() {
                     <Route path='/archives' component={Archives} />
                     <Route path='/blog' component={Blog} />
                     <Route path='/events' component={Events} />
-                    <Route path='/store' component={Store} />
+                    <Route path='/store' exact={true} component={Store} />
+                    <Route path='/store/:course' component={Forms} />
                     <Route path='/user' component={User} />
                 </Switch>
             </BrowserRouter>

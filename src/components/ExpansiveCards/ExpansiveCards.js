@@ -1,4 +1,6 @@
 import React, { forwardRef } from 'react'
+import { Link } from 'react-router-dom'
+import { Button } from '@material-ui/core';
 
 import './ExpansiveCards.css'
 import ArrowBottom from '../../assets/arrowBottom.svg'
@@ -48,12 +50,12 @@ function ExpansiveCards(props, ref) {
 					if(!expand) {
 						if(index < itensWithoutExpansive) {
 							return (<React.Fragment key={index}>
-												<a className='cardBtn' target="_blank" href={ element.link }>
+												<Button className='cardBtn' component={Link} to={'/store/' + element.route}>
 													<div className='smallCardExpansive'>
 														<p className='smallCardTextExpansive'>{ element.title || element.name }</p>
 														<img className='itemImgExpansive' alt={element.title + 'logo'} src={ element.img }/>
 													</div>
-												</a>
+												</Button>
 													{ (index + 1) % itensPerLine === 0 
 														? (<div className='break'></div>)    
 														: (null)
@@ -64,12 +66,12 @@ function ExpansiveCards(props, ref) {
 						}
 					} else {
 						return (<React.Fragment key={index}>
-											<a className='cardBtn' target="_blank" href={ element.link }>
+											<Button className='cardBtn' component={Link} to={'/store/' + element.route}>
 												<div className='smallCardExpansive'>
 													<p className='smallCardTextExpansive'>{ element.title || element.name }</p>
 													<img className='itemImgExpansive' alt={element.title + 'logo'} src={ element.img }/>
 												</div>
-											</a>
+											</Button>
 												{ (index + 1) % itensPerLine === 0 
 													? (<div className='break'></div>)
 													: (null)

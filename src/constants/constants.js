@@ -299,16 +299,22 @@ export const Courses = [
   {
     title: 'Sistema Linux',
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/w_250,c_fill,ar_1:1,g_auto,r_max/v1592624913/site-ieee-uem/Curso_-_Sistema_Linux_opn0ys.png',
-    link: 'https://forms.gle/6JwccfUVw53HSn2k9'
+    link: 'https://forms.gle/6JwccfUVw53HSn2k9',
+    route: 'linux',
+    dates: [new Date('2020-06-22T14:00:00'), new Date('2020-06-24T14:00:00')]
   },
   {
     title: 'Word/Excel',
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/w_250,c_fill,ar_1:1,g_auto,r_max/v1592624913/site-ieee-uem/Curso_-_Lattes_p63jmg.png',
-    link: 'https://forms.gle/sVAxw2sWMxxWHkoU7'
+    link: 'https://forms.gle/sVAxw2sWMxxWHkoU7',
+    route: 'word',
+    dates: [new Date('2020-06-23T14:00:00'), new Date('2020-06-25T14:00:00')]
   },
   {
     title: 'Lattes',
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/w_250,c_fill,ar_1:1,g_auto,r_max/v1592624898/site-ieee-uem/Excel_zmwpbz.png',
-    link: 'https://forms.gle/HRH57T8MUaMU7Zkh7'
+    link: 'https://forms.gle/HRH57T8MUaMU7Zkh7',
+    route: 'lattes',
+    dates: [new Date('2020-06-26T14:00:00')]
   },
 ]
