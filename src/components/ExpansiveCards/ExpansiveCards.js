@@ -50,7 +50,7 @@ function ExpansiveCards(props, ref) {
 					if(!expand) {
 						if(index < itensWithoutExpansive) {
 							return (<React.Fragment key={index}>
-												<Button className='cardBtn' component={Link} to={'/store/' + element.route}>
+												<Button style={{ backgroundColor: 'transparent' }} component={Link} to={'/store/' + element.route}>
 													<div className='smallCardExpansive'>
 														<p className='smallCardTextExpansive'>{ element.title || element.name }</p>
 														<img className='itemImgExpansive' alt={element.title + 'logo'} src={ element.img }/>
@@ -66,7 +66,7 @@ function ExpansiveCards(props, ref) {
 						}
 					} else {
 						return (<React.Fragment key={index}>
-											<Button className='cardBtn' component={Link} to={'/store/' + element.route}>
+											<Button style={{ backgroundColor: 'transparent' }} component={Link} to={'/store/' + element.route}>
 												<div className='smallCardExpansive'>
 													<p className='smallCardTextExpansive'>{ element.title || element.name }</p>
 													<img className='itemImgExpansive' alt={element.title + 'logo'} src={ element.img }/>

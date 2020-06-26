@@ -297,24 +297,24 @@ export const Projects = [
 
 export const Courses = [
   {
-    title: 'Sistema Linux',
-    img: 'https://res.cloudinary.com/ieee-uem/image/upload/w_250,c_fill,ar_1:1,g_auto,r_max/v1592624913/site-ieee-uem/Curso_-_Sistema_Linux_opn0ys.png',
+    title: 'Python Básico',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593189186/site-ieee-uem/Curso_-_Python_lhrxv1.png',
     link: 'https://forms.gle/6JwccfUVw53HSn2k9',
-    route: 'linux',
-    dates: [new Date('2020-06-22T14:00:00'), new Date('2020-06-24T14:00:00')]
+    route: 'python',
+    dates: [new Date('2020-06-29T14:00:00'), new Date('2020-06-30T14:00:00'), new Date('2020-07-01T14:00:00')]
   },
   {
-    title: 'Word/Excel',
-    img: 'https://res.cloudinary.com/ieee-uem/image/upload/w_250,c_fill,ar_1:1,g_auto,r_max/v1592624913/site-ieee-uem/Curso_-_Lattes_p63jmg.png',
+    title: 'Github',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593189186/site-ieee-uem/Curso_-_Github_shxznm.png',
     link: 'https://forms.gle/sVAxw2sWMxxWHkoU7',
-    route: 'word',
-    dates: [new Date('2020-06-23T14:00:00'), new Date('2020-06-25T14:00:00')]
+    route: 'github',
+    dates: [new Date('2020-07-03T14:00:00')]
   },
   {
-    title: 'Lattes',
-    img: 'https://res.cloudinary.com/ieee-uem/image/upload/w_250,c_fill,ar_1:1,g_auto,r_max/v1592624898/site-ieee-uem/Excel_zmwpbz.png',
+    title: 'Energias Renováveis',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593189186/site-ieee-uem/Curso_-_Energias_renov%C3%A1veis_zczo0e.png',
     link: 'https://forms.gle/HRH57T8MUaMU7Zkh7',
-    route: 'lattes',
-    dates: [new Date('2020-06-26T14:00:00')]
+    route: 'energias',
+    dates: [new Date('2020-07-03T19:30:00')]
   },
 ]
