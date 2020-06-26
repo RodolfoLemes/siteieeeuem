@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     background-color: #F1F4FD;
-    z-index: 1000;
+    z-index: 55;
 }
 
 .headerImg {
@@ -82,14 +82,11 @@
     margin: 0;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .headerView {
+        position: fixed;
         height: 64px;
-        width: 100vw;
-        top: 0;
-        display: flex;
         background-color: #344EA9;
-        z-index: 1000;
     }
 
     .headerImg {
@@ -99,6 +96,11 @@
 
     .headerRight {
         width: 20vw;
+    }
+
+    .headerBtn {
+        width: 100%;
+        padding: 5px;
     }
 
     .headerButtonsView {

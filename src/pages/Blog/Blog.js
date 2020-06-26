@@ -1,14 +1,15 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState, useEffect, useContext } from 'react'
 
 import { Chapters } from '../../constants/constants'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import ExpansiveBlog from '../../components/ExpansiveBlog/ExpansiveBlog'
+import DimensionContext from '../../context/dimension'
 
 import './Blog.css';
 
 function Blog() {
-
+  const { width, height } = useContext(DimensionContext)
   const [folder, setFolder] = useState('IEEE')
 
   const handleScroll = (event) => {
@@ -77,36 +78,36 @@ function Blog() {
         ref={refIEEE}
         nameItens='IEEE'
         itens={Chapters}
-        itensPerLine={2}
-        itensWithoutExpansive={4}
+        itensPerLine={width > 768 ? 2 : 1}
+        itensWithoutExpansive={width > 768 ? 4 : 2}
       />
       <ExpansiveBlog
         ref={refRAS}
         nameItens='RAS'
         itens={Chapters}
-        itensPerLine={2}
-        itensWithoutExpansive={4}
+        itensPerLine={width > 768 ? 2 : 1}
+        itensWithoutExpansive={width > 768 ? 4 : 2}
       />
       <ExpansiveBlog
         ref={refPES}
         nameItens='PES'
         itens={Chapters}
-        itensPerLine={2}
-        itensWithoutExpansive={4}
+        itensPerLine={width > 768 ? 2 : 1}
+        itensWithoutExpansive={width > 768 ? 4 : 2}
       />
       <ExpansiveBlog
         ref={refCS}
         nameItens='CS'
         itens={Chapters}
-        itensPerLine={2}
-        itensWithoutExpansive={4}
+        itensPerLine={width > 768 ? 2 : 1}
+        itensWithoutExpansive={width > 768 ? 4 : 2}
       />
       <ExpansiveBlog
         ref={refBIOENG}
         nameItens='BIOENG'
         itens={Chapters}
-        itensPerLine={2}
-        itensWithoutExpansive={4}
+        itensPerLine={width > 768 ? 2 : 1}
+        itensWithoutExpansive={width > 768 ? 4 : 2}
       />
 
       <Footer

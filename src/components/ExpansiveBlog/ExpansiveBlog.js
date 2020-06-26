@@ -3,6 +3,7 @@ import React, { useContext, useState, useRef, forwardRef } from 'react'
 import DimensionContext from '../../context/dimension'
 import ArrowBottom from '../../assets/arrowBottom.svg'
 import ArrowTop from '../../assets/arrowTop.svg'
+import './ExpansiveBlog.css'
 
 const backgroundColor = {
   IEEE: "#344EA9",
@@ -42,18 +43,18 @@ function ExpansiveBlog(props, ref) {
   }
 
   return (
-    <div ref={refDiv} className='pageItem' style={{ height: heightComponents.page(), width: width, paddingBottom: 20, backgroundColor: backgroundColor[nameItens] }}>
-        <div ref={ref} className='itemTopView' style={{ height: height/10, width: width*0.9, paddingRight: width*0.1 }}>
-          <p className='itemTitle' style={{ fontSize: height/17, color: '#f1f4fd' }}>{ nameItens }</p>
+    <div ref={refDiv} className='blogPageItem' style={{ height: heightComponents.page(), backgroundColor: backgroundColor[nameItens] }}>
+        <div ref={ref} className='blogItemTopView'>
+          <p className='blogItemTitle'>{ nameItens }</p>
         </div>
-        <div className='itemBottomView' style={{ height: heightComponents.bottomView(), width: width*0.9, paddingRight: width*0.1 }}>
+        <div className='blogItemBottomView' style={{ height: heightComponents.bottomView()}}>
         { itens.map((element, index) => {
             if(!expand) {
               if(index < itensWithoutExpansive) {
                   return (<React.Fragment key={index}>
-                          <div className='smallCard' style={{ height: height/3.5, width: width/3, margin: height/21, backgroundColor: '#f1f4fd', justifyContent: 'flex-start' }}>
+                          <div className='blogSmallCard' style={{ height: height/3.5, margin: height/21, backgroundColor: '#f1f4fd', justifyContent: 'flex-start' }}>
                               <div style={{ height: '30%', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                <p className='smallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{ element.title }</p>
+                                <p className='blogSmallCardText' style={{ fontSize: width/80, marginBottom: height/80 }}>{ element.title }</p>
                               </div>
                               <div style={{ display: 'flex', flexDirection: 'row', height: '50%', width: '100%', justifyContent:'center', alignItems: 'center' }}>
                                 <div style={{ height: '100%', width: '55%', marginRight: '5%' }}>

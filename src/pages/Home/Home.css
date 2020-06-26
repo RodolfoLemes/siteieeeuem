@@ -28,6 +28,8 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	background-color: #292E56;
+	height: 87.5vh;
 }
 
 .bigCard {
@@ -58,8 +60,8 @@
 }
 
 .smallCard {
-	min-width: 150px;
-	min-height: 150px;
+	min-width: 140px;
+	min-height: 140px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -113,6 +115,8 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	width: 100vw;
+	height: 9vh;
 }
 
 .projectTopView2 {
@@ -161,9 +165,14 @@
 .blackCardText {
 	font-family: 'Roboto';
 	text-align: justify;
-	white-space: -webkit-pre-wrap;
+	white-space: inherit;
+	text-overflow: ellipsis;
+	width: 100%;
+	height: 100%;
+	display: block;
+	overflow: hidden;
 	word-wrap: break-word;
-	word-break: break-all;
+	hyphens: auto;
 	color: #F1F4FD;
 }
 
@@ -181,6 +190,7 @@
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+	z-index: 45;
 }
 
 body {
@@ -195,7 +205,7 @@ footer {
 	outline: none;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	.pageFlex {
 		flex-direction: column;
 	}
@@ -223,6 +233,7 @@ footer {
 	}
 
 	.smallCardText {
+		color: #292E56;
 		font-size: 1.2em;
 	}
 
@@ -244,6 +255,7 @@ footer {
 		font-size: 2em;
 	}
 }
+
 
 @font-face {
 	font-family: 'FuturaHv';

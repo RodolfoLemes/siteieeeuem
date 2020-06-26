@@ -1,0 +1,118 @@
+.blogPageItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  width: 100vw;
+}
+
+.blogItemTopView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10vw;
+  width: 90vw;
+  height: 10vh;
+}
+
+.blogItemTitle {
+  font-family: 'FuturaHv';
+  font-size: 2.8em;
+  color: #f1f4fd;
+}
+
+.blogItemBottomView {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding-right: 10vw;
+  width: 90vw;
+  height: 75vh;
+}
+
+.buttonView {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+  width: inherit;
+}
+
+.arrowButtonExpansive {
+  width: 7vw;
+  height: auto;
+}
+
+.blogSmallCard {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f4fd;
+  border-radius: 60px;
+  box-shadow: 0px 8px 24px rgba(50, 50, 71, 0.2), 0px 6px 12px rgba(50, 50, 71, 0.2);
+  margin: 3vh;
+  padding: 10px;
+  width: 30vw;
+  height: 15vw;
+}
+
+.smallCardTextExpansive {
+  font-family: 'FuturaHv';
+  font-size: 1.25em;
+  overflow-wrap: break-word;
+  margin-bottom: 5%;
+  color: #292E56;
+}
+
+.itemImgExpansive {
+  display: block;
+  height: 60%;
+  width: auto;
+  border-radius: 50%;
+  margin-bottom: 10%;
+  object-fit: cover;
+  overflow-block: hidden;
+}
+
+@media (max-width: 768px){
+  .blogItemTopView {
+    padding-right: 0px;
+    width: 100vw;
+  }
+
+  .blogItemTitle {
+    font-size: 2em;
+  }
+
+  .blogItemBottomView {
+    padding-right: 0px;
+    width: 100vw;
+  }
+
+  .blogSmallCard {
+      border-radius: 30px;
+      width: 90vw;
+      height: 32vw;
+  }
+
+  .smallCardTextExpansive {
+      font-size: 0.9em;
+      text-align: center;
+  }
+
+  .arrowButtonExpansive {
+      width: 15vw;
+  }
+
+  .itemTitle {
+      font-size: 2em;
+  }
+}

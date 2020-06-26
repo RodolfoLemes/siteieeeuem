@@ -1,9 +1,12 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useRef, useEffect } from 'react'
 import  Lottie  from  'lottie-web-react'
 
 import './Store.css';
+import api from '../../utils/api'
+import ExpansiveCards from '../../components/ExpansiveCards/ExpansiveCards'
 import DimensionContext from '../../context/dimension'
 import Header from '../../components/Header/Header'
+import { Courses } from '../../constants/constants'
 
 const renderer = 'svg'
 let watchAnimationData = require('../../assets/maintenceAnm.json')
@@ -15,6 +18,9 @@ function Store() {
 
   const { width, height } = useContext(DimensionContext)
 
+  const refCourses = useRef()
+
+  const [expandCourse, isExpandCourse] = useState(false)
   const [playingState] = useState('play')
   const [autoplay] = useState(false)
   const [loop] = useState(true)
@@ -27,7 +33,7 @@ function Store() {
     <div className='Store'>
       <Header />
       <div className='pageStore'>
-        <p className='maintenceText'>EM MANUTENÇÃO</p>
+        {/* <p className='maintenceText'>EM MANUTENÇÃO</p>
         <div className='animation'>
           <Lottie
             options={{
@@ -42,7 +48,17 @@ function Store() {
             speed={speed}
             direction={direction}
           />
-        </div>
+        </div> */}
+        <ExpansiveCards
+          ref={refCourses}
+          nameItens='CURSOS'
+          itens={Courses}
+          expand={expandCourse}
+          onClick={() => {refCourses.current.scrollIntoView({behavior: 'instant'}); isExpandCourse(!expandCourse)}}
+          itensPerLine={width > 768 ? 3 : 2}
+          itensWithoutExpansive={6}
+          clickable={true}
+        />
       </div>
 
 

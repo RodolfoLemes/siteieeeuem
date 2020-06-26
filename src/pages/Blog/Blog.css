@@ -28,6 +28,13 @@
     margin-top: 10px;
 }
 
+
+@media screen and (max-width: 767px) {
+    .stickyButtons {
+        display: none;
+    }
+}
+
 @font-face {
 	font-family: 'FuturaHv';
 	src: url('../../assets/fonts/futura-heavy.ttf');
