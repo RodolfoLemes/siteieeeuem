@@ -86,7 +86,7 @@ function Header() {
           <Button component={Link} to='/store'>
             <ShoppingCartRounded style={{ height: height/25, width: height/25, color: '#292E56' }}/>
           </Button>
-          <Button component={Link} to='/user'>
+          <Button component={Link} to='/'>
             <AccountCircleRounded style={{ height: height/25, width: height/25, color: '#292E56' }}/>
           </Button>
         </div>
@@ -121,7 +121,7 @@ function Header() {
               <Button component={Link} to='/store'>
                 <ShoppingCartRounded style={{ height: 22, width: 22, color: '#f1f4fd' }}/>
               </Button>
-              <Button component={Link} to='/user'>
+              <Button component={Link} to='/'>
                 <AccountCircleRounded style={{ height: 22, width: 22, color: '#f1f4fd' }}/>
               </Button>
           </div>

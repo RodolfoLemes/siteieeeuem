@@ -1,21 +1,17 @@
 import React, { useState, useContext } from 'react'
 import Iframe from 'react-iframe'
 import { Instagram, Facebook } from '@material-ui/icons';
+//import { useAlert } from 'react-alert'
 
 import './Footer.css'
-import transporter from '../../utils/mailer'
 import DimensionContext from '../../context/dimension'
+import api from '../../utils/api'
 import { urlMap } from '../../constants/urls'
-
-const ieeeUemEmail = ''
-
-function isEmail(email) {
-	var re = /\S+@\S+\.\S+/;
-  return re.test(email);
-}
 
 function Footer(props) {
 	const { width, height } = useContext(DimensionContext)
+
+	//const alert = useAlert()
 
 	if(props.blogPage) {
 		var { blogPage } = props
@@ -28,17 +24,17 @@ function Footer(props) {
 
 	async function sendEmail() {
 		if(email !== '' && msg !== '') {
-			if(isEmail(email)) {
-				let info = await transporter.sendMail({
-					from: email, // sender address
-					to: ieeeUemEmail, // list of receivers
-					subject: "CONTATO", // Subject line
-					text: msg, // plain text body
-				})
+			const response = await api.post('api/contact', {
+				email,
+				msg
+			})
 
-				if(info) {
-					console.log("TORBA")
-				}
+			if(response.data) {
+				setEmail('')
+				setMsg('')
+				//alert.show('Email enviado com sucesso. Vlw, parceiro. Tenha um bom dia')
+			} else {
+				//alert.show('Tu fez coisa errada ai, corrija')
 			}
 		}
 	}

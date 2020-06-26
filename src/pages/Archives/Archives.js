@@ -3,15 +3,8 @@ import Iframe from 'react-iframe'
 
 import DimensionContext from '../../context/dimension'
 import Header from '../../components/Header/Header'
+import { folderId } from '../../constants/urls'
 import './Archives.css';
-
-const folderId = {
-  IEEE: '12uNwKsVt9xyZyhvfoR_-DUKni2J5wmb7',
-  CS: '1TbqF3fO23qymPhipZ7lO16O66RLVo3hJ',
-  RAS: '18Knj-qZaMlQ_Q_2Fq_7k4CM8PKVyNO8L',
-  PES: '1m3hLfFV7nlFJdSOc_6LMZRXa9N5kfhoS',
-  BIOENG: '1ao0bsQ7BIci-NperbsLRVoU7ZC4f4fPo'
-}
 
 const color = {
   IEEE: "#344EA9",
