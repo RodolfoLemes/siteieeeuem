@@ -27,12 +27,12 @@ function Header() {
           <Button className='headerBtn' component={Link} to='/store'>
             <p className='textBtn' style={{ color: pathname === '/store' ? '#292E56' : '#f1f4fd' }}>LOJA</p>
           </Button>
-          <Button className='headerBtn' component={Link} to='/blog'>
+          {/* <Button className='headerBtn' component={Link} to='/blog'>
             <p className='textBtn' style={{ color: pathname === '/blog' ? '#292E56' : '#f1f4fd' }}>BLOG</p>
           </Button>
           <Button className='headerBtn' component={Link} to='/archives'>
             <p className='textBtn' style={{ color: pathname === '/archives' ? '#292E56' : '#f1f4fd' }}>ARQUIVOS</p>
-          </Button>
+          </Button> */}
           <Button 
             className='headerBtn'
             href={pathname === '/events' || pathname === '/store' || pathname === '/archives' ? '/#footer' : pathname + '#footer'}  
@@ -63,12 +63,12 @@ function Header() {
           <Button className='headerBtn' component={Link} to='/store'>
             <p className='textBtn' style={{ color: pathname === '/store' ? '#292E56' : '#A0A8B7' }}>LOJA</p>
           </Button>
-          <Button className='headerBtn' component={Link} to='/blog'>
+          {/* <Button className='headerBtn' component={Link} to='/blog'>
             <p className='textBtn' style={{ color: pathname === '/blog' ? '#292E56' : '#A0A8B7' }}>BLOG</p>
           </Button>
           <Button className='headerBtn' component={Link} to='/archives'>
             <p className='textBtn' style={{ color: pathname === '/archives' ? '#292E56' : '#A0A8B7' }}>ARQUIVOS</p>
-          </Button>
+          </Button> */}
           <Button 
             className='headerContactBtn' 
             style={{ borderRadius: height/20, marginLeft: width*0.03, backgroundColor: '#292e56' }}
