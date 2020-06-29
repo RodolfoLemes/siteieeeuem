@@ -5,6 +5,7 @@ import { Button } from '@material-ui/core';
 import './ExpansiveCards.css'
 import ArrowBottom from '../../assets/arrowBottom.svg'
 import ArrowTop from '../../assets/arrowTop.svg'
+import finished from '../../assets/finished.svg'
 
 function ExpansiveCards(props, ref) {
 
@@ -50,13 +51,22 @@ function ExpansiveCards(props, ref) {
 					if(!expand) {
 						if(index < itensWithoutExpansive) {
 							return (<React.Fragment key={index}>
-												<Button style={{ backgroundColor: 'transparent' }} component={Link} to={'/store/' + element.route}>
-													<div className='smallCardExpansive'>
-														<p className='smallCardTextExpansive'>{ element.title || element.name }</p>
-														<img className='itemImgExpansive' alt={element.title + 'logo'} src={ element.img }/>
-													</div>
-												</Button>
-													{ (index + 1) % itensPerLine === 0 
+												{ element.clickable
+													? (<Button style={{ backgroundColor: 'transparent' }} component={Link} to={'/store/' + element.route}>
+															<div className='smallCardExpansive'>
+																<p className='smallCardTextExpansive'>{ element.title || element.name }</p>
+																<img className='itemImgExpansive' alt={element.title + 'logo'} src={ element.img }/>
+															</div>
+														</Button>)
+													: (<Button style={{ backgroundColor: 'transparent', cursor: 'default' }}>
+															<div className='smallCardExpansive'>
+																<p className='smallCardTextExpansive'>{ element.title || element.name }</p>
+																<img className='itemImgExpansive' alt={element.title + 'logo'} src={ element.img }/>
+																<img className='itemImgHover' alt={element.title + 'logo'} src={ finished }/>
+															</div>
+														</Button>)
+												 }
+												 { (index + 1) % itensPerLine === 0 
 														? (<div className='break'></div>)    
 														: (null)
 													}
@@ -66,12 +76,21 @@ function ExpansiveCards(props, ref) {
 						}
 					} else {
 						return (<React.Fragment key={index}>
-											<Button style={{ backgroundColor: 'transparent' }} component={Link} to={'/store/' + element.route}>
-												<div className='smallCardExpansive'>
-													<p className='smallCardTextExpansive'>{ element.title || element.name }</p>
-													<img className='itemImgExpansive' alt={element.title + 'logo'} src={ element.img }/>
-												</div>
-											</Button>
+							{ element.clickable
+													? (<Button style={{ backgroundColor: 'transparent' }} component={Link} to={'/store/' + element.route}>
+															<div className='smallCardExpansive'>
+																<p className='smallCardTextExpansive'>{ element.title || element.name }</p>
+																<img className='itemImgExpansive' alt={element.title + 'logo'} src={ element.img }/>
+															</div>
+														</Button>)
+													: (<Button style={{ backgroundColor: 'transparent', cursor: 'default' }}>
+															<div className='smallCardExpansive'>
+																<p className='smallCardTextExpansive'>{ element.title || element.name }</p>
+																<img className='itemImgExpansive' alt={element.title + 'logo'} src={ element.img }/>
+																<img className='itemImgHover' alt={element.title + 'logo'} src={ finished }/>
+															</div>
+														</Button>)
+												 }
 												{ (index + 1) % itensPerLine === 0 
 													? (<div className='break'></div>)
 													: (null)

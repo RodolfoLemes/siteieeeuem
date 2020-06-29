@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import { DotLoader } from 'react-spinners'
+import ReCAPTCHA from "react-google-recaptcha"
 
 import api from '../../utils/api'
 import { Courses } from '../../constants/constants'
@@ -18,6 +19,8 @@ function Forms() {
   const [select, setSelect] = useState('')
   const [other, setOther] = useState('')
   const [loading, isLoading] = useState(false)
+  const [captcha, isCaptcha] = useState(false)
+  
 
   const history = useHistory()
   const { course } = useParams()
@@ -32,6 +35,10 @@ function Forms() {
     if(name != '' && email != '' && select != '') {
       if(!isEmail(email)) {
         alert('Insira um email válido')
+        return
+      }
+      if(!captcha) {
+        alert('Você é um robô!?')
         return
       }
       isLoading(true)
@@ -55,7 +62,15 @@ function Forms() {
     }
   }
 
+  async function sendCaptcha(e) {
+    const response = await api.post('api/reCaptcha', {
+      response: e
+    })
 
+    if(response.data.success) {
+      isCaptcha(true)
+    }
+  }
 
   return (
     <div className='Forms'>
@@ -118,8 +133,15 @@ function Forms() {
                   <input type='radio' className='formsRadioLabelInput' value='outro' checked={select === 'outro'} onChange={select => setSelect(select.target.value)}/>
                   <input type='text' className='formsRadioLabelOther' readOnly={select !== 'outro'} value={other} onChange={other => setOther(other.target.value)} placeholder='Outro...'/>
                 </label>
-                
               </label>
+
+              <label className='formsCaptcha'>
+                <ReCAPTCHA 
+                  sitekey="6LeOI6sZAAAAANKo_cspe6_Sgdgd28mQgwjwZGk5"
+                  onChange={sendCaptcha}
+                />
+              </label>
+              
               <div className='formsSubmit'>
                 <input type='button' className='formsSubmitBtn' value='Enviar' onClick={handleSubmit} />
               </div>

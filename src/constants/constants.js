@@ -33,24 +33,42 @@ export const Chapters = [
 
 export const Courses = [
   {
-    title: 'Python Básico',
-    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593189186/site-ieee-uem/Curso_-_Python_lhrxv1.png',
-    link: 'https://forms.gle/6JwccfUVw53HSn2k9',
-    route: 'python',
-    dates: [new Date('2020-06-29T14:00:00'), new Date('2020-06-30T14:00:00'), new Date('2020-07-01T14:00:00')]
-  },
-  {
     title: 'Github',
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593189186/site-ieee-uem/Curso_-_Github_shxznm.png',
-    link: 'https://forms.gle/sVAxw2sWMxxWHkoU7',
     route: 'github',
-    dates: [new Date('2020-07-03T14:00:00')]
+    dates: [new Date('2020-07-03T14:00:00')],
+    clickable: true
   },
   {
     title: 'Energia Fotovoltaica',
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593189186/site-ieee-uem/Curso_-_Energias_renov%C3%A1veis_zczo0e.png',
-    link: 'https://forms.gle/HRH57T8MUaMU7Zkh7',
     route: 'energia',
-    dates: [new Date('2020-07-03T19:30:00')]
+    dates: [new Date('2020-07-03T19:30:00')],
+    clickable: true
+  },
+  {
+    title: 'Python Básico',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593189186/site-ieee-uem/Curso_-_Python_lhrxv1.png',
+    route: 'python',
+    dates: [new Date('2020-06-29T14:00:00'), new Date('2020-06-30T14:00:00'), new Date('2020-07-01T14:00:00')],
+    clickable: false 
+  },
+  {
+    title: 'Excel/Word',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1592624898/site-ieee-uem/Excel_zmwpbz.png',
+    route: 'excel',
+    clickable: false 
+  },
+  {
+    title: 'Lattes',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1592624913/site-ieee-uem/Curso_-_Lattes_p63jmg.png',
+    route: 'lattes',
+    clickable: false
+  },
+  {
+    title: 'Sistema Linux',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1592624913/site-ieee-uem/Curso_-_Sistema_Linux_opn0ys.png',
+    route: 'linux',
+    clickable: false
   },
 ]

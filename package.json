@@ -19,6 +19,7 @@
     "react-admin": "^3.5.5",
     "react-calendar": "^3.1.0",
     "react-dom": "^16.13.1",
+    "react-google-recaptcha": "^2.1.0",
     "react-iframe": "^1.8.0",
     "react-responsive-carousel": "^3.2.7",
     "react-router-dom": "^5.2.0",

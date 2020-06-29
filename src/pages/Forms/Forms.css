@@ -95,6 +95,14 @@
   font-family: 'FuturaHv';
 }
 
+.formsCaptcha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px 0 10px 0px;
+}
+
 .formsSubmit {
   display: flex;
   align-items: center;
