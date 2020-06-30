@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import { DotLoader } from 'react-spinners'
 import ReCAPTCHA from "react-google-recaptcha"
@@ -21,15 +21,15 @@ function Forms() {
   const [loading, isLoading] = useState(false)
   const [captcha, isCaptcha] = useState(false)
   
-
+  const otherRef = useRef()
   const history = useHistory()
   const { course } = useParams()
 
   const Course = Courses.find(element => element.route === course)
 
-  if(!Course) {
-    return null
-  }
+  if(!Course) return null
+  if(!Course.clickable) return null
+  if(Course.dates[0].getTime() - Date.now() < 0) return null
 
   async function handleSubmit() {
     if(name != '' && email != '' && select != '') {
@@ -130,8 +130,8 @@ function Forms() {
                   Recomendação de amigo
                 </label>
                 <label className='formsRadioLabel'>
-                  <input type='radio' className='formsRadioLabelInput' value='outro' checked={select === 'outro'} onChange={select => setSelect(select.target.value)}/>
-                  <input type='text' className='formsRadioLabelOther' readOnly={select !== 'outro'} value={other} onChange={other => setOther(other.target.value)} placeholder='Outro...'/>
+                  <input type='radio' className='formsRadioLabelInput' value='outro' checked={select === 'outro'} onChange={select => {setSelect(select.target.value); otherRef.current.focus()}}/>
+                  <input type='text' ref={otherRef} className='formsRadioLabelOther' readOnly={select !== 'outro'} value={other} onChange={other => setOther(other.target.value)} placeholder='Outro...'/>
                 </label>
               </label>
 
