@@ -32,7 +32,7 @@ function Forms() {
   if(Course.dates[0].getTime() - Date.now() < 0) return null
 
   async function handleSubmit() {
-    if(name != '' && email != '' && select != '') {
+    if(name != '' && email != '' && select != '' && other != '') {
       if(!isEmail(email)) {
         alert('Insira um email válido')
         return
@@ -88,7 +88,10 @@ function Forms() {
               <text className='formsTitle'>{'Curso de ' + Course.title }</text>
 
               <text className='formsDescription'>
-                Preencha esse formulário para se inscrever no nosso curso. :D
+                { Course.route === 'energia'
+                  ? ('Preencha esse formulário para se inscrever na mesa redonda :D')
+                  : ('Preencha esse formulário para se inscrever no nosso curso. :D') 
+                }
                 <br/>
                 {Course.dates.map((element, index) => {
                   return (
