@@ -32,7 +32,7 @@ function Forms() {
   if(Course.dates[0].getTime() - Date.now() < 0) return null
 
   async function handleSubmit() {
-    if(name != '' && email != '' && select != '' && other != '') {
+    if(name != '' && email != '' && select != '') {
       if(!isEmail(email)) {
         alert('Insira um email válido')
         return
