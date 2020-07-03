@@ -37,14 +37,14 @@ export const Courses = [
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593189186/site-ieee-uem/Curso_-_Github_shxznm.png',
     route: 'github',
     dates: [new Date('2020-07-03T14:00:00')],
-    clickable: true
+    clickable: false
   },
   {
     title: 'Energia Fotovoltaica',
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593189186/site-ieee-uem/Curso_-_Energias_renov%C3%A1veis_zczo0e.png',
     route: 'energia',
     dates: [new Date('2020-07-03T19:30:00')],
-    clickable: true
+    clickable: false
   },
   {
     title: 'Python Básico',
