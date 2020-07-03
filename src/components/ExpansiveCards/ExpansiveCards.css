@@ -65,6 +65,7 @@
 .smallCardTextExpansive {
     font-family: 'FuturaHv';
     font-size: 1.25em;
+    text-align: center;
     overflow-wrap: break-word;
     margin-bottom: 5%;
     color: #292E56;

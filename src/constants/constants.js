@@ -33,6 +33,27 @@ export const Chapters = [
 
 export const Courses = [
   {
+    title: 'Protheus',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593799620/site-ieee-uem/Curso_-_Protheus_bxwp0t.png',
+    route: 'protheus',
+    dates: [new Date('2020-07-08T14:00:00')],
+    clickable: true
+  },
+  {
+    title: 'EasyEDA',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593799620/site-ieee-uem/Curso_-_EasyEDA_gdzbop.png',
+    route: 'easyeda',
+    dates: [new Date('2020-07-09T14:00:00')],
+    clickable: true
+  },
+  {
+    title: 'Sensores e Transdutores',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593799620/site-ieee-uem/Curso_-_Sensores_e_Transdutores_yomczi.png',
+    route: 'transdutores',
+    dates: [new Date('2020-07-10T19:00:00'), new Date('2020-07-11T19:00:00')],
+    clickable: true
+  },
+  {
     title: 'Github',
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593189186/site-ieee-uem/Curso_-_Github_shxznm.png',
     route: 'github',
