@@ -90,7 +90,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	padding: 5vh;
+	padding: 6vh;
 	border-radius: 60px;
 	box-shadow: -2px -4px 12px rgba(255, 255, 255, 0.05), 2px 4px 18px rgba(0, 0, 0, 0.25), inset -2px -4px 6px rgba(0, 0, 0, 0.3), inset 2px 4px 6px rgba(255, 255, 255, 0.05);
 	margin-left: 5vw;
@@ -158,21 +158,15 @@
 
 .blackCardTitle {
 	font-family: 'FuturaHv';
+	font-size: 2em;
 	text-justify: distribute;
 	color: #F1F4FD;
 }
 
 .blackCardText {
 	font-family: 'Roboto';
+	font-size: 1.2em;
 	text-align: justify;
-	white-space: inherit;
-	text-overflow: ellipsis;
-	width: 100%;
-	height: 100%;
-	display: block;
-	overflow: hidden;
-	word-wrap: break-word;
-	hyphens: auto;
 	color: #F1F4FD;
 }
 

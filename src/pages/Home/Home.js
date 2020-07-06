@@ -1,7 +1,8 @@
 import React, { useContext, useState, useRef, useEffect } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import { HashLoader, DotLoader } from 'react-spinners'
+import { HashLoader, DotLoader } from 'react-spinners';
+import ClampLines from 'react-clamp-lines';
 
 import api from '../../utils/api'
 import shuffle from '../../utils/shuffle'
@@ -213,7 +214,14 @@ function Home() {
                             style={{ backgroundColor: '#292E56' }}
                           >
                             <h1 className='blackCardTitle'>{element.title1}</h1>
-                            <p className='blackCardText'>{element.description1}</p>
+                            <ClampLines
+                              text={element.description1}
+                              id='carouselText1'
+                              lines='10'
+                              ellipsis='...'
+                              className='blackCardText'
+                              buttons={false}
+                            />
                           </div>
                           { width > 768 
                             ? (<div 
@@ -221,7 +229,14 @@ function Home() {
                                 style={{ backgroundColor: '#292E56' }}
                               >
                                 <h1 className='blackCardTitle'>{element.title2}</h1>
-                                <p className='blackCardText'>{element.description2}</p>
+                                <ClampLines
+                                  text={element.description2}
+                                  id='carouselText2'
+                                  lines='10'
+                                  ellipsis='...'
+                                  className='blackCardText'
+                                  buttons={false}
+                                />
                               </div>)
                             : (null) }
                         </div>
