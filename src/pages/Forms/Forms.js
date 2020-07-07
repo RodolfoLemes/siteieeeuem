@@ -77,12 +77,14 @@ function Forms() {
       <Header />
       <div className='pageForms'>
         { loading
-          ? (<DotLoader
-              margin={10}
-              size={200}
-              color={"#344ea9"}
-              loading={true}
-            />)
+          ? (<div className='dotLoaderView'>
+              <DotLoader
+                margin={10}
+                size={200}
+                color={"#344ea9"}
+                loading={true}
+              />
+            </div>)
           : (
             <form className='formsCourse'>
               <text className='formsTitle'>{'Curso de ' + Course.title }</text>
