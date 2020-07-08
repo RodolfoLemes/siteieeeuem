@@ -212,12 +212,13 @@ function Home() {
                           <div 
                             className='blackCard' 
                             style={{ backgroundColor: '#292E56' }}
+                            title={element.description1}
                           >
                             <h1 className='blackCardTitle'>{element.title1}</h1>
                             <ClampLines
                               text={element.description1}
                               id='carouselText1'
-                              lines='10'
+                              lines={width < 768 ? '10' : '100'}
                               ellipsis='...'
                               className='blackCardText'
                               buttons={false}
@@ -227,12 +228,13 @@ function Home() {
                             ? (<div 
                                 className='blackCard'
                                 style={{ backgroundColor: '#292E56' }}
+                                title={element.description2}
                               >
                                 <h1 className='blackCardTitle'>{element.title2}</h1>
                                 <ClampLines
                                   text={element.description2}
                                   id='carouselText2'
-                                  lines='10'
+                                  lines={width < 768 ? '10' : '100'}
                                   ellipsis='...'
                                   className='blackCardText'
                                   buttons={false}

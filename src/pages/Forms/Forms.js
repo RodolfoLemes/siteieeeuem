@@ -89,6 +89,8 @@ function Forms() {
             <form className='formsCourse'>
               <text className='formsTitle'>{'Curso de ' + Course.title }</text>
 
+              <div dangerouslySetInnerHTML={{__html: Course.description || null}} />
+
               <text className='formsDescription'>
                 { Course.route === 'energia'
                   ? ('Preencha esse formulário para se inscrever na mesa redonda :D')
@@ -105,7 +107,7 @@ function Forms() {
                 })}
                 Qualquer dúvida, entre em contato conosco: ieeeuem@gmail.com.
               </text>
-              
+
               <label className='formsName'>
                 <text className='formsNameTitle'>Nome:</text>
                 <input type='text' className='formsNameText' placeholder='Nome completo' value={name} onChange={name => setName(name.target.value)}/>
