@@ -50,7 +50,7 @@ function monthExists(date, events) {
 const colorDots = {
   IEEE: "#344EA9",
   CS: "#FFC34E",
-  RAS: "#FF647C",
+  RAS: "#F44336",
   PES: "#45EA36",
   BIOENG: "#2D3142"
 }

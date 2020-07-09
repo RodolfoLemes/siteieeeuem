@@ -8,6 +8,8 @@ import DimensionContext from '../../context/dimension'
 import Header from '../../components/Header/Header'
 import { Courses } from '../../constants/constants'
 
+import youtubeIcon from '../../assets/youtube.svg'
+
 /* const renderer = 'svg'
 let watchAnimationData = require('../../assets/maintenceAnm.json')
 const  rendererSettings = {
@@ -32,6 +34,12 @@ function Store() {
   return (
     <div className='Store'>
       <Header />
+      <div className={width < 768 ? 'stickyYoutubeCellphone' : 'stickyYoutube'}>
+        <a  href='https://www.youtube.com/channel/UClNXr5wAuSNTNGquZUShnSA' target='_blank'>
+          <img src={youtubeIcon} />
+          <text>Nosso <br/> canal</text>
+        </a>
+      </div>
       <div className='pageStore'>
         {/* <p className='maintenceText'>EM MANUTENÇÃO</p>
         <div className='animation'>

@@ -59,7 +59,7 @@ function Blog() {
         <button 
           onClick={() => { refRAS.current.scrollIntoView({ behavior: 'smooth' }); setFolder('RAS') }} 
           className={ folder === 'RAS' ? 'chapterButtonsSelected' : 'chapterButtonsUnselected' }  
-          style={{ backgroundColor: '#FF647C' }}>RAS</button>
+          style={{ backgroundColor: '#F44336' }}>RAS</button>
         <button 
           onClick={() => { refPES.current.scrollIntoView({ behavior: 'smooth' }); setFolder('PES') }} 
           className={ folder === 'PES' ? 'chapterButtonsSelected' : 'chapterButtonsUnselected' }  

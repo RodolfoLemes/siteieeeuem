@@ -30,6 +30,54 @@
 	width: 40vw;
 }
 
+.stickyYoutube {
+	position: fixed;
+	top: 20vh;
+	right: 4vw;
+	height: fit-content;
+	width: fit-content;
+	border-radius: 20px;
+	background-color: #F44336;
+}
+
+.stickyYoutube a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	font-family: 'FuturaHv';
+	padding: 5px 30px 5px 10px;
+	color: #f1f4fd;
+}
+
+.stickyYoutube a text {
+	text-align: center;
+	margin-left: 10px;
+}
+
+.stickyYoutubeCellphone {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	height: 75px;
+	width: 75px;
+	border-radius: 50%;
+	background-color: #F44336;
+	z-index: 30;
+}
+
+.stickyYoutubeCellphone a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	font-family: 'FuturaHv';
+	padding: 5px 30px 5px 10px;
+	color: #f1f4fd;
+}
+
 @media (max-width: 768px) {
 	.maintenceText {
 		margin-top: 10vh;
@@ -44,6 +92,15 @@
 	.pageStore {
 		margin-top: 8vh;
 	}
+
+	.stickyYoutubeCellphone a {
+		padding: 5px;
+	}
+
+	.stickyYoutubeCellphone a text {
+		display: none;
+	}
+
 }
 
 @font-face {
