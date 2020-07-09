@@ -37,7 +37,7 @@ export const Courses = [
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594236754/site-ieee-uem/Curso_-_Gest%C3%A3o_de_tempo_bw4ayk.png',
     route: 'tempo',
     dates: [new Date('2020-07-15T14:00:00')],
-    description: '<p className="formsP">Gestão de tempo é uma ferramenta essêncial para o desenvolvimento pessoal de qualquer pessoa. Nesse curso você aprenderá a como administrar seus horários.<p>',
+    description: '<p class="formsP">Gestão de tempo é uma ferramenta essêncial para o desenvolvimento pessoal de qualquer pessoa. Nesse curso você aprenderá a como administrar seus horários.<p>',
     clickable: true
   },
   {
@@ -45,7 +45,7 @@ export const Courses = [
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594236754/site-ieee-uem/Curso_-_NBR5410_o590ew.png',
     route: 'norma',
     dates: [new Date('2020-07-16T10:00:00')],
-    description: '<p className="formsP">A Norma NBR5410 refere-se a estabelece as condições mínimas para o perfeito funcionamento de uma instalação elétrica de baixa tensão. Nesse curso você será introduzido a NBR5410.<p>',
+    description: '<p class="formsP">A Norma NBR5410 refere-se a estabelece as condições mínimas para o perfeito funcionamento de uma instalação elétrica de baixa tensão. Nesse curso você será introduzido a NBR5410.<p>',
     clickable: true
   },
   {
@@ -53,7 +53,7 @@ export const Courses = [
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594236754/site-ieee-uem/Curso_-_Illustrator_jls9kn.png',
     route: 'illustrator',
     dates: [new Date('2020-07-13T17:00:00'), new Date('2020-07-14T17:00:00')],
-    description: '<p className="formsP">Adobe Illustrator é um software de edição de imagens vetoriais. Nesse curso você será introduzido ao mundo da edição de vetores. Pré-requisito: ter o software instalado.<p>',
+    description: '<p class="formsP">Adobe Illustrator é um software de edição de imagens vetoriais. Nesse curso você será introduzido ao mundo da edição de vetores. Pré-requisito: ter o software instalado.<p>',
     clickable: true
   },
   {
@@ -61,7 +61,7 @@ export const Courses = [
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594236754/site-ieee-uem/Curso_-_Photoshop_ec64ja.png',
     route: 'photoshop',
     dates: [new Date('2020-07-14T14:00:00')],
-    description: '<p className="formsP">Adobe Photoshop é um software de edição de imagens bidimensionais. Nesse curso você será introduzido ao mundo da edição de imagens. Pré-requisito: ter o software instalado.<p>',
+    description: '<p class="formsP">Adobe Photoshop é um software de edição de imagens bidimensionais. Nesse curso você será introduzido ao mundo da edição de imagens. Pré-requisito: ter o software instalado.<p>',
     clickable: true
   },
   {
@@ -69,15 +69,7 @@ export const Courses = [
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594236754/site-ieee-uem/Curso_-_Photoshop-1_twoosy.png',
     route: 'premiere',
     dates: [new Date('2020-07-13T14:00:00')],
-    description: '<p className="formsP">Adobe Premiere é um software de edição de vídeos. Nesse curso você será introduzido ao mundo da edição de vídeos. Pré-requisito: ter o software instalado.<p>',
-    clickable: true
-  },
-  {
-    title: 'EasyEDA',
-    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593799620/site-ieee-uem/Curso_-_EasyEDA_gdzbop.png',
-    route: 'easyeda',
-    dates: [new Date('2020-07-09T14:00:00')],
-    description: '<p className="formsP">EasyEDA é um software de Design de PCBs e Esquemáticos muito utilizado por profissionais na área da Engenharia.<br/> Acesse a o link <a href="https://easyeda.com/" target="_blank">EasyEDA</a> para o download e o registro.<p>',
+    description: '<p class="formsP">Adobe Premiere é um software de edição de vídeos. Nesse curso você será introduzido ao mundo da edição de vídeos. Pré-requisito: ter o software instalado.<p>',
     clickable: true
   },
   {
@@ -86,6 +78,14 @@ export const Courses = [
     route: 'transdutores',
     dates: [new Date('2020-07-10T19:00:00'), new Date('2020-07-11T19:00:00')],
     clickable: true
+  },
+  {
+    title: 'EasyEDA',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593799620/site-ieee-uem/Curso_-_EasyEDA_gdzbop.png',
+    route: 'easyeda',
+    dates: [new Date('2020-07-09T14:00:00')],
+    description: '<p className="formsP">EasyEDA é um software de Design de PCBs e Esquemáticos muito utilizado por profissionais na área da Engenharia.<br/> Acesse a o link <a href="https://easyeda.com/" target="_blank">EasyEDA</a> para o download e o registro.<p>',
+    clickable: false
   },
   {
     title: 'Protheus',
