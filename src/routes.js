@@ -22,7 +22,7 @@ function Routes() {
                     <Route path='/events' component={Events} />
                     <Route path='/store' exact={true} component={Store} />
                     <Route path='/store/:course' component={Forms} />
-                    {/* <Route path='/user' component={User} /> */}
+                    <Route path='/user' component={User} />
                 </Switch>
             </BrowserRouter>
         </DimensionProvider> 

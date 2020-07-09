@@ -12,7 +12,6 @@ import { Admin,
   Edit,
   EditButton,
   DeleteButton } from 'react-admin';
-import jsonServerProvider from 'ra-data-json-server';
 
 import AuthProvider from '../../provider/AuthProvider'
 import DataProvider from '../../provider/DataProvider'
@@ -22,11 +21,10 @@ const EventList = (props) => (
   <List {...props}>
     <Datagrid>
         <TextField source="id" />
-        <TextField source="_id" />
         <TextField source="date" />
         <TextField source="chapter" />
         <TextField source="description" />
-        <EditButton />
+        {/* <EditButton /> */}
         <DeleteButton undoable={false} />
     </Datagrid>
   </List>
@@ -50,7 +48,7 @@ const EventCreate = (props) => (
 )
 
 
-const EventEdit = (props) => (
+/* const EventEdit = (props) => (
   <Edit title="Event MyEdit" {...props} >
     <SimpleForm>
       <TextField source="description" />
@@ -60,13 +58,13 @@ const EventEdit = (props) => (
       <TextField source="date" />
     </SimpleForm>
   </Edit>
-)
+) */
 
 function User() {
   return (
     <div className="User">
       <Admin dataProvider={DataProvider} authProvider={AuthProvider}>
-        <Resource name="event" list={EventList} create={EventCreate} edit={EventEdit} />
+        <Resource name="event" list={EventList} create={EventCreate} />
     	</Admin>
     </div>
   );

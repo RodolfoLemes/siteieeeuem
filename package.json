@@ -14,8 +14,6 @@
     "nodemailer": "^6.4.8",
     "prop-types": "^15.7.2",
     "query-string": "^6.13.1",
-    "ra-data-json-server": "^3.5.5",
-    "ra-data-simple-rest": "^3.5.5",
     "react": "^16.13.1",
     "react-admin": "^3.5.5",
     "react-calendar": "^3.1.0",

@@ -218,7 +218,7 @@ function Home() {
                             <ClampLines
                               text={element.description1}
                               id='carouselText1'
-                              lines={width < 768 ? '10' : '100'}
+                              lines={'10'}
                               ellipsis='...'
                               className='blackCardText'
                               buttons={false}
@@ -234,7 +234,7 @@ function Home() {
                                 <ClampLines
                                   text={element.description2}
                                   id='carouselText2'
-                                  lines={width < 768 ? '10' : '100'}
+                                  lines={'10'}
                                   ellipsis='...'
                                   className='blackCardText'
                                   buttons={false}
