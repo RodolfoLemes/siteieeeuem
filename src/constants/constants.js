@@ -33,14 +33,6 @@ export const Chapters = [
 
 export const Courses = [
   {
-    title: 'Gestão de Tempo',
-    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594236754/site-ieee-uem/Curso_-_Gest%C3%A3o_de_tempo_bw4ayk.png',
-    route: 'tempo',
-    dates: [new Date('2020-07-15T14:00:00')],
-    description: '<p className="formsP">Gestão de tempo é uma ferramenta essêncial para o desenvolvimento pessoal de qualquer pessoa. Nesse curso você aprenderá a como administrar seus horários.<p>',
-    clickable: true
-  },
-  {
     title: 'Norma NBR5410',
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594236754/site-ieee-uem/Curso_-_NBR5410_o590ew.png',
     route: 'norma',
