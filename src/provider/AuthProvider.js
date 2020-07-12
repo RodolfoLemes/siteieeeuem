@@ -3,17 +3,21 @@ import api from '../utils/api'
 export default {
   // called when the user attempts to log in
   login: async ({ username, password }) => {
-    const response = await api.post('api/auth', {
-        login: username,
-        password
-    })
-
-    if(response.data) {
-        localStorage.setItem('username', username);
-        return Promise.resolve();
-    } else {
-        return Promise.reject()
+    try {
+        const response = await api.post('api/auth', {
+            login: username,
+            password
+        })
+        if(response.data) {
+          localStorage.setItem('username', username);
+          return Promise.resolve();
+        } else {
+            return Promise.reject();
+        }
+    } catch (error) {
+        return Promise.reject();
     }
+    
   },
   // called when the user clicks on the logout button
   logout: () => {
