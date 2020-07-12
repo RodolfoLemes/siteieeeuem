@@ -69,7 +69,7 @@ export const Courses = [
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1593799620/site-ieee-uem/Curso_-_Sensores_e_Transdutores_yomczi.png',
     route: 'transdutores',
     dates: [new Date('2020-07-10T19:00:00'), new Date('2020-07-11T19:00:00')],
-    clickable: true
+    clickable: false
   },
   {
     title: 'EasyEDA',

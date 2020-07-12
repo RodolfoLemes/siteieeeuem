@@ -100,7 +100,11 @@ function Forms() {
                 {Course.dates.map((element, index) => {
                   return (
                     <React.Fragment>
-                      {`${index + 1}° - ${element.getDate()}/${element.getMonth() + 1} as ${element.getHours()}:${element.getMinutes() < 10 ? '0' + element.getMinutes() : element.getMinutes()}h`}
+                      {/* {element.getTimezoneOffset() == 180 
+                        ? `${index + 1}° - ${element.getDate()}/${element.getMonth() + 1} as ${element.getHours()}:${element.getMinutes() < 10 ? '0' + element.getMinutes() : element.getMinutes()}h`
+                        : `${index + 1}° - ${element.getDate()}/${element.getMonth() + 1} as ${}`
+                      } */}
+                      { `${index + 1}° - ${element.getDate()}/${element.getMonth() + 1} as ${element.toLocaleTimeString('pt-BR')}, no horario de brasília.`}
                       <br/>
                     </React.Fragment>
                     )
