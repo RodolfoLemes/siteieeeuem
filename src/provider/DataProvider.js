@@ -2,7 +2,7 @@ import { fetchUtils } from 'react-admin';
 import { stringify } from 'query-string';
 
 import api from '../utils/api'
-const apiUrl = 'http://backendieee.herokuapp.com';
+const apiUrl = 'https://backendieee.herokuapp.com';
 const httpClient = fetchUtils.fetchJson;
 
 export default {
@@ -15,10 +15,10 @@ export default {
           filter: JSON.stringify(params.filter),
       }; */
       //const url = `${apiUrl}/${resource}?${stringify(query)}`;
-      const url =  `${apiUrl}/${resource}`
-      const response = await api.get(url)
+      //const url =  `${apiUrl}/${resource}`
+      const response = await api.get(resource)
 
-      const data2 = response.data.map((element, index) => {
+      const data2 = response.data.map((element) => {
         return {
           id: element._id,
           ...element
