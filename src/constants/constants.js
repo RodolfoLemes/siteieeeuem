@@ -41,14 +41,6 @@ export const Courses = [
     clickable: true
   },
   {
-    title: 'Adobe Illustrator',
-    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594236754/site-ieee-uem/Curso_-_Illustrator_jls9kn.png',
-    route: 'illustrator',
-    dates: [new Date('2020-07-13T17:00:00'), new Date('2020-07-14T17:00:00')],
-    description: '<p class="formsP">Adobe Illustrator é um software de edição de imagens vetoriais. Nesse curso você será introduzido ao mundo da edição de vetores. Pré-requisito: ter o software instalado.<p>',
-    clickable: true
-  },
-  {
     title: 'Adobe Photoshop',
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594236754/site-ieee-uem/Curso_-_Photoshop_ec64ja.png',
     route: 'photoshop',
@@ -57,12 +49,20 @@ export const Courses = [
     clickable: true
   },
   {
+    title: 'Adobe Illustrator',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594236754/site-ieee-uem/Curso_-_Illustrator_jls9kn.png',
+    route: 'illustrator',
+    dates: [new Date('2020-07-13T17:00:00'), new Date('2020-07-14T17:00:00')],
+    description: '<p class="formsP">Adobe Illustrator é um software de edição de imagens vetoriais. Nesse curso você será introduzido ao mundo da edição de vetores. Pré-requisito: ter o software instalado.<p>',
+    clickable: false
+  },
+  {
     title: 'Adobe Premiere',
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594236754/site-ieee-uem/Curso_-_Photoshop-1_twoosy.png',
     route: 'premiere',
     dates: [new Date('2020-07-13T14:00:00')],
     description: '<p class="formsP">Adobe Premiere é um software de edição de vídeos. Nesse curso você será introduzido ao mundo da edição de vídeos. Pré-requisito: ter o software instalado.<p>',
-    clickable: true
+    clickable: false
   },
   {
     title: 'Sensores e Transdutores',
