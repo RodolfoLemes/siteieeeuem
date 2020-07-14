@@ -46,7 +46,7 @@ export const Courses = [
     route: 'photoshop',
     dates: [new Date('2020-07-14T14:00:00')],
     description: '<p class="formsP">Adobe Photoshop é um software de edição de imagens bidimensionais. Nesse curso você será introduzido ao mundo da edição de imagens. Pré-requisito: ter o software instalado.<p>',
-    clickable: true
+    clickable: false
   },
   {
     title: 'Adobe Illustrator',
