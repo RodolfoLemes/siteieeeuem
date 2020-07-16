@@ -38,7 +38,7 @@ export const Courses = [
     route: 'norma',
     dates: [new Date('2020-07-16T10:00:00')],
     description: '<p class="formsP">A Norma NBR5410 refere-se a estabelece as condições mínimas para o perfeito funcionamento de uma instalação elétrica de baixa tensão. Nesse curso você será introduzido a NBR5410.<p>',
-    clickable: true
+    clickable: false
   },
   {
     title: 'Adobe Photoshop',
