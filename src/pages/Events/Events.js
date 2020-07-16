@@ -95,20 +95,45 @@ function Events() {
   function createDatesInfo() {
     var elements = monthExists(date, events)
 
-    if(elements.length > 0){
+    var sortedElements = []
+    var notSortedElements = []
+    for(let element of elements) {
+      let date = new Date(element.date)
+
+      if(date - Date.now() >= 0) {
+        sortedElements.push(element)
+      } else {
+        notSortedElements.unshift(element)
+      }
+    }
+
+    var final = [ ...sortedElements, ...notSortedElements ]
+
+    if(final.length > 0){
       return (
         <React.Fragment>
-            { elements.map((element, index) => (
-              <div key={index} className='eventsCard' style={{ backgroundColor: colorDots[element.chapter] }}>
-                <div className='eventsCardDate'>
-                  <p className='eventsCardDateFont'>{new Date(element.date).getDate()}</p>
-                  <p className='eventsCardDateFont'>{number2month(new Date(element.date).getMonth())}</p>
+            { sortedElements.map((element, index) => (
+                <div key={index} className='eventsCard' style={{ backgroundColor: colorDots[element.chapter] }}>
+                  <div className='eventsCardDate'>
+                    <p className='eventsCardDateFont'>{new Date(element.date).getDate()}</p>
+                    <p className='eventsCardDateFont'>{number2month(new Date(element.date).getMonth())}</p>
+                  </div>
+                  <div className='eventsCardText'>
+                    <p className='eventsCardTextFont'>{element.description + ' - as ' + (new Date(element.date).getUTCHours()) + ':' + (new Date(element.date).getMinutes() > 10 ? new Date(element.date).getMinutes() : '0' + new Date(element.date).getMinutes()) + 'h'}</p>
+                  </div>
                 </div>
-                <div className='eventsCardText'>
-                  <p className='eventsCardTextFont'>{element.description}</p>
+              )) }
+            { notSortedElements.map((element, index) => (
+                <div key={index} className='eventsCardFinish' style={{ backgroundColor: colorDots[element.chapter] }}>
+                  <div className='eventsCardDate'>
+                    <p className='eventsCardDateFont'>{new Date(element.date).getDate()}</p>
+                    <p className='eventsCardDateFont'>{number2month(new Date(element.date).getMonth())}</p>
+                  </div>
+                  <div className='eventsCardText'>
+                    <p className='eventsCardTextFont'>{element.description + ' - as ' + (new Date(element.date).getUTCHours()) + ':' + (new Date(element.date).getMinutes() > 10 ? new Date(element.date).getMinutes() : '0' + new Date(element.date).getMinutes()) + 'h'}</p>
+                  </div>
                 </div>
-              </div>
-            )) }
+              )) }
         </React.Fragment>
       )
     }
