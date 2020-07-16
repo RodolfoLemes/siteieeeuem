@@ -33,6 +33,30 @@ export const Chapters = [
 
 export const Courses = [
   {
+    title: 'Sinais biomédicos com Python',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594924476/site-ieee-uem/Curso_-_Sinal_Biomed_Python_qmorhu.png',
+    route: 'sinais',
+    dates: [new Date('2020-07-23T19:00:00')],
+    description: '<p class="formsP">Com o avanço da bioengenharia, torna-se essencial aprender sobre processamento de sinais biomédicos. Uma das maneiras de trabalhar com tais sinais, é a partir da utilização da linguagem Python. Tal curso trará uma introdução sobre o tema.<p>',
+    clickable: true
+  },
+  {
+    title: 'Bibliotecas de Python',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594923713/site-ieee-uem/Curso_-_Bibliotecas_Python_d6ajmr.png',
+    route: 'bibliotecas',
+    dates: [new Date('2020-07-22T14:00:00'), new Date('2020-07-23T14:00:00'), new Date('2020-07-24T14:00:00')],
+    description: '<p class="formsP">Sendo uma linguagem dependente de bibliotecas, o Python possui incontáveis, contemplando todo tipo de conteúdo. Nesse curso, serão ensinadas as bibliotecas de numpy, pandas, scipy, matplotlib e bs4<p>',
+    clickable: true
+  },
+  {
+    title: 'OpenCV com Python',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594923713/site-ieee-uem/Curso_-_OpenCV_jlu5ry.png',
+    route: 'opencv',
+    dates: [new Date('2020-07-20T14:00:00'), new Date('2020-07-21T14:00:00')],
+    description: '<p class="formsP">O processamento de imagens com Python, a partir da biblioteca OpenCV, tem-se mostrado oportuno para pesquisa científica e áreas voltadas à inteligência artificial.<p>',
+    clickable: true
+  },
+  {
     title: 'Norma NBR5410',
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594236754/site-ieee-uem/Curso_-_NBR5410_o590ew.png',
     route: 'norma',

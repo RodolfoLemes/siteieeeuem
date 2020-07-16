@@ -111,6 +111,7 @@
     .smallCardTextExpansive {
         font-size: 0.9em;
         text-align: center;
+        line-height: 15px;
     }
 
     .arrowButtonExpansive {
