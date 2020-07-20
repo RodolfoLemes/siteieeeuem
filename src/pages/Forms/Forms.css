@@ -1,6 +1,7 @@
 .Forms {
 	display: flex;
-	height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
 	flex-direction: column;
 	background-color:#f1f4fd;
 }
@@ -116,6 +117,7 @@
   justify-content: center;
   width: inherit;
   height: fit-content;
+  margin: 10px 0 30px 0;
 }
 
 .formsSubmitBtn {
