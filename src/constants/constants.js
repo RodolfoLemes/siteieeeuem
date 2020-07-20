@@ -33,6 +33,30 @@ export const Chapters = [
 
 export const Courses = [
   {
+    title: 'Criação de apps com React Native',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1595202653/site-ieee-uem/Curso_-_ReactNative_u9jh1p.png',
+    route: 'reactnative',
+    dates: [new Date('2020-07-30T14:00:00'), new Date('2020-07-31T14:00:00')],
+    description: '<p class="formsP">Criada pelo Facebook, a React Native é uma biblioteca de Javascript voltada ao desenvolvimento de aplicativos para os sistemas Android e IOS de maneira nativa. Nesse curso, tratemos noções básicas sobre o desenvolvimento de aplicativos nativos com React Native.</br></br>Requisitos:</br>- Conhecimento básico de algoritmos</br>- Conhecimento básico de Javascript, ES6+ e NodeJS<p>',
+    clickable: true
+  },
+  {
+    title: 'Criação de sites com React',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1595202653/site-ieee-uem/Curso_-_Sites_com_ReactJS_bwdtkd.png',
+    route: 'react',
+    dates: [new Date('2020-07-28T14:00:00'), new Date('2020-07-29T14:00:00')],
+    description: '<p class="formsP">Utilizado nos sites da Netflix, Airbnb, Imgur, entre outros, o React é uma biblioteca de Javascript. Com ele, a criação de interfaces de usuário (UIs) torna-se muito mais fácil. Nesse curso, tratemos noções básicas sobre o desenvolvimento de sites com React.</br></br>Requisitos:</br>- Conhecimento básico de algoritmos</br>- Conhecimento básico de Javascript, ES6+ e NodeJS<p>',
+    clickable: true
+  },
+  {
+    title: 'Javascript, ES6+ e NodeJS',
+    img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1595202653/site-ieee-uem/Curso_-_React_e_Node_dtoei2.png',
+    route: 'javascript',
+    dates: [new Date('2020-07-27T14:00:00')],
+    description: '<p class="formsP">Sendo uma das principais linguagens Web, o Javascript tem-se mudado de "opção" para "necessidade" quando se trata de programação web. Nesse curso, traremos noções básicas sobre Javascript, ES6+ e NodeJS.</br></br>Requisitos:</br>- Conhecimento básico de algoritmos.<p>',
+    clickable: true
+  },
+  {
     title: 'Sinais biomédicos com Python',
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1594924476/site-ieee-uem/Curso_-_Sinal_Biomed_Python_qmorhu.png',
     route: 'sinais',
@@ -54,7 +78,7 @@ export const Courses = [
     route: 'opencv',
     dates: [new Date('2020-07-20T14:00:00'), new Date('2020-07-21T14:00:00')],
     description: '<p class="formsP">O processamento de imagens com Python, a partir da biblioteca OpenCV, tem-se mostrado oportuno para pesquisa científica e áreas voltadas à inteligência artificial.<p>',
-    clickable: true
+    clickable: false
   },
   {
     title: 'Norma NBR5410',
