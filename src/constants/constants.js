@@ -49,7 +49,7 @@ export const Courses = [
     clickable: true
   },
   {
-    title: 'Javascript, ES6+ e NodeJS',
+    title: 'Javascript e ES6 e NodeJS',
     img: 'https://res.cloudinary.com/ieee-uem/image/upload/v1595202653/site-ieee-uem/Curso_-_React_e_Node_dtoei2.png',
     route: 'javascript',
     dates: [new Date('2020-07-27T14:00:00')],
@@ -70,7 +70,7 @@ export const Courses = [
     route: 'bibliotecas',
     dates: [new Date('2020-07-22T14:00:00'), new Date('2020-07-23T14:00:00'), new Date('2020-07-24T14:00:00')],
     description: '<p class="formsP">Sendo uma linguagem dependente de bibliotecas, o Python possui incontáveis, contemplando todo tipo de conteúdo. Nesse curso, serão ensinadas as bibliotecas de numpy, pandas, scipy, matplotlib e bs4<p>',
-    clickable: true
+    clickable: false
   },
   {
     title: 'OpenCV com Python',
