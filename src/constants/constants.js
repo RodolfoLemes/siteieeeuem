@@ -62,7 +62,7 @@ export const Courses = [
     route: 'sinais',
     dates: [new Date('2020-07-23T19:00:00')],
     description: '<p class="formsP">Com o avanço da bioengenharia, torna-se essencial aprender sobre processamento de sinais biomédicos. Uma das maneiras de trabalhar com tais sinais, é a partir da utilização da linguagem Python. Tal curso trará uma introdução sobre o tema.<p>',
-    clickable: true
+    clickable: false
   },
   {
     title: 'Bibliotecas de Python',
