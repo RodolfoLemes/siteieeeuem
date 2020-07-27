@@ -25,6 +25,7 @@ function dateExists(date, events) {
     return false
   })
 
+
   if(finds) return finds
   else return undefined
 }
@@ -63,24 +64,26 @@ function Events() {
   const [loading, isLoading] = useState(false)
 
   useEffect(() => {
+    console.log(date)
     async function fetchData() {
-      const response = await api.get('event', {
+      const response = await api.get('event', /* {
         params: {
           filter: {
             date
           }
         }
-      })
+      }*/)
       setEvents(response.data)
       isLoading(true)
     }
+
+
 
     fetchData()
   }, [date])
 
   function tileContent({ date, view }){ 
     var elements = dateExists(date, events)
-    
     if(elements.length > 0){
       return (
         <React.Fragment >
@@ -100,7 +103,7 @@ function Events() {
     for(let element of elements) {
       let date = new Date(element.date)
 
-      if(date - Date.now() >= 0) {
+      if(date.getTime() + 10800000 - Date.now() >= 0) {
         sortedElements.push(element)
       } else {
         notSortedElements.unshift(element)
