@@ -54,7 +54,7 @@ export const Courses = [
     route: 'javascript',
     dates: [new Date('2020-07-27T14:00:00')],
     description: '<p class="formsP">Sendo uma das principais linguagens Web, o Javascript tem-se mudado de "opção" para "necessidade" quando se trata de programação web. Nesse curso, traremos noções básicas sobre Javascript, ES6+ e NodeJS.</br></br>Requisitos:</br>- Conhecimento básico de algoritmos.<p>',
-    clickable: true
+    clickable: false
   },
   {
     title: 'Sinais biomédicos com Python',
