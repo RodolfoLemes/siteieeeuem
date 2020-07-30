@@ -38,7 +38,7 @@ export const Courses = [
     route: 'reactnative',
     dates: [new Date('2020-07-30T14:00:00'), new Date('2020-07-31T14:00:00')],
     description: '<p class="formsP">Criada pelo Facebook, a React Native é uma biblioteca de Javascript voltada ao desenvolvimento de aplicativos para os sistemas Android e IOS de maneira nativa. Nesse curso, tratemos noções básicas sobre o desenvolvimento de aplicativos nativos com React Native.</br></br>Requisitos:</br>- Conhecimento básico de algoritmos</br>- Conhecimento básico de Javascript, ES6+ e NodeJS<p>',
-    clickable: true
+    clickable: false
   },
   {
     title: 'Criação de sites com React',
@@ -46,7 +46,7 @@ export const Courses = [
     route: 'react',
     dates: [new Date('2020-07-28T14:00:00'), new Date('2020-07-29T14:00:00')],
     description: '<p class="formsP">Utilizado nos sites da Netflix, Airbnb, Imgur, entre outros, o React é uma biblioteca de Javascript. Com ele, a criação de interfaces de usuário (UIs) torna-se muito mais fácil. Nesse curso, tratemos noções básicas sobre o desenvolvimento de sites com React.</br></br>Requisitos:</br>- Conhecimento básico de algoritmos</br>- Conhecimento básico de Javascript, ES6+ e NodeJS<p>',
-    clickable: true
+    clickable: false
   },
   {
     title: 'Javascript e ES6 e NodeJS',
