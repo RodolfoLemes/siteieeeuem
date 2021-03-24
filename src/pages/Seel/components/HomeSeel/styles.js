@@ -46,5 +46,8 @@ export const ArrowLeftContainer = styled.button`
 
 	&:hover ${ArrowLeft} {
 		opacity: 1;
+		-moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.08);
+		-webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.08);
+		box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.08);
 	}
 `;
