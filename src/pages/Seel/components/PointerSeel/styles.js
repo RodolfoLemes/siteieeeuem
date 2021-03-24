@@ -21,6 +21,7 @@ export const Container = styled.div`
 
 export const HeaderTitle = styled.text`
 	font-size: 36px;
+	font-family: Poppins;
 	color: ${colors.white};
 `;
 
@@ -31,8 +32,9 @@ export const SubscribeButton = styled.button`
 	outline: none;
 	border: none;
 	border-radius: 30px;
-	font-size: 26px;
+	font-size: 24px;
 	font-weight: 600;
+	font-family: Poppins;
 	color: ${colors.white};
 	margin-bottom: 15px;
 	background-size: 100% 100%;
@@ -44,7 +46,7 @@ export const SubscribeButton = styled.button`
 		8px 14px 24px rgba(0, 0, 0, 0.25);
 	background-color: ${colors.tomato};
 
-	&:hover {
+	&:hover:enabled {
 		background-image: linear-gradient(
 			145deg,
 			transparent 10%,
@@ -60,5 +62,9 @@ export const SubscribeButton = styled.button`
 		);
 		animation: ${backgroundButton} 3s linear infinite;
 		cursor: pointer;
+	}
+
+	&:disabled {
+		opacity: 0.5;
 	}
 `;

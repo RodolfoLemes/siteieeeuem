@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from './styles';
 
 import { HeaderTitle, SubscribeButton } from './styles';
-import ListCards from './components';
+import ListCards from './components/ListCards';
 
 function PointerSeel() {
 	return (
@@ -11,7 +11,7 @@ function PointerSeel() {
 
 			<ListCards />
 
-			<SubscribeButton>Inscrever-se</SubscribeButton>
+			<SubscribeButton disabled>Inscrever-se</SubscribeButton>
 		</Container>
 	);
 }

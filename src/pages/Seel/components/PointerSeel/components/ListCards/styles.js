@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colors from '../../../colors';
+import colors from '../../../../colors';
 
 export const Container = styled.div`
 	display: flex;
@@ -40,7 +40,8 @@ export const CardIcon = styled.img`
 `;
 
 export const CardText = styled.text`
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: 500;
+	font-family: Poppins;
 	color: ${colors.white};
 `;
