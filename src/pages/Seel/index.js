@@ -4,6 +4,7 @@ import { Container } from './styles';
 import HomeSeel from './components/HomeSeel';
 import PointerSeel from './components/PointerSeel';
 import Timeline from './components/Timeline';
+import Panelists from './components/Panelists';
 
 function Seel() {
 	return (
@@ -11,6 +12,7 @@ function Seel() {
 			<HomeSeel />
 			<PointerSeel />
 			<Timeline />
+			<Panelists />
 		</Container>
 	);
 }
