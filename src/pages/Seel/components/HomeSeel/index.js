@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-	Container,
 	HomeImg,
 	HomeContainer,
 	ArrowLeft,
@@ -12,15 +11,13 @@ import arrowLeftIcon from '../../../../assets/seel/arrowLeftSEEL.svg';
 
 function Seel() {
 	return (
-		<Container>
-			<HomeContainer>
-				<ArrowLeftContainer>
-					<ArrowLeft src={arrowLeftIcon} />
-				</ArrowLeftContainer>
+		<HomeContainer>
+			<ArrowLeftContainer>
+				<ArrowLeft src={arrowLeftIcon} />
+			</ArrowLeftContainer>
 
-				<HomeImg src={Img} />
-			</HomeContainer>
-		</Container>
+			<HomeImg src={Img} />
+		</HomeContainer>
 	);
 }
 
