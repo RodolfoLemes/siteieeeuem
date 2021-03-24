@@ -2,9 +2,9 @@ import React from 'react';
 import { Container } from './styles';
 
 import { CardContainer, CardIcon, CardText } from './styles';
-import kitsIcon from '../../../../../assets/seel/game-controller-outline.svg';
-import peopleIcon from '../../../../../assets/seel/people-outline.svg';
-import calendarIcon from '../../../../../assets/seel/calendar-outline.svg';
+import kitsIcon from '../../../../../../assets/seel/game-controller-outline.svg';
+import peopleIcon from '../../../../../../assets/seel/people-outline.svg';
+import calendarIcon from '../../../../../../assets/seel/calendar-outline.svg';
 
 function ListCards() {
 	return (
