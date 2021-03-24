@@ -6,7 +6,9 @@ import kitsIcon from '../../../../../../assets/seel/game-controller-outline.svg'
 import peopleIcon from '../../../../../../assets/seel/people-outline.svg';
 import calendarIcon from '../../../../../../assets/seel/calendar-outline.svg';
 
-function ListCards() {
+function ListCards({ references }) {
+	const { panelistsRef, timelineRef } = references;
+
 	return (
 		<Container>
 			<CardContainer>
@@ -14,12 +16,20 @@ function ListCards() {
 				<CardText>Kits</CardText>
 			</CardContainer>
 
-			<CardContainer>
+			<CardContainer
+				onClick={() =>
+					panelistsRef.current.scrollIntoView({ behavior: 'smooth' })
+				}
+			>
 				<CardIcon src={peopleIcon} isPeople={true} />
 				<CardText>Palestrantes</CardText>
 			</CardContainer>
 
-			<CardContainer>
+			<CardContainer
+				onClick={() =>
+					timelineRef.current.scrollIntoView({ behavior: 'smooth' })
+				}
+			>
 				<CardIcon src={calendarIcon} />
 				<CardText>Cronograma</CardText>
 			</CardContainer>
