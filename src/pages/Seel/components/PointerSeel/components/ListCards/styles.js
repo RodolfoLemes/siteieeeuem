@@ -9,12 +9,13 @@ export const Container = styled.div`
 	justify-content: center;
 `;
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.button`
 	display: flex;
 	flex-direction: column;
 	height: 250px;
 	width: 200px;
 	margin: 0px 30px;
+	border-width: 0px;
 	border-radius: 30px;
 	-moz-box-shadow: 8px 14px 24px rgba(0, 0, 0, 0.25);
 	-webkit-box-shadow: 8px 14px 24px rgba(0, 0, 0, 0.25);
