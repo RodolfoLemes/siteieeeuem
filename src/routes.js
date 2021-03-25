@@ -11,6 +11,7 @@ import Store from './pages/Store/Store';
 import Forms from './pages/Forms/Forms';
 import User from './pages/User/User';
 import Seel from './pages/Seel';
+import Subscribe from './pages/Subscribe';
 
 function Routes() {
 	return (
@@ -25,6 +26,7 @@ function Routes() {
 					<Route path="/store/:course" component={Forms} />
 					<Route path="/user" component={User} />
 					<Route path="/seel" component={Seel} />
+					<Route path="/subscribe" component={Subscribe} />
 				</Switch>
 			</BrowserRouter>
 		</DimensionProvider>
