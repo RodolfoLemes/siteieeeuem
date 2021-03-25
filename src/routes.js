@@ -12,6 +12,7 @@ import Forms from './pages/Forms/Forms';
 import User from './pages/User/User';
 import Seel from './pages/Seel';
 import Subscribe from './pages/Subscribe';
+import Payment from './pages/Payment';
 
 function Routes() {
 	return (
@@ -27,6 +28,7 @@ function Routes() {
 					<Route path="/user" component={User} />
 					<Route path="/seel" component={Seel} />
 					<Route path="/subscribe" component={Subscribe} />
+					<Route path="/payment" component={Payment} />
 				</Switch>
 			</BrowserRouter>
 		</DimensionProvider>

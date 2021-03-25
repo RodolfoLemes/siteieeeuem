@@ -17,17 +17,17 @@ import {
 import FormInput from './components/FormInput';
 
 function Subscribe() {
-	const [nameInput, setNameInput] = useState(null);
-	const [addressInput, setAddressInput] = useState(null);
-	const [institutionInput, setInstitutionInput] = useState(null);
-	const [cityInput, setCityInput] = useState(null);
-	const [cepInput, setCepInput] = useState(null);
-	const [phoneInput, setPhoneInput] = useState(null);
-	const [cpfInput, setCpfInput] = useState(null);
-	const [rgInput, setRgInput] = useState(null);
-	const [emailInput, setEmailInput] = useState(null);
+	const [name, setName] = useState(null);
+	const [address, setAddress] = useState(null);
+	const [university, setUniversity] = useState(null);
+	const [city, setCity] = useState(null);
+	const [cep, setCep] = useState(null);
+	const [phone, setPhone] = useState(null);
+	const [cpf, setCpf] = useState(null);
+	const [rg, setRg] = useState(null);
+	const [email, setEmail] = useState(null);
 	const [membershipSelector, setMembershipSelector] = useState(null);
-	const [membershipInput, setMembershipInput] = useState(null);
+	const [membership, setMembership] = useState(null);
 	const [productSelector, setProductSelector] = useState(null);
 	return (
 		<Container>
@@ -39,13 +39,13 @@ function Subscribe() {
 						labelText="Nome"
 						placeholderText="Nome completo"
 						rowWidth={48}
-						onchange={() => setNameInput(nameInput)}
+						onchange={() => setName(name)}
 					/>
 					<FormInput
 						labelText="Endereço"
 						placeholderText="Rua, número"
 						rowWidth={48}
-						onchange={() => setAddressInput(addressInput)}
+						onchange={() => setAddress(address)}
 					/>
 				</RowContainer>
 
@@ -54,13 +54,13 @@ function Subscribe() {
 						labelText="Instituição de ensino"
 						placeholderText="Ex: Universidade Estadual de Maringá"
 						rowWidth={48}
-						onchange={() => setInstitutionInput(institutionInput)}
+						onchange={() => setUniversity(university)}
 					/>
 					<FormInput
 						labelText="Cidade"
 						placeholderText="Ex: Maringá"
 						rowWidth={48}
-						onchange={() => setCityInput(cityInput)}
+						onchange={() => setCity(city)}
 					/>
 				</RowContainer>
 
@@ -70,21 +70,21 @@ function Subscribe() {
 						placeholderText="XXXXX-XXX"
 						type="number"
 						rowWidth={31}
-						onchange={() => setCepInput(cepInput)}
+						onchange={() => setCep(cep)}
 					/>
 					<FormInput
 						labelText="Telefone"
 						placeholderText="(XX) X XXXX-XXXX"
 						type="tel"
 						rowWidth={31}
-						onchange={() => setPhoneInput(phoneInput)}
+						onchange={() => setPhone(phone)}
 					/>
 					<FormInput
 						labelText="CPF"
 						placeholderText="XXX.XXX.XXX-XX"
 						type="number"
 						rowWidth={31}
-						onchange={() => setCpfInput(cpfInput)}
+						onchange={() => setCpf(cpf)}
 					/>
 				</RowContainer>
 
@@ -94,14 +94,14 @@ function Subscribe() {
 						placeholderText="XX.XXX.XXX-X"
 						type="number"
 						rowWidth={31}
-						onchange={() => setRgInput(rgInput)}
+						onchange={() => setRg(rg)}
 					/>
 					<FormInput
 						labelText="E-mail"
 						placeholderText="seuemail@dominio.com"
 						type="email"
 						rowWidth={65}
-						onchange={() => setEmailInput(emailInput)}
+						onchange={() => setEmail(email)}
 					/>
 				</RowContainer>
 
@@ -129,7 +129,7 @@ function Subscribe() {
 						placeholderText="XXXXXXXX"
 						type="number"
 						rowWidth={31}
-						onchange={() => setMembershipInput(membershipInput)}
+						onchange={() => setMembership(membership)}
 					/>
 
 					<FormSelectorContainer rowWidth={31}>
