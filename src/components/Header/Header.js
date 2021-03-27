@@ -52,8 +52,8 @@ function Header() {
           </Button> */}
 
 				<Button className="headerBtn" component={Link} to="/seel">
-					<p className="textBtn" style={{ color: '#f1f4fd' }}>
-						SEEL
+					<p className="textBtn" style={{ color: '#FFD780' }}>
+						IV SEEL
 					</p>
 				</Button>
 
@@ -121,9 +121,18 @@ function Header() {
 							ARQUIVOS
 						</p>
 					</Button> */}
-					<Button className="headerBtn" component={Link} to="/seel">
-						<p className="textBtn" style={{ color: '#A0A8B7' }}>
-							SEEL
+					<Button
+						className="headerContactBtn"
+						component={Link}
+						to="/seel"
+						style={{
+							borderRadius: height / 20,
+							marginLeft: width * 0.03,
+							backgroundColor: '#FF684D',
+						}}
+					>
+						<p className="textBtn" style={{ color: '#FEFEFE' }}>
+							IV SEEL
 						</p>
 					</Button>
 					<Button
