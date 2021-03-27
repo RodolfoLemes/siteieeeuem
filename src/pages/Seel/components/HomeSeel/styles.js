@@ -15,6 +15,10 @@ export const HomeImg = styled.img`
 	@media (max-width: 670px) {
 		width: 360px;
 	}
+
+	@media (max-width: 359px) {
+		width: 320px;
+	}
 `;
 
 export const ArrowLeft = styled.img`

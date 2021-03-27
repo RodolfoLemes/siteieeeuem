@@ -31,6 +31,8 @@ export const HeaderTitle = styled.text`
 
 	@media (max-width: 400px) {
 		font-size: 20px;
+		text-align: center;
+		margin: 0px 20px;
 	}
 `;
 
