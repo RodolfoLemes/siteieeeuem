@@ -22,6 +22,14 @@ export const WeekDayTitle = styled.div`
 	font-family: Poppins;
 	margin: 10px 0px 20px 0px;
 	color: ${colors.white};
+
+	@media (max-width: 480px) {
+		width: 80%;
+	}
+
+	@media (max-width: 370px) {
+		font-size: 18px;
+	}
 `;
 
 export const ItemContainer = styled.div`
