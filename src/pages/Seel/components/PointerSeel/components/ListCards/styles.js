@@ -44,6 +44,11 @@ export const CardContainer = styled.button`
 		height: 200px;
 		margin-bottom: 40px;
 	}
+
+	@media (max-width: 400px) {
+		height: 160px;
+		width: 160px;
+	}
 `;
 
 export const CardIcon = styled.img`
@@ -53,6 +58,10 @@ export const CardIcon = styled.img`
 
 	@media (max-width: 800px) {
 		height: 100px;
+	}
+
+	@media (max-width: 400px) {
+		height: 80px;
 	}
 `;
 
