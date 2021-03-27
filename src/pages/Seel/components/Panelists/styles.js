@@ -11,20 +11,3 @@ export const Container = styled.div`
 	box-sizing: border-box;
 	padding: 0px 100px;
 `;
-
-export const PanelistImage = styled.img`
-	display: block;
-	max-height: 300px;
-	max-width: 250px;
-	height: auto;
-	width: auto;
-`;
-
-export const PanelistDescription = styled.text`
-	max-height: 300px;
-	width: 40vw;
-	color: ${colors.white};
-	font-size: 16px;
-	font-family: Poppins;
-	text-align: justify;
-`;

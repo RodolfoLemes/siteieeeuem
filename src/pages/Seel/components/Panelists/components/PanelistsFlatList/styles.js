@@ -17,6 +17,10 @@ export const ItemContainer = styled.div`
 	justify-content: space-evenly;
 	box-sizing: border-box;
 	padding: 0px 100px;
+
+	@media (max-width: 900px) {
+		flex-direction: column;
+	}
 `;
 
 export const PanelistImage = styled.img`
@@ -25,6 +29,10 @@ export const PanelistImage = styled.img`
 	max-width: 250px;
 	height: auto;
 	width: auto;
+
+	@media (max-width: 900px) {
+		margin-bottom: 20px;
+	}
 `;
 
 export const PanelistDescription = styled.text`
@@ -34,4 +42,14 @@ export const PanelistDescription = styled.text`
 	font-size: 16px;
 	font-family: Poppins;
 	text-align: justify;
+
+	@media (max-width: 900px) {
+		max-height: 400px;
+		width: 60vw;
+		margin-bottom: 20px;
+	}
+
+	@media (max-width: 510px) {
+		width: 80vw;
+	}
 `;
