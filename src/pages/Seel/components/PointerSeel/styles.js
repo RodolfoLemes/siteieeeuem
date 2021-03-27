@@ -13,16 +13,25 @@ const backgroundButton = keyframes`
 export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	height: auto;
 	width: 100vw;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: flex-start;
+	margin: 40px 0px 80px;
 `;
 
 export const HeaderTitle = styled.text`
 	font-size: 36px;
 	font-family: Poppins;
 	color: ${colors.white};
+
+	@media (max-width: 580px) {
+		font-size: 24px;
+	}
+
+	@media (max-width: 400px) {
+		font-size: 20px;
+	}
 `;
 
 export const SubscribeButton = styled.button`
@@ -36,7 +45,7 @@ export const SubscribeButton = styled.button`
 	font-weight: 600;
 	font-family: Poppins;
 	color: ${colors.white};
-	margin-bottom: 15px;
+	margin: 100px 0px 15px 0px;
 	background-size: 100% 100%;
 	-moz-box-shadow: 0 0 0 7px ${colors.tomato} inset,
 		8px 14px 24px rgba(0, 0, 0, 0.25);
@@ -66,5 +75,15 @@ export const SubscribeButton = styled.button`
 
 	&:disabled {
 		opacity: 0.5;
+	}
+
+	@media (max-width: 800px) {
+		margin: 40px 0px 15px 0px;
+	}
+
+	@media (max-width: 580px) {
+		height: 50px;
+		width: 80%;
+		font-size: 20px;
 	}
 `;

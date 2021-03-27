@@ -7,6 +7,13 @@ export const Container = styled.div`
 	width: 100vw;
 	align-items: flex-start;
 	justify-content: center;
+	margin-top: 80px;
+
+	@media (max-width: 800px) {
+		margin-top: 40px;
+		flex-direction: column;
+		align-items: center;
+	}
 `;
 
 export const CardContainer = styled.button`
@@ -32,12 +39,21 @@ export const CardContainer = styled.button`
 		box-shadow: 3px 9px 24px rgba(0, 0, 0, 0.25);
 		cursor: pointer;
 	}
+
+	@media (max-width: 800px) {
+		height: 200px;
+		margin-bottom: 40px;
+	}
 `;
 
 export const CardIcon = styled.img`
 	height: 140px;
 	width: 60%;
 	width: ${props => (props.isPeople ? `80%` : `60%`)};
+
+	@media (max-width: 800px) {
+		height: 100px;
+	}
 `;
 
 export const CardText = styled.text`
@@ -45,4 +61,8 @@ export const CardText = styled.text`
 	font-weight: 500;
 	font-family: Poppins;
 	color: ${colors.white};
+
+	@media (max-width: 800px) {
+		display: none;
+	}
 `;
