@@ -27,7 +27,7 @@ export const HeaderTitle = styled.div`
 	color: ${colors.white};
 `;
 export const InfoText = styled.text`
-	font-size: 20px;
+	font-size: 16px;
 	font-family: Poppins-regular;
 	color: ${colors.white};
 `;
@@ -47,7 +47,7 @@ export const BackButton = styled.button`
 	font-weight: 600;
 	font-family: Poppins;
 	color: ${colors.white};
-	margin-bottom: 40px;
+	margin: 20px 0px 40px;
 	background-size: 100% 100%;
 	-moz-box-shadow: 0 0 0 7px ${colors.tomato} inset,
 		8px 14px 24px rgba(0, 0, 0, 0.25);
