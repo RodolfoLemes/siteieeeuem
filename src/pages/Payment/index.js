@@ -21,11 +21,7 @@ function Payment() {
 			</InfoText>
 
 			<PaymentInfoContainer>
-				<PaymentInfo
-					title="Pix"
-					description="Minha chave pix"
-					qrcode={'PicPayQR'}
-				/>
+				<PaymentInfo title="Pix" description="44998701731" qrcode={'PixQR'} />
 
 				<PaymentInfo
 					title="PicPay"
