@@ -39,13 +39,13 @@ function Subscribe() {
 						labelText="Nome"
 						placeholderText="Nome completo"
 						rowWidth={48}
-						onchange={() => setName(name)}
+						onChange={() => setName(name)}
 					/>
 					<FormInput
 						labelText="Endereço"
 						placeholderText="Rua, número"
 						rowWidth={48}
-						onchange={() => setAddress(address)}
+						onChange={() => setAddress(address)}
 					/>
 				</RowContainer>
 
@@ -54,13 +54,13 @@ function Subscribe() {
 						labelText="Instituição de ensino"
 						placeholderText="Ex: Universidade Estadual de Maringá"
 						rowWidth={48}
-						onchange={() => setUniversity(university)}
+						onChange={() => setUniversity(university)}
 					/>
 					<FormInput
 						labelText="Cidade"
 						placeholderText="Ex: Maringá"
 						rowWidth={48}
-						onchange={() => setCity(city)}
+						onChange={() => setCity(city)}
 					/>
 				</RowContainer>
 
@@ -70,21 +70,21 @@ function Subscribe() {
 						placeholderText="XXXXX-XXX"
 						type="number"
 						rowWidth={31}
-						onchange={() => setCep(cep)}
+						onChange={() => setCep(cep)}
 					/>
 					<FormInput
 						labelText="Telefone"
 						placeholderText="(XX) X XXXX-XXXX"
 						type="tel"
 						rowWidth={31}
-						onchange={() => setPhone(phone)}
+						onChange={() => setPhone(phone)}
 					/>
 					<FormInput
 						labelText="CPF"
 						placeholderText="XXX.XXX.XXX-XX"
 						type="number"
 						rowWidth={31}
-						onchange={() => setCpf(cpf)}
+						onChange={() => setCpf(cpf)}
 					/>
 				</RowContainer>
 
@@ -94,14 +94,14 @@ function Subscribe() {
 						placeholderText="XX.XXX.XXX-X"
 						type="number"
 						rowWidth={31}
-						onchange={() => setRg(rg)}
+						onChange={() => setRg(rg)}
 					/>
 					<FormInput
 						labelText="E-mail"
 						placeholderText="seuemail@dominio.com"
 						type="email"
 						rowWidth={65}
-						onchange={() => setEmail(email)}
+						onChange={() => setEmail(email)}
 					/>
 				</RowContainer>
 
@@ -129,7 +129,7 @@ function Subscribe() {
 						placeholderText="XXXXXXXX"
 						type="number"
 						rowWidth={31}
-						onchange={() => setMembership(membership)}
+						onChange={() => setMembership(membership)}
 					/>
 
 					<FormSelectorContainer rowWidth={31}>
