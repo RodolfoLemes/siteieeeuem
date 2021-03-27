@@ -11,6 +11,10 @@ export const HomeContainer = styled.div`
 export const HomeImg = styled.img`
 	height: auto;
 	width: 600px;
+
+	@media (max-width: 670px) {
+		width: 360px;
+	}
 `;
 
 export const ArrowLeft = styled.img`
@@ -39,5 +43,10 @@ export const ArrowLeftContainer = styled.button`
 		-moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.08);
 		-webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.08);
 		box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.08);
+	}
+
+	@media (max-width: 670px) {
+		top: 10px;
+		left: 0px;
 	}
 `;
