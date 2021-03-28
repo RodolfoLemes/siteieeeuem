@@ -7,11 +7,13 @@ import peopleIcon from '../../../../../../assets/seel/people-outline.svg';
 import calendarIcon from '../../../../../../assets/seel/calendar-outline.svg';
 
 function ListCards({ references }) {
-	const { panelistsRef, timelineRef } = references;
+	const { panelistsRef, timelineRef, kitsRef } = references;
 
 	return (
 		<Container>
-			<CardContainer>
+			<CardContainer
+				onClick={() => kitsRef.current.scrollIntoView({ behavior: 'smooth' })}
+			>
 				<CardIcon src={kitsIcon} />
 				<CardText>Kits</CardText>
 			</CardContainer>
