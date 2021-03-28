@@ -17,7 +17,7 @@ export const Container = styled.div`
 	height: auto;
 	width: 100vw;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: flex-start;
 	background-color: ${colors.background};
 `;
 
@@ -25,6 +25,17 @@ export const HeaderTitle = styled.div`
 	font-size: 48px;
 	font-family: Poppins-regular;
 	color: ${colors.white};
+
+	@media (max-width: 580px) {
+		margin-top: 20px;
+		font-size: 36px;
+	}
+
+	@media (max-width: 400px) {
+		font-size: 24px;
+		text-align: center;
+		margin: 20px 20px 0px 20px;
+	}
 `;
 
 export const FormContainer = styled.div`
@@ -39,6 +50,10 @@ export const RowContainer = styled.div`
 	justify-content: space-between;
 	height: auto;
 	width: 100%;
+
+	@media (max-width: 920px) {
+		flex-direction: column;
+	}
 `;
 
 export const FinishButton = styled.button`
@@ -52,7 +67,7 @@ export const FinishButton = styled.button`
 	font-weight: 600;
 	font-family: Poppins;
 	color: ${colors.white};
-	margin-bottom: 40px;
+	margin: 40px 0px;
 	background-size: 100% 100%;
 	-moz-box-shadow: 0 0 0 7px ${colors.tomato} inset,
 		8px 14px 24px rgba(0, 0, 0, 0.25);
@@ -83,6 +98,12 @@ export const FinishButton = styled.button`
 	&:disabled {
 		opacity: 0.5;
 	}
+
+	@media (max-width: 580px) {
+		height: 50px;
+		width: 80%;
+		font-size: 20px;
+	}
 `;
 
 export const InfoText = styled.text`
@@ -103,12 +124,20 @@ export const FormSelectorContainer = styled.div`
 	width: ${props => `${props.rowWidth}%`};
 	margin-top: 20px;
 	padding-left: 10px;
+
+	@media (max-width: 920px) {
+		width: 100%;
+	}
 `;
 
 export const FormSelectorLabel = styled.label`
 	font-size: 20px;
 	font-family: Poppins-regular;
 	color: ${colors.white};
+
+	@media (max-width: 520px) {
+		font-size: 16px;
+	}
 `;
 
 export const OptionsContainer = styled.div`
@@ -124,4 +153,8 @@ export const OptionText = styled.text`
 	font-family: Poppins-regular;
 	margin: 0px 20px 0px 10px;
 	color: ${colors.white};
+
+	@media (max-width: 520px) {
+		font-size: 16px;
+	}
 `;
