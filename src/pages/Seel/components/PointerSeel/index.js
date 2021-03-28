@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from './styles';
 
-import { HeaderTitle, SubscribeButton } from './styles';
+import { HeaderTitle, SubscribeButton, StyledLink } from './styles';
 import ListCards from './components/ListCards';
 
 function PointerSeel({ references }) {
@@ -10,8 +10,13 @@ function PointerSeel({ references }) {
 			<HeaderTitle>E aí, já se inscreveu no evento?</HeaderTitle>
 
 			<ListCards references={references} />
+			{/* <StyledLink to="/seel/subscribe">
+				<SubscribeButton>Inscrever-se</SubscribeButton>
+			</StyledLink> */}
 
-			<SubscribeButton disabled>Inscrever-se</SubscribeButton>
+			<StyledLink>
+				<SubscribeButton disabled>Inscrever-se</SubscribeButton>
+			</StyledLink>
 		</Container>
 	);
 }

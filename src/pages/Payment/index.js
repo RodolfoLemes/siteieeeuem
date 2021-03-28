@@ -6,6 +6,7 @@ import {
 	ColoredText,
 	BackButton,
 	PaymentInfoContainer,
+	StyledLink,
 } from './styles';
 
 import PaymentInfo from './components/PaymentInfo';
@@ -30,7 +31,9 @@ function Payment() {
 				/>
 			</PaymentInfoContainer>
 
-			<BackButton>Voltar para o evento</BackButton>
+			<StyledLink to="/seel">
+				<BackButton>Voltar para o evento</BackButton>
+			</StyledLink>
 		</Container>
 	);
 }

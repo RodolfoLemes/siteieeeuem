@@ -26,9 +26,9 @@ function Routes() {
 					<Route path="/store" exact={true} component={Store} />
 					<Route path="/store/:course" component={Forms} />
 					<Route path="/user" component={User} />
-					<Route path="/seel" component={Seel} />
-					<Route path="/subscribe" component={Subscribe} />
-					<Route path="/payment" component={Payment} />
+					<Route path="/seel" exact={true} component={Seel} />
+					<Route path="/seel/subscribe" component={Subscribe} />
+					<Route path="/seel/payment" component={Payment} />
 				</Switch>
 			</BrowserRouter>
 		</DimensionProvider>

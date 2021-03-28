@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { Link } from 'react-router-dom';
 import colors from './colors';
 
 const backgroundButton = keyframes`
@@ -57,8 +58,8 @@ export const ColoredText = styled.text`
 `;
 
 export const BackButton = styled.button`
-	height: 70px;
-	width: 400px;
+	height: inherit;
+	width: inherit;
 	display: block;
 	outline: none;
 	border: none;
@@ -67,7 +68,6 @@ export const BackButton = styled.button`
 	font-weight: 600;
 	font-family: Poppins;
 	color: ${colors.white};
-	margin: 40px 0px;
 	background-size: 100% 100%;
 	-moz-box-shadow: 0 0 0 7px ${colors.tomato} inset,
 		8px 14px 24px rgba(0, 0, 0, 0.25);
@@ -100,13 +100,8 @@ export const BackButton = styled.button`
 	}
 
 	@media (max-width: 580px) {
-		height: 50px;
-		width: 80%;
+		width: 100%;
 		font-size: 20px;
-	}
-
-	@media (max-width: 330px) {
-		font-size: 16px;
 	}
 `;
 
@@ -119,5 +114,18 @@ export const PaymentInfoContainer = styled.div`
 
 	@media (max-width: 800px) {
 		flex-direction: column;
+	}
+`;
+
+export const StyledLink = styled(Link)`
+	height: 70px;
+	width: 400px;
+	border-radius: 30px;
+	margin: 40px 0px;
+	text-decoration: none;
+
+	@media (max-width: 580px) {
+		height: 50px;
+		width: 80%;
 	}
 `;

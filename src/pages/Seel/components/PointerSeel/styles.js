@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { Link } from 'react-router-dom';
 import colors from '../../colors';
 
 const backgroundButton = keyframes`
@@ -37,8 +38,8 @@ export const HeaderTitle = styled.text`
 `;
 
 export const SubscribeButton = styled.button`
-	height: 70px;
-	width: 400px;
+	height: inherit;
+	width: inherit;
 	display: block;
 	outline: none;
 	border: none;
@@ -47,7 +48,6 @@ export const SubscribeButton = styled.button`
 	font-weight: 600;
 	font-family: Poppins;
 	color: ${colors.white};
-	margin: 100px 0px 15px 0px;
 	background-size: 100% 100%;
 	-moz-box-shadow: 0 0 0 7px ${colors.tomato} inset,
 		8px 14px 24px rgba(0, 0, 0, 0.25);
@@ -79,6 +79,19 @@ export const SubscribeButton = styled.button`
 		opacity: 0.5;
 	}
 
+	@media (max-width: 580px) {
+		width: 100%;
+		font-size: 20px;
+	}
+`;
+
+export const StyledLink = styled(Link)`
+	height: 70px;
+	width: 400px;
+	border-radius: 30px;
+	margin: 100px 0px 15px 0px;
+	text-decoration: none;
+
 	@media (max-width: 800px) {
 		margin: 40px 0px 15px 0px;
 	}
@@ -86,6 +99,5 @@ export const SubscribeButton = styled.button`
 	@media (max-width: 580px) {
 		height: 50px;
 		width: 80%;
-		font-size: 20px;
 	}
 `;
