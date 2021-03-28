@@ -104,6 +104,10 @@ export const FinishButton = styled.button`
 		width: 80%;
 		font-size: 20px;
 	}
+
+	@media (max-width: 330px) {
+		font-size: 16px;
+	}
 `;
 
 export const InfoText = styled.text`

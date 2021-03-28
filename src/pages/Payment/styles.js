@@ -25,11 +25,31 @@ export const HeaderTitle = styled.div`
 	font-size: 48px;
 	font-family: Poppins-regular;
 	color: ${colors.white};
+
+	@media (max-width: 580px) {
+		margin-top: 20px;
+		font-size: 36px;
+	}
+
+	@media (max-width: 400px) {
+		font-size: 24px;
+		text-align: center;
+		margin: 20px 20px 0px 20px;
+	}
 `;
+
 export const InfoText = styled.text`
+	width: 80%;
 	font-size: 16px;
 	font-family: Poppins-regular;
+	padding: 0px 20px;
+	text-align: center;
 	color: ${colors.white};
+
+	@media (max-width: 1230px) {
+		margin-top: 20px;
+		text-align: justify;
+	}
 `;
 
 export const ColoredText = styled.text`
@@ -47,7 +67,7 @@ export const BackButton = styled.button`
 	font-weight: 600;
 	font-family: Poppins;
 	color: ${colors.white};
-	margin: 20px 0px 40px;
+	margin: 40px 0px;
 	background-size: 100% 100%;
 	-moz-box-shadow: 0 0 0 7px ${colors.tomato} inset,
 		8px 14px 24px rgba(0, 0, 0, 0.25);
@@ -78,6 +98,16 @@ export const BackButton = styled.button`
 	&:disabled {
 		opacity: 0.5;
 	}
+
+	@media (max-width: 580px) {
+		height: 50px;
+		width: 80%;
+		font-size: 20px;
+	}
+
+	@media (max-width: 330px) {
+		font-size: 16px;
+	}
 `;
 
 export const PaymentInfoContainer = styled.div`
@@ -86,4 +116,8 @@ export const PaymentInfoContainer = styled.div`
 	height: auto;
 	width: 80vw;
 	justify-content: space-evenly;
+
+	@media (max-width: 800px) {
+		flex-direction: column;
+	}
 `;
