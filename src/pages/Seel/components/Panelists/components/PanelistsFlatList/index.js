@@ -6,7 +6,7 @@ import {
 	PanelistDescription,
 } from './styles';
 
-function Panelist({ data }) {
+function PanelistsFlatList({ data }) {
 	return (
 		<Container>
 			{data.map((element, key) => (
@@ -19,4 +19,4 @@ function Panelist({ data }) {
 	);
 }
 
-export default Panelist;
+export default PanelistsFlatList;
