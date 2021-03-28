@@ -5,9 +5,12 @@ export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	height: auto;
-	width: 100vw;
+	width: 100%;
 	align-items: center;
-	background-color: ${colors.background};
+
+	@media (max-width: 800px) {
+		margin-top: 20px;
+	}
 `;
 
 export const PaymentInfoTitle = styled.text`
@@ -19,6 +22,11 @@ export const PaymentInfoTitle = styled.text`
 export const QRCode = styled.img`
 	height: 300px;
 	width: 300px;
+
+	@media (max-width: 500px) {
+		height: auto;
+		width: 80%;
+	}
 `;
 
 export const PaymentInfoContainer = styled.div`
@@ -30,6 +38,7 @@ export const PaymentInfoContainer = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	box-sizing: border-box;
+	overflow: hidden;
 	background-color: ${colors.primary};
 `;
 
@@ -38,6 +47,10 @@ export const PaymentInfoIcon = styled.img`
 	width: 32px;
 	padding: 0px 30px;
 	transform: rotate(135deg);
+
+	@media (max-width: 500px) {
+		display: none;
+	}
 `;
 
 export const PaymentInfoText = styled.text`
@@ -50,6 +63,10 @@ export const PaymentInfoText = styled.text`
 	text-overflow: ellipsis;
 	-webkit-line-clamp: 1;
 	color: ${colors.white};
+
+	@media (max-width: 500px) {
+		margin: 10px 20px;
+	}
 `;
 
 export const PaymentInfoCopyTextButton = styled.button`
