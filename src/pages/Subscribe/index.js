@@ -12,6 +12,7 @@ import {
 	OptionsContainer,
 	Option,
 	OptionText,
+	StyledLink,
 } from './styles';
 
 import FormInput from './components/FormInput';
@@ -160,7 +161,9 @@ function Subscribe() {
 				.
 			</InfoText>
 
-			<FinishButton>Finalizar inscrição</FinishButton>
+			<StyledLink to="/seel/payment">
+				<FinishButton>Finalizar inscrição</FinishButton>
+			</StyledLink>
 		</Container>
 	);
 }
