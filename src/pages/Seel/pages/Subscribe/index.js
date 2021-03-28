@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import {
 	Container,
 	HeaderTitle,
@@ -12,24 +13,84 @@ import {
 	OptionsContainer,
 	Option,
 	OptionText,
-	StyledLink,
 } from './styles';
 
+import SeelProviders from '../../providers/SeelProviders';
 import FormInput from './components/FormInput';
 
 function Subscribe() {
-	const [name, setName] = useState(null);
-	const [address, setAddress] = useState(null);
-	const [university, setUniversity] = useState(null);
-	const [city, setCity] = useState(null);
-	const [cep, setCep] = useState(null);
-	const [phone, setPhone] = useState(null);
-	const [cpf, setCpf] = useState(null);
-	const [rg, setRg] = useState(null);
-	const [email, setEmail] = useState(null);
-	const [membershipSelector, setMembershipSelector] = useState(null);
-	const [membership, setMembership] = useState(null);
-	const [productSelector, setProductSelector] = useState(null);
+	const history = useHistory();
+
+	const [name, setName] = useState('');
+	const [address, setAddress] = useState('');
+	const [university, setUniversity] = useState('');
+	const [city, setCity] = useState('');
+	const [cep, setCep] = useState('');
+	const [phone, setPhone] = useState('');
+	const [cpf, setCpf] = useState('');
+	const [rg, setRg] = useState('');
+	const [email, setEmail] = useState('');
+	const [membershipSelector, setMembershipSelector] = useState(false);
+	const [membership, setMembership] = useState('');
+	const [productSelector, setProductSelector] = useState(true);
+
+	const [clickable, setClickable] = useState(false);
+	const [loading, isLoading] = useState(false);
+	const [error, setError] = useState(null);
+
+	useEffect(
+		function openSubscriber() {
+			if (
+				name.length > 1 &&
+				address.length > 1 &&
+				university.length > 1 &&
+				city.length > 1 &&
+				cep.length > 1 &&
+				phone.length > 1 &&
+				cpf.length > 1 &&
+				rg.length > 1 &&
+				email.length > 1
+			) {
+				setClickable(true);
+			} else {
+				setClickable(false);
+			}
+		},
+		[name, address, university, city, cep, phone, cpf, rg, email],
+	);
+
+	async function handleSubscriber(e) {
+		e.preventDefault();
+		setClickable(false);
+		isLoading(true);
+		try {
+			await SeelProviders.subscriber({
+				name,
+				address,
+				university,
+				city,
+				cep,
+				phone,
+				cpf,
+				rg,
+				email,
+				membership,
+				productSelector,
+			});
+
+			isLoading(false);
+			history.push('/seel/payment');
+		} catch (err) {
+			if (err.response.data.message === 'celebrate request validation failed') {
+				setError(err.response.data.validation.body.message);
+			} else {
+				setError(err.response.data.message);
+			}
+			setClickable(true);
+			isLoading(false);
+		}
+	}
+
 	return (
 		<Container>
 			<HeaderTitle>Inscrição</HeaderTitle>
@@ -40,13 +101,15 @@ function Subscribe() {
 						labelText="Nome"
 						placeholderText="Nome completo"
 						rowWidth={48}
-						onChange={() => setName(name)}
+						value={name}
+						onChange={setName}
 					/>
 					<FormInput
 						labelText="Endereço"
 						placeholderText="Rua, número"
 						rowWidth={48}
-						onChange={() => setAddress(address)}
+						value={address}
+						onChange={setAddress}
 					/>
 				</RowContainer>
 
@@ -55,13 +118,15 @@ function Subscribe() {
 						labelText="Instituição de ensino"
 						placeholderText="Ex: Universidade Estadual de Maringá"
 						rowWidth={48}
-						onChange={() => setUniversity(university)}
+						value={university}
+						onChange={setUniversity}
 					/>
 					<FormInput
 						labelText="Cidade"
 						placeholderText="Ex: Maringá"
 						rowWidth={48}
-						onChange={() => setCity(city)}
+						value={city}
+						onChange={setCity}
 					/>
 				</RowContainer>
 
@@ -71,21 +136,24 @@ function Subscribe() {
 						placeholderText="XXXXX-XXX"
 						type="number"
 						rowWidth={31}
-						onChange={() => setCep(cep)}
+						value={cep}
+						onChange={setCep}
 					/>
 					<FormInput
 						labelText="Telefone"
 						placeholderText="(XX) X XXXX-XXXX"
 						type="tel"
 						rowWidth={31}
-						onChange={() => setPhone(phone)}
+						value={phone}
+						onChange={setPhone}
 					/>
 					<FormInput
 						labelText="CPF"
 						placeholderText="XXX.XXX.XXX-XX"
 						type="number"
 						rowWidth={31}
-						onChange={() => setCpf(cpf)}
+						value={cpf}
+						onChange={setCpf}
 					/>
 				</RowContainer>
 
@@ -95,14 +163,16 @@ function Subscribe() {
 						placeholderText="XX.XXX.XXX-X"
 						type="number"
 						rowWidth={31}
-						onChange={() => setRg(rg)}
+						value={rg}
+						onChange={setRg}
 					/>
 					<FormInput
 						labelText="E-mail"
 						placeholderText="seuemail@dominio.com"
 						type="email"
 						rowWidth={65}
-						onChange={() => setEmail(email)}
+						value={email}
+						onChange={setEmail}
 					/>
 				</RowContainer>
 
@@ -130,7 +200,9 @@ function Subscribe() {
 						placeholderText="XXXXXXXX"
 						type="number"
 						rowWidth={31}
-						onChange={() => setMembership(membership)}
+						disabled={!membershipSelector}
+						value={membership}
+						onChange={setMembership}
 					/>
 
 					<FormSelectorContainer rowWidth={31}>
@@ -161,9 +233,11 @@ function Subscribe() {
 				.
 			</InfoText>
 
-			<StyledLink to="/seel/payment">
-				<FinishButton>Finalizar inscrição</FinishButton>
-			</StyledLink>
+			{error && <p>{error}</p>}
+
+			<FinishButton onClick={handleSubscriber} disabled={!clickable}>
+				Finalizar inscrição
+			</FinishButton>
 		</Container>
 	);
 }

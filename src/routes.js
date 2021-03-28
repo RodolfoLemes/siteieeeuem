@@ -11,8 +11,8 @@ import Store from './pages/Store/Store';
 import Forms from './pages/Forms/Forms';
 import User from './pages/User/User';
 import Seel from './pages/Seel';
-import Subscribe from './pages/Subscribe';
-import Payment from './pages/Payment';
+import Subscribe from './pages/Seel/pages/Subscribe';
+import Payment from './pages/Seel/pages/Payment';
 
 function Routes() {
 	return (

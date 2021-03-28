@@ -9,11 +9,11 @@ import {
 	PaymentInfoCopyTextButton,
 } from './styles';
 
-import InfoIcon from '../../../../assets/seel/link-outline.svg';
+import InfoIcon from '../../../../../../assets/seel/link-outline.svg';
 
 function Payment({ title, description, qrcode }) {
 	const [buttonText, setButtonText] = useState('Copiar');
-	console.log(buttonText);
+
 	return (
 		<Container>
 			<PaymentInfoTitle>{title}</PaymentInfoTitle>
@@ -22,8 +22,8 @@ function Payment({ title, description, qrcode }) {
 				<PaymentInfoIcon src={InfoIcon} />
 				<PaymentInfoText>{description}</PaymentInfoText>
 				<PaymentInfoCopyTextButton
-					onClick={() => {
-						navigator.clipboard.writeText(description);
+					onClick={async () => {
+						await navigator.clipboard.writeText(description);
 						setButtonText('Copiado!');
 						setTimeout(() => setButtonText('Copiar'), 2000);
 					}}
@@ -33,7 +33,9 @@ function Payment({ title, description, qrcode }) {
 			</PaymentInfoContainer>
 
 			<QRCode
-				src={require('../../../../assets/seel/' + qrcode.toString() + '.png')}
+				src={require('../../../../../../assets/seel/' +
+					qrcode.toString() +
+					'.png')}
 			/>
 		</Container>
 	);
