@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import { Link } from 'react-router-dom';
 import colors from './colors';
 
 const backgroundButton = keyframes`
@@ -58,8 +57,8 @@ export const RowContainer = styled.div`
 `;
 
 export const FinishButton = styled.button`
-	height: inherit;
-	width: inherit;
+	height: 70px;
+	width: 400px;
 	display: block;
 	outline: none;
 	border: none;
@@ -67,6 +66,7 @@ export const FinishButton = styled.button`
 	font-size: 24px;
 	font-weight: 600;
 	font-family: Poppins;
+	margin: 40px 0px;
 	color: ${colors.white};
 	background-size: 100% 100%;
 	-moz-box-shadow: 0 0 0 7px ${colors.tomato} inset,
@@ -100,8 +100,8 @@ export const FinishButton = styled.button`
 	}
 
 	@media (max-width: 580px) {
-		width: 100%;
-		font-size: 20px;
+		height: 50px;
+		width: 80%;
 	}
 `;
 
@@ -155,18 +155,5 @@ export const OptionText = styled.text`
 
 	@media (max-width: 520px) {
 		font-size: 16px;
-	}
-`;
-
-export const StyledLink = styled(Link)`
-	height: 70px;
-	width: 400px;
-	border-radius: 30px;
-	margin: 40px 0px;
-	text-decoration: none;
-
-	@media (max-width: 580px) {
-		height: 50px;
-		width: 80%;
 	}
 `;

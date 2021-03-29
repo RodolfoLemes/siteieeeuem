@@ -1,10 +1,11 @@
 import React from 'react';
-import { Container } from './styles';
+import { Container, StyledLink } from './styles';
 
 import { CardContainer, CardIcon, CardText } from './styles';
 import kitsIcon from '../../../../../../assets/seel/game-controller-outline.svg';
 import peopleIcon from '../../../../../../assets/seel/people-outline.svg';
 import calendarIcon from '../../../../../../assets/seel/calendar-outline.svg';
+import cardIcon from '../../../../../../assets/seel/card-outline.svg';
 
 function ListCards({ references }) {
 	const { panelistsRef, timelineRef, kitsRef } = references;
@@ -35,6 +36,11 @@ function ListCards({ references }) {
 				<CardIcon src={calendarIcon} />
 				<CardText>Cronograma</CardText>
 			</CardContainer>
+
+			<StyledLink to="/seel/payment">
+				<CardIcon src={cardIcon} />
+				<CardText>Pagamento</CardText>
+			</StyledLink>
 		</Container>
 	);
 }
