@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Loader from 'react-loader-spinner';
 import { useHistory } from 'react-router-dom';
 import {
 	Container,
@@ -13,10 +14,12 @@ import {
 	OptionsContainer,
 	Option,
 	OptionText,
+	ErrorText,
 } from './styles';
 
 import SeelProviders from '../../providers/SeelProviders';
 import FormInput from './components/FormInput';
+import colors from '../../colors';
 
 function Subscribe() {
 	const history = useHistory();
@@ -233,11 +236,23 @@ function Subscribe() {
 				.
 			</InfoText>
 
-			{error && <p>{error}</p>}
+			{error && <ErrorText>{error}</ErrorText>}
 
-			<FinishButton onClick={handleSubscriber} disabled={!clickable}>
+			<FinishButton
+				onClick={handleSubscriber}
+				disabled={!clickable}
+				propVisible={loading}
+			>
 				Finalizar inscrição
 			</FinishButton>
+
+			<Loader
+				type="ThreeDots"
+				color={colors.white}
+				height={60}
+				width={60}
+				visible={loading}
+			/>
 		</Container>
 	);
 }

@@ -60,13 +60,14 @@ export const FinishButton = styled.button`
 	height: 70px;
 	width: 400px;
 	display: block;
+	display: ${props => (props.propVisible ? `none` : `block`)};
 	outline: none;
 	border: none;
 	border-radius: 30px;
 	font-size: 24px;
 	font-weight: 600;
 	font-family: Poppins;
-	margin: 40px 0px;
+	margin: 20px 0px;
 	color: ${colors.white};
 	background-size: 100% 100%;
 	-moz-box-shadow: 0 0 0 7px ${colors.tomato} inset,
@@ -102,6 +103,11 @@ export const FinishButton = styled.button`
 	@media (max-width: 580px) {
 		height: 50px;
 		width: 80%;
+		font-size: 20px;
+	}
+
+	@media (max-width: 400px) {
+		font-size: 18px;
 	}
 `;
 
@@ -156,4 +162,12 @@ export const OptionText = styled.text`
 	@media (max-width: 520px) {
 		font-size: 16px;
 	}
+`;
+
+export const ErrorText = styled.p`
+	font-size: 16px;
+	font-family: Poppins;
+	text-align: center;
+	margin: 10px 0px;
+	color: ${colors.tomato};
 `;
