@@ -1,36 +1,77 @@
-import React from 'react'
-import { Admin, 
-  Resource, 
-  List, 
-  Datagrid, 
-  TextField, 
-  Create, 
-  SimpleForm, 
-  TextInput, 
-  SelectInput, 
-  DateTimeInput,
-  Edit,
-  EditButton,
-  DeleteButton } from 'react-admin';
+import React, { useState } from 'react';
+import {
+	Admin,
+	Resource,
+	List,
+	Datagrid,
+	TextField,
+	Button,
+} from 'react-admin';
 
-import AuthProvider from '../../provider/AuthProvider'
-import DataProvider from '../../provider/DataProvider'
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import UpdateIcon from '@material-ui/icons/Update';
+
+import seelApi from '../../utils/seelApi';
+import AuthProvider from '../../provider/AuthProvider';
+import DataProvider from '../../provider/DataProvider';
+import SeelProvider from '../../provider/SeelProvider';
 import './User.css';
 
-const EventList = (props) => (
+/* const EventList = (props) => (
   <List {...props}>
     <Datagrid>
         <TextField source="id" />
         <TextField source="date" />
         <TextField source="chapter" />
         <TextField source="description" />
-        {/* <EditButton /> */}
+        <EditButton /> 
         <DeleteButton undoable={false} />
     </Datagrid>
   </List>
+); */
+
+const SubscribersList = props => (
+	<List {...props}>
+		<Datagrid>
+			<TextField source="id" />
+			<TextField source="isPaid" label="paid" />
+			<TextField source="hasKit" label="kits" />
+			<TextField source="name" />
+			<TextField source="cpf" />
+			<TextField source="rg" />
+			<TextField source="email" />
+			<CustomField />
+		</Datagrid>
+	</List>
 );
 
-const EventCreate = (props) => (
+const CustomField = props => {
+	const [loading, setLoading] = useState(false);
+
+	return (
+		<Button
+			onClick={async () => {
+				setLoading(true);
+				await seelApi.patch(
+					'/subscribers',
+					{
+						email: props.record.email,
+					},
+					{
+						headers: {
+							Authorization: 'seelcomplex',
+						},
+					},
+				);
+				setLoading(false);
+			}}
+		>
+			{loading ? <UpdateIcon /> : <CheckCircleIcon />}
+		</Button>
+	);
+};
+
+/* const EventCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
       <DateTimeInput source="date" />
@@ -45,8 +86,7 @@ const EventCreate = (props) => (
       />
     </SimpleForm>
   </Create>
-)
-
+) */
 
 /* const EventEdit = (props) => (
   <Edit title="Event MyEdit" {...props} >
@@ -61,13 +101,14 @@ const EventCreate = (props) => (
 ) */
 
 function User() {
-  return (
-    <div className="User">
-      <Admin dataProvider={DataProvider} authProvider={AuthProvider}>
-        <Resource name="event" list={EventList} create={EventCreate} />
-    	</Admin>
-    </div>
-  );
+	return (
+		<div className="User">
+			<Admin dataProvider={SeelProvider} authProvider={AuthProvider}>
+				{/* <Resource name="event" list={EventList} create={EventCreate} /> */}
+				<Resource name="subscribers" list={SubscribersList} />
+			</Admin>
+		</div>
+	);
 }
 
-export default User
+export default User;
