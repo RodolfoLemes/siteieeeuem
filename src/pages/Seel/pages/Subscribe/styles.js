@@ -25,9 +25,9 @@ export const HeaderTitle = styled.div`
 	font-size: 48px;
 	font-family: Poppins-regular;
 	color: ${colors.white};
+	margin-top: 20px;
 
 	@media (max-width: 580px) {
-		margin-top: 20px;
 		font-size: 36px;
 	}
 

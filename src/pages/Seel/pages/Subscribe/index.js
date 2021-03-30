@@ -216,13 +216,69 @@ function Subscribe() {
 								checked={productSelector}
 								onClick={() => setProductSelector(true)}
 							/>
-							<OptionText>Evento</OptionText>
+							<OptionText>Evento - R$25,00</OptionText>
 							<Option
 								type="radio"
 								checked={!productSelector}
 								onClick={() => setProductSelector(false)}
 							/>
-							<OptionText>Evento + kit</OptionText>
+							<OptionText>Evento + kit - R$50,00</OptionText>
+						</OptionsContainer>
+					</FormSelectorContainer>
+				</RowContainer>
+
+				<RowContainer>
+					<FormSelectorContainer rowWidth={31}>
+						<FormSelectorLabel>Escolha um dos cursos</FormSelectorLabel>
+						<OptionsContainer>
+							<Option
+								type="radio"
+								checked={productSelector}
+								onClick={() => setProductSelector(true)}
+							/>
+							<OptionText>curso 1</OptionText>
+							<Option
+								type="radio"
+								checked={!productSelector}
+								onClick={() => setProductSelector(false)}
+							/>
+							<OptionText>curso 2</OptionText>
+						</OptionsContainer>
+					</FormSelectorContainer>
+
+					<FormSelectorContainer rowWidth={31}>
+						<FormSelectorLabel>Escolha um dos cursos</FormSelectorLabel>
+						<OptionsContainer>
+							<Option
+								type="radio"
+								checked={productSelector}
+								onClick={() => setProductSelector(true)}
+							/>
+							<OptionText>curso 1</OptionText>
+							<Option
+								type="radio"
+								checked={!productSelector}
+								onClick={() => setProductSelector(false)}
+							/>
+							<OptionText>curso 2</OptionText>
+						</OptionsContainer>
+					</FormSelectorContainer>
+
+					<FormSelectorContainer rowWidth={31}>
+						<FormSelectorLabel>Escolha um dos cursos</FormSelectorLabel>
+						<OptionsContainer>
+							<Option
+								type="radio"
+								checked={productSelector}
+								onClick={() => setProductSelector(true)}
+							/>
+							<OptionText>curso 1</OptionText>
+							<Option
+								type="radio"
+								checked={!productSelector}
+								onClick={() => setProductSelector(false)}
+							/>
+							<OptionText>curso 2</OptionText>
 						</OptionsContainer>
 					</FormSelectorContainer>
 				</RowContainer>
