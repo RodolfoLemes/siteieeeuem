@@ -89,15 +89,22 @@ export const StyledLink = styled(Link)`
 	height: 70px;
 	width: 400px;
 	border-radius: 30px;
-	margin: 100px 0px 15px 0px;
+	margin: 15px 0px;
 	text-decoration: none;
-
-	@media (max-width: 800px) {
-		margin: 40px 0px 15px 0px;
-	}
 
 	@media (max-width: 580px) {
 		height: 50px;
 		width: 80%;
+	}
+`;
+
+export const DateText = styled.text`
+	font-size: 16px;
+	font-family: Poppins;
+	margin-top: 80px;
+	color: ${colors.white};
+
+	@media (max-width: 800px) {
+		margin-top: 40px;
 	}
 `;

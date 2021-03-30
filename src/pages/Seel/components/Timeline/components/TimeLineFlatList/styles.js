@@ -10,7 +10,7 @@ export const FlatListContainer = styled.div`
 	justify-content: flex-start;
 `;
 
-export const WeekDayTitle = styled.div`
+export const WeekDayTitle = styled.button`
 	display: flex;
 	height: 50px;
 	width: 400px;
@@ -22,6 +22,8 @@ export const WeekDayTitle = styled.div`
 	font-family: Poppins;
 	margin: 10px 0px 20px 0px;
 	color: ${colors.white};
+	background-color: transparent;
+	transition: all 0.5s ease;
 
 	@media (max-width: 480px) {
 		width: 80%;
@@ -29,6 +31,11 @@ export const WeekDayTitle = styled.div`
 
 	@media (max-width: 370px) {
 		font-size: 18px;
+	}
+
+	&:hover {
+		background-color: ${colors.tomato};
+		cursor: pointer;
 	}
 `;
 
@@ -49,5 +56,14 @@ export const ItemHour = styled.text`
 export const ItemEvent = styled.text`
 	font-size: 18px;
 	font-family: Poppins;
+	color: ${colors.white};
+`;
+
+export const ItemDescription = styled.text`
+	display: ${props => (props.itemDisplay ? `block` : `none`)};
+	font-size: 16px;
+	font-family: Poppins;
+	padding: 0px 15px;
+	text-align: center;
 	color: ${colors.white};
 `;
