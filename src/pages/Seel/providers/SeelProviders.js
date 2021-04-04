@@ -13,6 +13,7 @@ export default {
 		email,
 		membership = undefined,
 		productSelector,
+		courses,
 	}) {
 		const value = productSelector ? 25 : 50;
 
@@ -31,6 +32,7 @@ export default {
 			email,
 			membership,
 			value,
+			courses,
 		});
 	},
 };

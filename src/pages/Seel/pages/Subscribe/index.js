@@ -36,6 +36,9 @@ function Subscribe() {
 	const [membershipSelector, setMembershipSelector] = useState(false);
 	const [membership, setMembership] = useState('');
 	const [productSelector, setProductSelector] = useState(true);
+	const [courseOne, setCourseOne] = useState(false);
+	const [courseTwo, setCourseTwo] = useState(false);
+	const [courseThree, setCourseThree] = useState(false);
 
 	const [clickable, setClickable] = useState(false);
 	const [loading, isLoading] = useState(false);
@@ -66,6 +69,15 @@ function Subscribe() {
 		e.preventDefault();
 		setClickable(false);
 		isLoading(true);
+
+		// Adicionar os nomes dos cursos reais aqui
+		const courses = [];
+		courses.push(courseOne ? 'Curso de Carpinagem' : 'Curso de Lorota');
+		courses.push(
+			courseTwo ? 'Curso de João Bobo' : 'Curso de Maria vai com as outras',
+		);
+		courses.push(courseOne ? 'Curso de JoséScript' : 'Curso de MariaScript');
+
 		try {
 			await SeelProviders.subscriber({
 				name,
@@ -79,6 +91,7 @@ function Subscribe() {
 				email,
 				membership,
 				productSelector,
+				courses,
 			});
 
 			isLoading(false);
@@ -233,14 +246,14 @@ function Subscribe() {
 						<OptionsContainer>
 							<Option
 								type="radio"
-								checked={productSelector}
-								onClick={() => setProductSelector(true)}
+								checked={courseOne}
+								onClick={() => setCourseOne(true)}
 							/>
 							<OptionText>curso 1</OptionText>
 							<Option
 								type="radio"
-								checked={!productSelector}
-								onClick={() => setProductSelector(false)}
+								checked={!courseOne}
+								onClick={() => setCourseOne(false)}
 							/>
 							<OptionText>curso 2</OptionText>
 						</OptionsContainer>
@@ -251,14 +264,14 @@ function Subscribe() {
 						<OptionsContainer>
 							<Option
 								type="radio"
-								checked={productSelector}
-								onClick={() => setProductSelector(true)}
+								checked={courseTwo}
+								onClick={() => setCourseTwo(true)}
 							/>
 							<OptionText>curso 1</OptionText>
 							<Option
 								type="radio"
-								checked={!productSelector}
-								onClick={() => setProductSelector(false)}
+								checked={!courseTwo}
+								onClick={() => setCourseTwo(false)}
 							/>
 							<OptionText>curso 2</OptionText>
 						</OptionsContainer>
@@ -269,14 +282,14 @@ function Subscribe() {
 						<OptionsContainer>
 							<Option
 								type="radio"
-								checked={productSelector}
-								onClick={() => setProductSelector(true)}
+								checked={courseThree}
+								onClick={() => setCourseThree(true)}
 							/>
 							<OptionText>curso 1</OptionText>
 							<Option
 								type="radio"
-								checked={!productSelector}
-								onClick={() => setProductSelector(false)}
+								checked={!courseThree}
+								onClick={() => setCourseThree(false)}
 							/>
 							<OptionText>curso 2</OptionText>
 						</OptionsContainer>
