@@ -4,6 +4,7 @@ import {
 	WeekDayTitle,
 	ItemContainer,
 	ItemHour,
+	ItemName,
 	ItemEvent,
 	ItemDescription,
 } from './styles';
@@ -17,7 +18,9 @@ function Timeline({ weekDay, data }) {
 			{data.map((element, index) => (
 				<ItemContainer key={index.toString()}>
 					<ItemHour>{element.hour}</ItemHour>
-					<ItemEvent>{element.panelist}</ItemEvent>
+					<ItemName>{element.panelist}</ItemName>
+					<ItemEvent>{element.name}</ItemEvent>
+
 					<ItemDescription itemDisplay={visible}>
 						{element.description}
 					</ItemDescription>

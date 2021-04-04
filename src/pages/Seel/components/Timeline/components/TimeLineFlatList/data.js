@@ -1,69 +1,183 @@
 export const Monday = [
 	{
-		hour: '8h00',
-		panelist: 'Abertura',
-		description: 'Abre os zóio corno',
-	},
-	{
-		hour: '8h30',
-		panelist: 'Palestra Ronan',
+		hour: '8h00 - 9h00',
+		name: 'Abertura',
+		panelist: 'IEEE UEM',
 		description:
-			'Apresentar possibilidades do uso de Julia e Jupyter Notebooks em Sistemas de Controle.',
+			'Apresentar o brevemente o Ramo Estudantil IEEE UEM, recado breve dos convidados para a abertura. Agradecimento aos organizadores, patrocinadores e apoiadores do evento. Revisar o cronograma, falar sobre o meet de tirar dúvidas das ferramentas.',
 	},
 	{
-		hour: '9h20',
-		panelist: 'Palestra Adalberto',
-		description: 'Abre os zóio corno',
+		hour: '9h00 - 10h00',
+		name: 'Relações humanas dentro de uma empresa',
+		panelist: 'Nailor Marques Jr.',
+		description:
+			'Formado em Direito e Letras. 30 livros, 2 audios-livros e 8 DVDs. Mais de 2500 palestras. Tem um assento como Conselheiro externo no Comex do Grupo Bellinati Perez e também no Conselho da Fenauto. Ja participou de programas como "Programa do Jô".',
 	},
 	{
-		hour: '8h30',
-		panelist: 'Palestra Francislei',
-		description: 'Abre os zóio corno',
+		hour: '10h00 - 11h00',
+		name: 'Subestação Digital',
+		panelist: 'General Electric - Anne',
+		description: '',
+	},
+	{
+		hour: '11h00 - 12h00',
+		name: 'IoT',
+		panelist: 'Aleksandro Montanha',
+		description:
+			'Aleksandro Montanha é um aluno de doutorado da Universidade de Sevilla, Es. Atualmente é gerente de tecnologia da IOT Hyundai no Brasil e membro da Intel Internet of Things Board. possui 3 desenvolvimento de Hardware e Software empresas com vasta experiência em gestão de equipes de alta performance.',
+	},
+	{
+		hour: '12h00 - 13h30',
+		name: 'Almoço',
+		panelist: '',
+		description: 'Recuperar as energias para continuar este incrível evento!',
+	},
+	{
+		hour: '13h30 - 14h00',
+		name: 'Dinâmica',
+		panelist: 'Red Bull',
+		description: 'Red Bull te dá aaasas... E conhecimento!',
+	},
+	{
+		hour: '14h00 - 15h00',
+		name: 'Workshop Empreendedorismo',
+		panelist: 'SEBRAE - Valdir Vergilio Madeira',
+		description:
+			'O workshop de Empreendedorismo tem como finalidade despertar o interesse dos alunos da educação superior para o empreendedorismo. Sensibilizando os participantes para a temática do Empreendedorismo, ampliando seus horizontes e demonstrando a importância do equilíbrio entre: empreendedorismo empresarial;  Intra-empreendedorismo; e empreendedorismo social.',
+	},
+	{
+		hour: '15h00 - 16h00',
+		name: 'Palestra: 5G e Internet das coisas',
+		panelist: 'Francisco Siqueira',
+		description:
+			'Engenheiro Eletricista com ênfase em eletrônica e Telecomunicações no INATEL, com MBA executiva em gestão empresarial pela FGV/ISAE. Mais de duas decadas atuando no setor de Telecom e TI da America Latina, como engenheiro de Telecom, gerente de projetos, de pré-vendas e comercial. Trabalhando em multinacionais como NOKIA, ERICSSON E CLARO.',
+	},
+	{
+		hour: '16h00 - 17h00',
+		name: 'Curso PCB + STM32',
+		panelist: 'Pablo Jean Rozário',
+		description:
+			'Formado em Engenharia Elétrica na Universidade Estadual de Maringá. Experiência com programação de microcontroladores PIC18, design de Placas de Circuito Impresso e conhecimentos em Instalações Elétricas residenciais.',
+	},
+	{
+		hour: '17h00 - 18h00',
+		name: 'Mesa Redonda: Dificuldades e Virtudes na execução de obras',
+		panelist: 'Siomara Lima Provensi',
+		description:
+			'Formada em Engenharia Civil pela UEM, atua em execução de obras há mais de 35 anos. Sua especialidade é na execução de prédios de alto nível e condomínio fechado. Atualmente é a Engenheira responsável Técnica da Construtora Cidade Verde a mais de 20 anos.',
 	},
 ];
 
 export const Tuesday = [
 	{
-		hour: '8h00',
-		panelist: 'Abertura',
-		description: 'Abre os zóio corno',
+		hour: '9h00 - 10h00',
+		name: 'Computação Quântica',
+		panelist: 'Ronan Damasco',
+		description:
+			'Ronan Damasco é Diretor Nacional de Tecnologia da Microsoft no Brasil. É formado em Engenharia Elétrica pela Unb, mestre em Segurança da Informação pela Universidade de Liverpool. Fez o Programa de Desenvolvimento Gerencial na Fundação Dom Cabral e o Programa de Liderança da Microsoft na Universidade Georgetown.',
 	},
 	{
-		hour: '8h30',
-		panelist: 'Palestra Ronan',
-		description: 'Abre os zóio corno',
+		hour: '10h00 - 11h00',
+		name: 'Curso Julia/Python/Controle',
+		panelist: 'Jair Certório',
+		description:
+			'Apresentar possibilidades do uso de Julia e Jupyter Notebooks em Sistemas de Controle.',
 	},
 	{
-		hour: '9h20',
-		panelist: 'Palestra Adalberto',
-		description: 'Abre os zóio corno',
+		hour: '11h00 - 12h00',
+		name: 'Mesa redonda',
+		panelist: '',
+		description: '',
 	},
 	{
-		hour: '8h30',
-		panelist: 'Palestra Francislei',
-		description: 'Abre os zóio corno',
+		hour: '12h00 - 14h00',
+		name: 'Almoço',
+		panelist: '',
+		description:
+			'Nada melhor do que um buchinho cheio para acompanhar palestras que mudarão a sua vida!',
+	},
+	{
+		hour: '14h00 - 15h00',
+		name:
+			'Telecomunicações - Rotina de otimização de rede Telecom. 2G, 3G e 4G.',
+		panelist: 'Elian Carlos Dias de Mattos',
+		description: '',
+	},
+	{
+		hour: '15h00 - 16h00',
+		name: 'Visão computacional alida à cirurgias na oftalmologia',
+		panelist: 'Rogério Nespolo',
+		description: '',
+	},
+	{
+		hour: '16h00 - 17h00',
+		name: 'Curso PCB + STM32',
+		panelist: 'Pablo Jean Rozário',
+		description:
+			'Formado em Engenharia Elétrica na Universidade Estadual de Maringá. Experiência com programação de microcontroladores PIC18, design de Placas de Circuito Impresso e conhecimentos em Instalações Elétricas residenciais.',
+	},
+	{
+		hour: '17h00 - 18h00',
+		name: 'Curso Fotovoltaico',
+		panelist: 'Gabriel Grala',
+		description:
+			'Graduado em Engenharia Eletrica pela UEM, bolsista CNPq com o projeto "Investigação do Desempenho de Controladores fracionários" (2018). Atualmente atua na área de formação sendo engenheiro eletricista executivo de obras e responsável pelo setor de energias renováveis.',
 	},
 ];
 
 export const Wednesday = [
 	{
-		hour: '8h00',
-		panelist: 'Abertura',
-		description: 'Abre os zóio corno',
+		hour: '09h00 - 10h00',
+		name: 'Mesa redonda',
+		panelist: '',
+		description: '',
 	},
 	{
-		hour: '8h30',
-		panelist: 'Palestra Ronan',
-		description: 'Abre os zóio corno',
+		hour: '10h00 - 11h00',
+		name: 'Curso Julia/Python/Controle',
+		panelist: 'Jair Certório',
+		description:
+			'Apresentar possibilidades do uso de Julia e Jupyter Notebooks em Sistemas de Controle.',
 	},
 	{
-		hour: '9h20',
-		panelist: 'Palestra Adalberto',
-		description: 'Abre os zóio corno',
+		hour: '11h00 - 12h00',
+		name: 'Gestão USA: visão americana de empreender',
+		panelist: 'Hudson Biondo',
+		description:
+			'Hudson Biondo, 43 anos, de Maringá, está na lista da ‘Forbes’ que aponta os mil empresários mais promissores dos Estados Unidos (EUA). Fundador da MasterCars, empresa de vendas de veículos usados ​​e financiamento de automóveis. É convidado da SEEL para conversarmos sobre uma visão americana de empreender.',
 	},
 	{
-		hour: '8h30',
-		panelist: 'Palestra Francislei',
-		description: 'Abre os zóio corno',
+		hour: '12h00 - 14h00',
+		name: 'Almoço',
+		panelist: '',
+		description:
+			'Cientistas do IEEE UEM afirmam que nove a cada dez pessoas aprendem melhor quando comem bem!',
+	},
+	{
+		hour: '14h00 - 15h00',
+		name: 'A indústria de EDA',
+		panelist: 'Marcelo Silva',
+		description:
+			'Marcelo Silva é Bacharel em Engenharia Elétrica pela Universidade Federal de Itajubá-MG, com 20+ anos de experiência em microeletrônica. Trabalhou na Motorola, Qualcomm California, na SiRF/CSR e Atualmente na Cadence. A palestra vai apresentar os fundamentos da indústria de Electronic Design Automation (EDA), provendo soluções de Software, Hardware e Sistemas.',
+	},
+	{
+		hour: '15h00 - 16h00',
+		name: 'Mercado Open Source e suas experiências',
+		panelist: 'Edson Yanaga',
+		description:
+			'Edson Yanaga, Diretor de Experiência do Desenvolvedor da Red Hat, Java Champion e Microsoft MVP. Autor publicado e palestrante frequente em conferências internacionais, discutindo Java, Kubernetes, Quarkus, microsserviços, computação em nuvem e DevOps. Falara sobre o mercado open source e suas experiências.',
+	},
+	{
+		hour: '16h00 - 17h00',
+		name: 'Curso PCB + STM32',
+		panelist: 'Pablo Jean Rozário',
+		description:
+			'Formado em Engenharia Elétrica na Universidade Estadual de Maringá. Experiência com programação de microcontroladores PIC18, design de Placas de Circuito Impresso e conhecimentos em Instalações Elétricas residenciais.',
+	},
+	{
+		hour: '17h00 - 18h00',
+		name: 'ENCERRAMENTO',
+		panelist: '',
+		description: '',
 	},
 ];
