@@ -44,26 +44,43 @@ export const ItemContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	margin-bottom: 20px;
+	margin-bottom: ${props => (props.itemDisplay ? `30px` : `20px`)};
 `;
 
 export const ItemHour = styled.text`
 	font-size: 18px;
 	font-family: Poppins;
+	margin-bottom: 5px;
 	color: ${colors.yellow};
 `;
 
+export const ItemName = styled.text`
+	width: 80vw;
+	text-align: center;
+	font-size: 16px;
+	font-family: Poppins;
+	margin-bottom: 5px;
+	color: #aaa;
+`;
+
 export const ItemEvent = styled.text`
+	width: 80vw;
+	text-align: center;
 	font-size: 18px;
 	font-family: Poppins;
+	margin-bottom: 10px;
 	color: ${colors.white};
 `;
 
 export const ItemDescription = styled.text`
 	display: ${props => (props.itemDisplay ? `block` : `none`)};
+	width: 80vw;
 	font-size: 16px;
 	font-family: Poppins;
-	padding: 0px 15px;
 	text-align: center;
 	color: ${colors.white};
+
+	@media (max-width: 420px) {
+		text-align: justify;
+	}
 `;
