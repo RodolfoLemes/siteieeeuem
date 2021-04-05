@@ -8,7 +8,7 @@ export const Monday = [
 	},
 	{
 		hour: '9h00 - 10h00',
-		name: 'Relações humanas dentro de uma empresa',
+		name: 'EM BREVE',
 		panelist: 'Nailor Marques Jr.',
 		description:
 			'Formado em Direito e Letras. 30 livros, 2 audios-livros e 8 DVDs. Mais de 2500 palestras. Tem um assento como Conselheiro externo no Comex do Grupo Bellinati Perez e também no Conselho da Fenauto. Ja participou de programas como "Programa do Jô".',
@@ -17,11 +17,12 @@ export const Monday = [
 		hour: '10h00 - 11h00',
 		name: 'Subestação Digital',
 		panelist: 'General Electric - Anne',
-		description: '',
+		description:
+			'Atualmente Engenheiro Chefe de aplicação técnicana GE Grid Solutions. Suas áreas de atuação e interesse são Subestações Digitais e Redes de Comunicação para Sistemas de Energia. Graduada em Engenharia Elétrica (2007) e Mestrado em Sistemas de Energia (2011), ambos os títulos pela Universidade Federal de Santa Catarina.',
 	},
 	{
 		hour: '11h00 - 12h00',
-		name: 'IoT',
+		name: 'ABINC e Internet das Coisas',
 		panelist: 'Aleksandro Montanha',
 		description:
 			'Aleksandro Montanha é um aluno de doutorado da Universidade de Sevilla, Es. Atualmente é gerente de tecnologia da IOT Hyundai no Brasil e membro da Intel Internet of Things Board. possui 3 desenvolvimento de Hardware e Software empresas com vasta experiência em gestão de equipes de alta performance.',
@@ -54,14 +55,14 @@ export const Monday = [
 	},
 	{
 		hour: '16h00 - 17h00',
-		name: 'Curso PCB + STM32',
+		name: 'Curso - Design de PCB + STM32',
 		panelist: 'Pablo Jean Rozário',
 		description:
-			'Formado em Engenharia Elétrica na Universidade Estadual de Maringá. Experiência com programação de microcontroladores PIC18, design de Placas de Circuito Impresso e conhecimentos em Instalações Elétricas residenciais.',
+			'Com sua vasta experiência na área, vai nos introduzir ao design de placas de circuito impresso, aplicando o microcontrolador STM32 em uma das placas que será projetada durante o curso.',
 	},
 	{
 		hour: '17h00 - 18h00',
-		name: 'Mesa Redonda: Dificuldades e Virtudes na execução de obras',
+		name: 'Mesa Redonda - Dificuldades e Virtudes na execução de obras',
 		panelist: 'Siomara Lima Provensi',
 		description:
 			'Formada em Engenharia Civil pela UEM, atua em execução de obras há mais de 35 anos. Sua especialidade é na execução de prédios de alto nível e condomínio fechado. Atualmente é a Engenheira responsável Técnica da Construtora Cidade Verde a mais de 20 anos.',
@@ -71,7 +72,7 @@ export const Monday = [
 export const Tuesday = [
 	{
 		hour: '9h00 - 10h00',
-		name: 'Computação Quântica',
+		name: 'Estado Atual da Computação Quântica',
 		panelist: 'Ronan Damasco',
 		description:
 			'Ronan Damasco é Diretor Nacional de Tecnologia da Microsoft no Brasil. É formado em Engenharia Elétrica pela Unb, mestre em Segurança da Informação pela Universidade de Liverpool. Fez o Programa de Desenvolvimento Gerencial na Fundação Dom Cabral e o Programa de Liderança da Microsoft na Universidade Georgetown.',
@@ -88,7 +89,7 @@ export const Tuesday = [
 		name: 'Mesa Redonda - Pós-graduação fora do Brasil',
 		panelist: 'Jair Guilherme Certório e Rogério Nespolo',
 		description:
-			'Explicar a diferença do mestrado e do PhD. Falar que aqui dá pra entrar direto no PhD e na Europa não. Falar um pouco sobre a experiência no mestrado/PhD. Aprontar como funciona o funding. E mencionar o que os rankings dizem das universidades e outros recursos na hora de se candidatar.',
+			'Diferença do mestrado e do PhD; Como é o PhD nos EUA e na Europa; Experiência no mestrado/PhD; Como funciona o funding; O que os rankings dizem das universidades e outros recursos na hora de se candidatar.',
 	},
 	{
 		hour: '12h00 - 14h00',
@@ -114,10 +115,10 @@ export const Tuesday = [
 	},
 	{
 		hour: '16h00 - 17h00 (SIMULTÂNEO)',
-		name: 'Curso - PCB + STM32',
+		name: 'Curso - Design de PCB + STM32',
 		panelist: 'Pablo Jean Rozário',
 		description:
-			'Formado em Engenharia Elétrica na Universidade Estadual de Maringá. Experiência com programação de microcontroladores PIC18, design de Placas de Circuito Impresso e conhecimentos em Instalações Elétricas residenciais.',
+			'Com sua vasta experiência na área, vai nos introduzir ao design de placas de circuito impresso, aplicando o microcontrolador STM32 em uma das placas que será projetada durante o curso.',
 	},
 	{
 		hour: '16h00 - 17h00 (SIMULTÂNEO)',
@@ -136,7 +137,7 @@ export const Tuesday = [
 	{
 		hour: '17h00 - 18h00 (SIMULTÂNEO)',
 		name: 'Curso - Como inserir meu produto no mercado?',
-		panelist: 'Dinâmica Consultoria - Aguardando nome do ministrante',
+		panelist: 'Dinâmica Consultoria',
 		description:
 			'Esse curso vai abordar uma aplicação de início de empresa. Aquele momento que você tem uma ideia e quer aplcar ela ao mercado, mas vem em mente as seguintes dúvidas: Será que existe um caminho certo para isso? Existem métodos? Essas e outras dúvidas  serão abordadas no curso dado por um dos gerentes da Dinâmica Consultoria.',
 	},
@@ -187,10 +188,10 @@ export const Wednesday = [
 	},
 	{
 		hour: '16h00 - 17h00',
-		name: 'Curso PCB + STM32',
+		name: 'Curso - Design de PCB + STM32',
 		panelist: 'Pablo Jean Rozário',
 		description:
-			'Formado em Engenharia Elétrica na Universidade Estadual de Maringá. Experiência com programação de microcontroladores PIC18, design de Placas de Circuito Impresso e conhecimentos em Instalações Elétricas residenciais.',
+			'Com sua vasta experiência na área, vai nos introduzir ao design de placas de circuito impresso, aplicando o microcontrolador STM32 em uma das placas que será projetada durante o curso.',
 	},
 	{
 		hour: '17h00 - 18h00',
