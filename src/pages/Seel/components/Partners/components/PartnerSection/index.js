@@ -14,7 +14,7 @@ function PartnerSection({ title, data }) {
 				{data.map((element, key) => (
 					<PartnerLogo
 						index={key.toString()}
-						src={require('../../../../../../assets/seel/' +
+						src={require('../../../../../../assets/seel/partners/' +
 							element.logo +
 							'.png')}
 					/>

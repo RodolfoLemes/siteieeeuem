@@ -1,12 +1,6 @@
 import React from 'react';
 
-import {
-	Container,
-	DateText,
-	HeaderTitle,
-	SubscribeButton,
-	StyledLink,
-} from './styles';
+import { Container, HeaderTitle, SubscribeButton, StyledLink } from './styles';
 import ListCards from './components/ListCards';
 
 function PointerSeel({ references }) {
@@ -16,10 +10,8 @@ function PointerSeel({ references }) {
 
 			<ListCards references={references} />
 
-			<DateText>Abertura dia 05/04</DateText>
-
-			<StyledLink>
-				<SubscribeButton disabled>Inscrever-se</SubscribeButton>
+			<StyledLink to="/seel/subscribe">
+				<SubscribeButton>Inscrever-se</SubscribeButton>
 			</StyledLink>
 		</Container>
 	);

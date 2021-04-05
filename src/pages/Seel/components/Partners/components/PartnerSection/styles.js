@@ -41,8 +41,11 @@ export const PartnersContainer = styled.div`
 `;
 
 export const PartnerLogo = styled.img`
-	height: 120px;
-	width: 120px;
+	max-height: 120px;
+	max-width: 240px;
+	height: auto;
+	width: auto;
+	object-fit: contain;
 	margin: 20px 40px;
 
 	@media (max-width: 600px) {

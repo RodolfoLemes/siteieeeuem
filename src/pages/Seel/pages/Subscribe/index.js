@@ -35,7 +35,7 @@ function Subscribe() {
 	const [rg, setRg] = useState('');
 	const [email, setEmail] = useState('');
 	const [membershipSelector, setMembershipSelector] = useState(false);
-	const [membership, setMembership] = useState('');
+	const [membership, setMembership] = useState(undefined);
 	const [productSelector, setProductSelector] = useState(true);
 	const [courseOne, setCourseOne] = useState(false);
 	const [courseTwo, setCourseTwo] = useState(false);
@@ -84,7 +84,7 @@ function Subscribe() {
 				: 'Como inserir meu produto no mercado?',
 		);
 		courses.push(
-			courseOne ? 'Sistemas de Controle usando Julia' : 'Empreendedorismo',
+			courseThree ? 'Sistemas de Controle usando Julia' : 'Empreendedorismo',
 		);
 
 		try {

@@ -1,61 +1,28 @@
 export const sponsors = [
 	{
-		logo: 'uem',
+		logo: 'obra_show',
 	},
 	{
-		logo: 'uem',
+		logo: 'moran',
 	},
 	{
-		logo: 'uem',
-	},
-	{
-		logo: 'uem',
-	},
-	{
-		logo: 'uem',
-	},
-	{
-		logo: 'uem',
-	},
-	{
-		logo: 'uem',
-	},
-	{
-		logo: 'uem',
-	},
-	{
-		logo: 'uem',
-	},
-	{
-		logo: 'uem',
-	},
-	{
-		logo: 'uem',
-	},
-	{
-		logo: 'uem',
+		logo: 'revest',
 	},
 ];
 
 export const support = [
 	{
-		logo: 'uem',
+		logo: 'redbull',
 	},
 	{
-		logo: 'uem',
+		logo: 'ctc',
 	},
 	{
-		logo: 'uem',
+		logo: 'sebrae',
 	},
 ];
 
 export const realization = [
-	{
-		logo: 'uem',
-	},
-	{
-		logo: 'uem',
-	},
 	{
 		logo: 'uem',
 	},

@@ -74,13 +74,14 @@ export const ItemEvent = styled.text`
 
 export const ItemDescription = styled.text`
 	display: ${props => (props.itemDisplay ? `block` : `none`)};
-	width: 80vw;
+	width: 50vw;
 	font-size: 16px;
 	font-family: Poppins;
 	text-align: center;
 	color: ${colors.white};
 
 	@media (max-width: 420px) {
+		width: 80vw;
 		text-align: justify;
 	}
 `;
