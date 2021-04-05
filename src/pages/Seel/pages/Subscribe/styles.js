@@ -147,20 +147,37 @@ export const FormSelectorLabel = styled.label`
 
 export const OptionsContainer = styled.div`
 	display: flex;
+	flex-direction: row;
 	height: 50px;
+	margin-top: 10px;
 	align-items: center;
+
+	@media (max-width: 1270px) {
+		height: fit-content;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+`;
+
+export const OptionContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+
+	@media (max-width: 520px) {
+		margin-top: 5px;
+	}
 `;
 
 export const Option = styled.input``;
 
 export const OptionText = styled.text`
-	font-size: 18px;
+	font-size: 13px;
 	font-family: Poppins-regular;
 	margin: 0px 20px 0px 10px;
 	color: ${colors.white};
 
 	@media (max-width: 520px) {
-		font-size: 16px;
+		font-size: 12px;
 	}
 `;
 
