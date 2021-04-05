@@ -7,6 +7,7 @@ import Partners from './components/Partners';
 import Timeline from './components/Timeline';
 import Panelists from './components/Panelists';
 import Kits from './components/Kits';
+import Footer from './components/Footer';
 
 function Seel() {
 	const timelineRef = useRef();
@@ -27,6 +28,7 @@ function Seel() {
 			<Timeline ref={timelineRef} />
 			<Panelists ref={panelistsRef} />
 			<Kits ref={kitsRef} />
+			<Footer />
 		</Container>
 	);
 }

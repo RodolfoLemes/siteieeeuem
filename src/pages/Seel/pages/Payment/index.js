@@ -9,6 +9,7 @@ import {
 	StyledLink,
 } from './styles';
 
+import Footer from '../../components/Footer';
 import PaymentInfo from './components/PaymentInfo';
 
 function Payment() {
@@ -34,6 +35,8 @@ function Payment() {
 			<StyledLink to="/seel">
 				<BackButton>Voltar para o evento</BackButton>
 			</StyledLink>
+
+			<Footer />
 		</Container>
 	);
 }
