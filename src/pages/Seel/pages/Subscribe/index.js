@@ -12,6 +12,7 @@ import {
 	FormSelectorContainer,
 	FormSelectorLabel,
 	OptionsContainer,
+	OptionContainer,
 	Option,
 	OptionText,
 	ErrorText,
@@ -72,11 +73,19 @@ function Subscribe() {
 
 		// Adicionar os nomes dos cursos reais aqui
 		const courses = [];
-		courses.push(courseOne ? 'Curso de Carpinagem' : 'Curso de Lorota');
 		courses.push(
-			courseTwo ? 'Curso de João Bobo' : 'Curso de Maria vai com as outras',
+			courseOne
+				? 'Introdução ao Data Science com aplicações'
+				: 'Design de PCB + STM32',
 		);
-		courses.push(courseOne ? 'Curso de JoséScript' : 'Curso de MariaScript');
+		courses.push(
+			courseTwo
+				? 'Sistemas fotovoltaicos'
+				: 'Como inserir meu produto no mercado?',
+		);
+		courses.push(
+			courseOne ? 'Sistemas de Controle usando Julia' : 'Empreendedorismo',
+		);
 
 		try {
 			await SeelProviders.subscriber({
@@ -196,18 +205,22 @@ function Subscribe() {
 					<FormSelectorContainer rowWidth={31}>
 						<FormSelectorLabel>Possui membresia?</FormSelectorLabel>
 						<OptionsContainer>
-							<Option
-								type="radio"
-								checked={membershipSelector}
-								onClick={() => setMembershipSelector(true)}
-							/>
-							<OptionText>Sim</OptionText>
-							<Option
-								type="radio"
-								checked={!membershipSelector}
-								onClick={() => setMembershipSelector(false)}
-							/>
-							<OptionText>Não</OptionText>
+							<OptionContainer>
+								<Option
+									type="radio"
+									checked={membershipSelector}
+									onClick={() => setMembershipSelector(true)}
+								/>
+								<OptionText>Sim</OptionText>
+							</OptionContainer>
+							<OptionContainer>
+								<Option
+									type="radio"
+									checked={!membershipSelector}
+									onClick={() => setMembershipSelector(false)}
+								/>
+								<OptionText>Não</OptionText>
+							</OptionContainer>
 						</OptionsContainer>
 					</FormSelectorContainer>
 
@@ -224,18 +237,22 @@ function Subscribe() {
 					<FormSelectorContainer rowWidth={31}>
 						<FormSelectorLabel>Escolha o produto</FormSelectorLabel>
 						<OptionsContainer>
-							<Option
-								type="radio"
-								checked={productSelector}
-								onClick={() => setProductSelector(true)}
-							/>
-							<OptionText>Evento - R$25,00</OptionText>
-							<Option
-								type="radio"
-								checked={!productSelector}
-								onClick={() => setProductSelector(false)}
-							/>
-							<OptionText>Evento + kit - R$50,00</OptionText>
+							<OptionContainer>
+								<Option
+									type="radio"
+									checked={productSelector}
+									onClick={() => setProductSelector(true)}
+								/>
+								<OptionText>Evento - R$25,00</OptionText>
+							</OptionContainer>
+							<OptionContainer>
+								<Option
+									type="radio"
+									checked={!productSelector}
+									onClick={() => setProductSelector(false)}
+								/>
+								<OptionText>Evento + kit - R$50,00</OptionText>
+							</OptionContainer>
 						</OptionsContainer>
 					</FormSelectorContainer>
 				</RowContainer>
@@ -244,54 +261,68 @@ function Subscribe() {
 					<FormSelectorContainer rowWidth={31}>
 						<FormSelectorLabel>Escolha um dos cursos</FormSelectorLabel>
 						<OptionsContainer>
-							<Option
-								type="radio"
-								checked={courseOne}
-								onClick={() => setCourseOne(true)}
-							/>
-							<OptionText>curso 1</OptionText>
-							<Option
-								type="radio"
-								checked={!courseOne}
-								onClick={() => setCourseOne(false)}
-							/>
-							<OptionText>curso 2</OptionText>
+							<OptionContainer>
+								<Option
+									type="radio"
+									checked={courseOne}
+									onClick={() => setCourseOne(true)}
+								/>
+								<OptionText>
+									Introdução ao Data Science com aplicações
+								</OptionText>
+							</OptionContainer>
+							<OptionContainer>
+								<Option
+									type="radio"
+									checked={!courseOne}
+									onClick={() => setCourseOne(false)}
+								/>
+								<OptionText>Design de PCB + STM32</OptionText>
+							</OptionContainer>
 						</OptionsContainer>
 					</FormSelectorContainer>
 
 					<FormSelectorContainer rowWidth={31}>
 						<FormSelectorLabel>Escolha um dos cursos</FormSelectorLabel>
 						<OptionsContainer>
-							<Option
-								type="radio"
-								checked={courseTwo}
-								onClick={() => setCourseTwo(true)}
-							/>
-							<OptionText>curso 1</OptionText>
-							<Option
-								type="radio"
-								checked={!courseTwo}
-								onClick={() => setCourseTwo(false)}
-							/>
-							<OptionText>curso 2</OptionText>
+							<OptionContainer>
+								<Option
+									type="radio"
+									checked={courseTwo}
+									onClick={() => setCourseTwo(true)}
+								/>
+								<OptionText>Sistemas fotovoltaicos</OptionText>
+							</OptionContainer>
+							<OptionContainer>
+								<Option
+									type="radio"
+									checked={!courseTwo}
+									onClick={() => setCourseTwo(false)}
+								/>
+								<OptionText>Como inserir meu produto no mercado?</OptionText>
+							</OptionContainer>
 						</OptionsContainer>
 					</FormSelectorContainer>
 
 					<FormSelectorContainer rowWidth={31}>
 						<FormSelectorLabel>Escolha um dos cursos</FormSelectorLabel>
 						<OptionsContainer>
-							<Option
-								type="radio"
-								checked={courseThree}
-								onClick={() => setCourseThree(true)}
-							/>
-							<OptionText>curso 1</OptionText>
-							<Option
-								type="radio"
-								checked={!courseThree}
-								onClick={() => setCourseThree(false)}
-							/>
-							<OptionText>curso 2</OptionText>
+							<OptionContainer>
+								<Option
+									type="radio"
+									checked={courseThree}
+									onClick={() => setCourseThree(true)}
+								/>
+								<OptionText>Sistemas de Controle usando Julia</OptionText>
+							</OptionContainer>
+							<OptionContainer>
+								<Option
+									type="radio"
+									checked={!courseThree}
+									onClick={() => setCourseThree(false)}
+								/>
+								<OptionText>Empreendedorismo</OptionText>
+							</OptionContainer>
 						</OptionsContainer>
 					</FormSelectorContainer>
 				</RowContainer>
