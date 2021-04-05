@@ -162,6 +162,7 @@ export const OptionsContainer = styled.div`
 export const OptionContainer = styled.div`
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 
 	@media (max-width: 520px) {
 		margin-top: 5px;
