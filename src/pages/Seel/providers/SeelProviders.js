@@ -11,7 +11,7 @@ export default {
 		cpf,
 		rg,
 		email,
-		membership = undefined,
+		membership = 'empty',
 		productSelector,
 		courses,
 	}) {
@@ -19,6 +19,8 @@ export default {
 
 		const formattedCpf = cpf.replace(/\.|-/g, '');
 		const formattedRg = rg.replace(/\.|-/g, '');
+
+		console.log(membership);
 
 		return await seelApi.post('/subscribers', {
 			name,

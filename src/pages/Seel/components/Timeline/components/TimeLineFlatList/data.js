@@ -78,16 +78,17 @@ export const Tuesday = [
 	},
 	{
 		hour: '10h00 - 11h00',
-		name: 'Curso Julia/Python/Controle',
+		name: 'Curso - Exemplos de Sistemas de Controle usando Julia',
 		panelist: 'Jair Certório',
 		description:
-			'Apresentar possibilidades do uso de Julia e Jupyter Notebooks em Sistemas de Controle.',
+			'Estudante de PhD na University of Maryland e pesquisador na área de teoria de controle e teoria dos jogos evolucionários. Já trabalhou com sistemas embarcados, desenvolvimento de eletrônicos, desenvolvimento de software e orçamento de projetos. Irá apresentar possibilidades do uso de Julia e Jupyter Notebooks em Sistemas de Controle.',
 	},
 	{
 		hour: '11h00 - 12h00',
-		name: 'Mesa redonda',
-		panelist: '',
-		description: '',
+		name: 'Mesa Redonda - Pós-graduação fora do Brasil',
+		panelist: 'Jair Guilherme Certório e Rogério Nespolo',
+		description:
+			'Explicar a diferença do mestrado e do PhD. Falar que aqui dá pra entrar direto no PhD e na Europa não. Falar um pouco sobre a experiência no mestrado/PhD. Aprontar como funciona o funding. E mencionar o que os rankings dizem das universidades e outros recursos na hora de se candidatar.',
 	},
 	{
 		hour: '12h00 - 14h00',
@@ -101,43 +102,60 @@ export const Tuesday = [
 		name:
 			'Telecomunicações - Rotina de otimização de rede Telecom. 2G, 3G e 4G.',
 		panelist: 'Elian Carlos Dias de Mattos',
-		description: '',
+		description:
+			'Atualmente é Engenheiro de Radio Frequência na UNITEL.Trabalhou nas áreas afins da Engenharia de RF às Atividades de Otimização, Desenvolvimento, Análise, Resolução de Problemas, Testes, Implantação e Manutenção de GSM / Redes UMTS e LTE. Teve experiências em empresas como NOKIA e HUAWEI.',
 	},
 	{
 		hour: '15h00 - 16h00',
 		name: 'Visão computacional alida à cirurgias na oftalmologia',
 		panelist: 'Rogério Nespolo',
-		description: '',
+		description:
+			'Pesquisador graduando do Departamento de Oftalmologia e Ciências Visuais - Universidade de Illinois em Chicago, desenvolvendo visão computacional e ferramentas de aprendizado de máquina para orientação cirúrgica. Proficiente em C / C ++ e processamento de imagens com visão computacional.',
 	},
 	{
-		hour: '16h00 - 17h00',
-		name: 'Curso PCB + STM32',
+		hour: '16h00 - 17h00 (SIMULTÂNEO)',
+		name: 'Curso - PCB + STM32',
 		panelist: 'Pablo Jean Rozário',
 		description:
 			'Formado em Engenharia Elétrica na Universidade Estadual de Maringá. Experiência com programação de microcontroladores PIC18, design de Placas de Circuito Impresso e conhecimentos em Instalações Elétricas residenciais.',
 	},
 	{
-		hour: '17h00 - 18h00',
-		name: 'Curso Fotovoltaico',
-		panelist: 'Gabriel Grala',
+		hour: '16h00 - 17h00 (SIMULTÂNEO)',
+		name: 'Curso - Introdução ao Data Science e aplicações',
+		panelist: 'Leonichel Guimarães',
+		description:
+			'É graduando em engenharia elétrica na Universidade Estadual de Maringá. Faz pesquisa na área de robótica, aprendizado de máquina e visão computacional. É membro do Ramo Estudantil IEEE UEM.',
+	},
+	{
+		hour: '17h00 - 18h00 (SIMULTÂNEO)',
+		name: 'Curso - Sistemas fotovoltaicos',
+		panelist: 'Gabriel Henrique Grala',
 		description:
 			'Graduado em Engenharia Eletrica pela UEM, bolsista CNPq com o projeto "Investigação do Desempenho de Controladores fracionários" (2018). Atualmente atua na área de formação sendo engenheiro eletricista executivo de obras e responsável pelo setor de energias renováveis.',
+	},
+	{
+		hour: '17h00 - 18h00 (SIMULTÂNEO)',
+		name: 'Curso - Como inserir meu produto no mercado?',
+		panelist: 'Dinâmica Consultoria - Aguardando nome do ministrante',
+		description:
+			'Esse curso vai abordar uma aplicação de início de empresa. Aquele momento que você tem uma ideia e quer aplcar ela ao mercado, mas vem em mente as seguintes dúvidas: Será que existe um caminho certo para isso? Existem métodos? Essas e outras dúvidas  serão abordadas no curso dado por um dos gerentes da Dinâmica Consultoria.',
 	},
 ];
 
 export const Wednesday = [
 	{
 		hour: '09h00 - 10h00',
-		name: 'Mesa redonda',
-		panelist: '',
-		description: '',
+		name: 'Mesa Redonda - Engenharia Elétrica',
+		panelist: 'Alunos do curso de Engenharia Elétrica',
+		description:
+			'Mesa Redonda com o objetivo de debater sobre o curso de Engenharia Elétrica, dentre os temas: Ementa de matérias, disciplinas ofertadas, projetos de extensão (Inovatech, IEEE, VASFE), entre outros.',
 	},
 	{
 		hour: '10h00 - 11h00',
-		name: 'Curso Julia/Python/Controle',
+		name: 'Curso - Exemplos de Sistemas de Controle usando Julia',
 		panelist: 'Jair Certório',
 		description:
-			'Apresentar possibilidades do uso de Julia e Jupyter Notebooks em Sistemas de Controle.',
+			'Estudante de PhD na University of Maryland e pesquisador na área de teoria de controle e teoria dos jogos evolucionários. Já trabalhou com sistemas embarcados, desenvolvimento de eletrônicos, desenvolvimento de software e orçamento de projetos. Irá apresentar possibilidades do uso de Julia e Jupyter Notebooks em Sistemas de Controle.',
 	},
 	{
 		hour: '11h00 - 12h00',

@@ -44,6 +44,7 @@ export const SubscribeButton = styled.button`
 	outline: none;
 	border: none;
 	border-radius: 30px;
+	margin-top: 40px;
 	font-size: 24px;
 	font-weight: 600;
 	font-family: Poppins;
