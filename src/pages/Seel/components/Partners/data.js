@@ -8,6 +8,12 @@ export const sponsors = [
 	{
 		logo: 'revest',
 	},
+	{
+		logo: 'elevo',
+	},
+	{
+		logo: 'romagnole',
+	},
 ];
 
 export const support = [
@@ -19,6 +25,9 @@ export const support = [
 	},
 	{
 		logo: 'sebrae',
+	},
+	{
+		logo: 'dinamica',
 	},
 ];
 
