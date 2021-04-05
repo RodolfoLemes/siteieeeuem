@@ -18,6 +18,7 @@ import {
 	ErrorText,
 } from './styles';
 
+import Footer from '../../components/Footer';
 import SeelProviders from '../../providers/SeelProviders';
 import FormInput from './components/FormInput';
 import colors from '../../colors';
@@ -353,6 +354,8 @@ function Subscribe() {
 				width={60}
 				visible={loading}
 			/>
+
+			<Footer />
 		</Container>
 	);
 }
