@@ -9,7 +9,7 @@ export default [
 		id: 2,
 		imagePanelist: require('../../../../assets/seel/panelists/panelistAleksandro.png'),
 		description:
-			'Aleksandro Montanha é um aluno de doutorado da Universidade de Sevilla, Es. Atualmente é gerente de tecnologia da IOT Hyundai no Brasil e membro da Intel Internet of Things Board. possui 3 desenvolvimento de Hardware e Software empresas com vasta experiência em gestão de equipes de alta performance.',
+			'Aleksandro Montanha é um aluno de doutorado da Universidade de Sevilla, Es. Atualmente é gerente de tecnologia da IOT Hyundai no Brasil e membro da Intel Internet of Things Board. Possui 3 empresas ná área de desenvolvimento de Hardware e Software com vasta experiência em gestão de equipes de alta performance.',
 	},
 	{
 		id: 3,
@@ -51,13 +51,13 @@ export default [
 		id: 9,
 		imagePanelist: require('../../../../assets/seel/panelists/panelistAnnelise.png'),
 		description:
-			'Atualmente Engenheiro Chefe de aplicação técnicana GE Grid Solutions. Suas áreas de atuação e interesse são Subestações Digitais e Redes de Comunicação para Sistemas de Energia. Graduada em Engenharia Elétrica (2007) e Mestrado em Sistemas de Energia (2011), ambos os títulos pela Universidade Federal de Santa Catarina.',
+			'Atualmente Engenheira Chefe de aplicação técnica na GE Grid Solutions. Suas áreas de atuação e interesse são Subestações Digitais e Redes de Comunicação para Sistemas de Energia. Graduada em Engenharia Elétrica (2007) e Mestrado em Sistemas de Energia (2011), ambos os títulos pela Universidade Federal de Santa Catarina.',
 	},
 	{
 		id: 10,
 		imagePanelist: require('../../../../assets/seel/panelists/panelistSiomara.png'),
 		description:
-			'Formada em Engenharia Civil pela UEM, atua em execução de obras há mais de 35 anos. Sua especialidade é na execução de prédios de alto nível e condomínio fechado. Atualmente é a Engenheira responsável Técnica da Construtora Cidade Verde a mais de 20 anos.',
+			'Formada em Engenharia Civil pela UEM, atua em execução de obras há mais de 35 anos. Sua especialidade é na execução de prédios de alto nível e condomínio fechado. Atualmente é a Engenheira responsável Técnica da Construtora Cidade Verde há mais de 20 anos.',
 	},
 	{
 		id: 11,
@@ -69,7 +69,7 @@ export default [
 		id: 12,
 		imagePanelist: require('../../../../assets/seel/panelists/panelistValdir.png'),
 		description:
-			'O workshop de Empreendedorismo tem como finalidade despertar o interesse dos alunos da educação superior para o empreendedorismo. Sensibilizando os participantes para a temática do Empreendedorismo, ampliando seus horizontes e demonstrando a importância do equilíbrio entre: empreendedorismo empresarial;  Intra-empreendedorismo; e empreendedorismo social.',
+			'Empreendedor, consultor em gestão de empresas, instrutor, mentor, além de expertise em desenvolvimento de pessoas e equipes de alta performance. Incansável na busca pelo conhecimento, passou por formação em áreas bem diversas, como educação física, artes Cênicas e Administração de empresas com MBA em gestão de empresas pela Universidade de Nevada USA.',
 	},
 	{
 		id: 13,
@@ -87,7 +87,7 @@ export default [
 		id: 15,
 		imagePanelist: require('../../../../assets/seel/panelists/panelistLeonichel.png'),
 		description:
-			'Engenharia eletricista em formação, pela Universidade Estadual de Maringá (UEM). Trabalhou voluntariamente como gestor de projetos no ramo estudantil IEEE UEM, em 2020. Atualmente atua em projeto de iniciação em tecnologia e inovação, na área de aprendizagem de máquina. Além de estudar ciência dos dados nas horas vagas.',
+			'Engenheiro eletricista em formação, pela Universidade Estadual de Maringá (UEM). Trabalhou voluntariamente como gestor de projetos no ramo estudantil IEEE UEM, em 2020. Atualmente atua em projeto de iniciação em tecnologia e inovação, na área de aprendizagem de máquina. Além de estudar ciência dos dados nas horas vagas.',
 	},
 
 	{

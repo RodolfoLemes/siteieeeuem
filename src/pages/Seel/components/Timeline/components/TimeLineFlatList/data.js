@@ -1,6 +1,6 @@
 export const Monday = [
 	{
-		hour: '8h00 - 9h00',
+		hour: '8h00 - 8h45',
 		name: 'Abertura',
 		panelist: 'IEEE UEM',
 		description:
@@ -16,16 +16,16 @@ export const Monday = [
 	{
 		hour: '10h00 - 11h00',
 		name: 'Subestação Digital',
-		panelist: 'General Electric - Anne',
+		panelist: 'Annelise Anderson Bittencourt',
 		description:
-			'Atualmente Engenheiro Chefe de aplicação técnicana GE Grid Solutions. Suas áreas de atuação e interesse são Subestações Digitais e Redes de Comunicação para Sistemas de Energia. Graduada em Engenharia Elétrica (2007) e Mestrado em Sistemas de Energia (2011), ambos os títulos pela Universidade Federal de Santa Catarina.',
+			'Atualmente, Engenheira Chefe de aplicação técnica na GE Grid Solutions. Suas áreas de atuação e interesse são Subestações Digitais e Redes de Comunicação para Sistemas de Energia. Graduada em Engenharia Elétrica (2007) e Mestrado em Sistemas de Energia (2011), ambos os títulos pela Universidade Federal de Santa Catarina.',
 	},
 	{
 		hour: '11h00 - 12h00',
 		name: 'ABINC e Internet das Coisas',
 		panelist: 'Aleksandro Montanha',
 		description:
-			'Aleksandro Montanha é um aluno de doutorado da Universidade de Sevilla, Es. Atualmente é gerente de tecnologia da IOT Hyundai no Brasil e membro da Intel Internet of Things Board. possui 3 desenvolvimento de Hardware e Software empresas com vasta experiência em gestão de equipes de alta performance.',
+			'Aleksandro Montanha é um aluno de doutorado da Universidade de Sevilla, Es. Atualmente é gerente de tecnologia da IOT Hyundai no Brasil e membro da Intel Internet of Things Board. Possui 3 empresas ná área de desenvolvimento de Hardware e Software com vasta experiência em gestão de equipes de alta performance.',
 	},
 	{
 		hour: '12h00 - 13h30',
@@ -54,18 +54,25 @@ export const Monday = [
 			'Engenheiro Eletricista com ênfase em eletrônica e Telecomunicações no INATEL, com MBA executiva em gestão empresarial pela FGV/ISAE. Mais de duas decadas atuando no setor de Telecom e TI da America Latina, como engenheiro de Telecom, gerente de projetos, de pré-vendas e comercial. Trabalhando em multinacionais como NOKIA, ERICSSON E CLARO.',
 	},
 	{
-		hour: '16h00 - 17h00',
+		hour: '16h00 - 17h00 (SIMULTÂNEO)',
 		name: 'Curso - Design de PCB + STM32',
 		panelist: 'Pablo Jean Rozário',
 		description:
 			'Com sua vasta experiência na área, vai nos introduzir ao design de placas de circuito impresso, aplicando o microcontrolador STM32 em uma das placas que será projetada durante o curso.',
 	},
 	{
+		hour: '16h00 - 17h00 (SIMULTÂNEO)',
+		name: 'Curso - Introdução ao Data Science e aplicações',
+		panelist: 'Leonichel Guimarães',
+		description:
+			'É graduando em engenharia elétrica na Universidade Estadual de Maringá. Faz pesquisa na área de robótica, aprendizado de máquina e visão computacional. É membro do Ramo Estudantil IEEE UEM.',
+	},
+	{
 		hour: '17h00 - 18h00',
 		name: 'Mesa Redonda - Dificuldades e Virtudes na execução de obras',
 		panelist: 'Siomara Lima Provensi',
 		description:
-			'Formada em Engenharia Civil pela UEM, atua em execução de obras há mais de 35 anos. Sua especialidade é na execução de prédios de alto nível e condomínio fechado. Atualmente é a Engenheira responsável Técnica da Construtora Cidade Verde a mais de 20 anos.',
+			'Formada em Engenharia Civil pela UEM, atua em execução de obras há mais de 35 anos. Sua especialidade é na execução de prédios de alto nível e condomínio fechado. Atualmente é a Engenheira responsável Técnica da Construtora Cidade Verde há mais de 20 anos.',
 	},
 ];
 
@@ -80,7 +87,7 @@ export const Tuesday = [
 	{
 		hour: '10h00 - 11h00',
 		name: 'Curso - Exemplos de Sistemas de Controle usando Julia',
-		panelist: 'Jair Certório',
+		panelist: 'Jair Guilherme Certório',
 		description:
 			'Estudante de PhD na University of Maryland e pesquisador na área de teoria de controle e teoria dos jogos evolucionários. Já trabalhou com sistemas embarcados, desenvolvimento de eletrônicos, desenvolvimento de software e orçamento de projetos. Irá apresentar possibilidades do uso de Julia e Jupyter Notebooks em Sistemas de Controle.',
 	},
@@ -154,7 +161,7 @@ export const Wednesday = [
 	{
 		hour: '10h00 - 11h00',
 		name: 'Curso - Exemplos de Sistemas de Controle usando Julia',
-		panelist: 'Jair Certório',
+		panelist: 'Jair Guilherme Certório',
 		description:
 			'Estudante de PhD na University of Maryland e pesquisador na área de teoria de controle e teoria dos jogos evolucionários. Já trabalhou com sistemas embarcados, desenvolvimento de eletrônicos, desenvolvimento de software e orçamento de projetos. Irá apresentar possibilidades do uso de Julia e Jupyter Notebooks em Sistemas de Controle.',
 	},
