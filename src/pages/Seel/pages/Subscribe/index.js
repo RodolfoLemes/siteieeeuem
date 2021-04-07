@@ -333,7 +333,14 @@ function Subscribe() {
 				Ao finalizar a inscrição, você será redirecionado para a página de
 				pagamento. As principais formas incluem <ColoredText>Pix</ColoredText> e{' '}
 				<ColoredText>PicPay</ColoredText>, caso você queira pagar de outra
-				forma, entrar em contato com <ColoredText>(44) 9 9930-5411</ColoredText>
+				forma, entrar em contato com{' '}
+				<ColoredText>Lucas Força: (44) 9 9930-5411</ColoredText>.
+			</InfoText>
+
+			<InfoText>
+				* Para pessoas fora de Maringá - PR,{' '}
+				<ColoredText>o envio e pagamento do frete</ColoredText> serão combinados
+				via contado com <ColoredText>Lucas Bento: (44) 9 9128-4128</ColoredText>
 				.
 			</InfoText>
 
