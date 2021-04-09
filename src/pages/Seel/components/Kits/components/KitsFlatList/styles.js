@@ -10,7 +10,7 @@ export const Container = styled.div`
 export const ItemContainer = styled.div`
 	display: flex;
 	flex-direction: ${props =>
-		props.setReverse % 2 === 0 ? `row-reverse` : `row`};
+		props.setReverse % 2 === 1 ? `row-reverse` : `row`};
 	height: auto;
 	width: 100vw;
 	margin: 20px 0px;
