@@ -313,8 +313,11 @@ function Subscribe() {
 									type="radio"
 									checked={courseThree}
 									onClick={() => setCourseThree(true)}
+									disabled={true}
 								/>
-								<OptionText>Sistemas de Controle usando Julia</OptionText>
+								<OptionText>
+									(ESGOTADO) Sistemas de Controle usando Julia
+								</OptionText>
 							</OptionContainer>
 							<OptionContainer>
 								<Option
