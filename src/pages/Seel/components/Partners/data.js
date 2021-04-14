@@ -14,6 +14,9 @@ export const sponsors = [
 	{
 		logo: 'romagnole',
 	},
+	{
+		logo: 'iwata',
+	},
 ];
 
 export const support = [

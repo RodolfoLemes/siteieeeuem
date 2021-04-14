@@ -78,10 +78,11 @@ export const Monday = [
 
 export const Tuesday = [
 	{
-		hour: '8h00 - 9h00',
-		name: 'TEMA EM BREVE',
-		panelist: 'Alexandre Ziebert',
-		description: 'DESCRIÇÃO EM BREVE',
+		hour: '8h00 - 09h00',
+		name: 'Mesa Redonda - Engenharia Elétrica',
+		panelist: 'Alunos do curso de Engenharia Elétrica',
+		description:
+			'Mesa redonda com o objetivo de debater sobre o curso de Engenharia Elétrica, dentre os temas: ementa de matérias, disciplinas ofertadas, projetos de extensão (Inovatech, IEEE, VASFE), entre outros.',
 	},
 	{
 		hour: '9h00 - 10h00',
@@ -158,18 +159,17 @@ export const Tuesday = [
 
 export const Wednesday = [
 	{
-		hour: '8h00 - 9h00',
+		hour: '08h00 - 09h00',
 		name: 'Aspectos gerais da operação do Sistema Interligado Nacional',
 		panelist: 'Douglas Paladine Vieira',
 		description:
 			'Engenheiro eletricista formado pela UEL, possui mestrado em engenharia elétrica pela UTFPR, MBA em liderança e gestão pela Estação Business School, além de aluno de especialização em Neurociências e Comportamento pela PUCRS. Acumula mais de 15 anos de experiência de atuação no setor elétrico. Atualmente, desempenha a função de gerente de engenharia de operação dos sistemas de geração e transmissão da COPEL GeT.',
 	},
 	{
-		hour: '9h00 - 10h00',
-		name: 'Mesa Redonda - Engenharia Elétrica',
-		panelist: 'Alunos do curso de Engenharia Elétrica',
-		description:
-			'Mesa redonda com o objetivo de debater sobre o curso de Engenharia Elétrica, dentre os temas: ementa de matérias, disciplinas ofertadas, projetos de extensão (Inovatech, IEEE, VASFE), entre outros.',
+		hour: '09h00 - 10h00',
+		name: 'TEMA EM BREVE',
+		panelist: 'Alexandre Ziebert',
+		description: 'DESCRIÇÃO EM BREVE',
 	},
 	{
 		hour: '10h00 - 11h00',

@@ -114,4 +114,16 @@ export default [
 		description:
 			'Engenheiro eletricista formado pela UEL, possui mestrado em engenharia elétrica pela UTFPR, MBA em liderança e gestão pela Estação Business School, além de aluno de especialização em Neurociências e Comportamento pela PUCRS. Acumula mais de 15 anos de experiência de atuação no setor elétrico. Atualmente, desempenha a função de gerente de engenharia de operação dos sistemas de geração e transmissão da COPEL GeT.',
 	},
+	{
+		id: 20,
+		imagePanelist: require('../../../../assets/seel/panelists/panelistVitoria.png'),
+		description:
+			'Estudante de engenharia de produção na Universidade Estadual de Maringá (UEM). Atua como gerente de projetos na empresa junior Dinâmica Consultoria. Já realizou três projetos, na área do seu curso, como consultora no ano de 2020 e está no seu segundo projeto como gerente. Irá ministrar um curso sobre como inserir meu produto no mercado (plano de negócios).',
+	},
+	{
+		id: 21,
+		imagePanelist: require('../../../../assets/seel/panelists/panelistJoao.png'),
+		description:
+			'Estudante de engenharia de produção na Universidade Estadual de Maringá (UEM). Atua como gerente de projetos na empresa junior Dinâmica Consultoria. Já realizou quatro projetos na área do seu curso como consultor no ano de 2020 e está no seu segundo projeto como gerente. Irá ministrar um curso sobre como inserir meu produto no mercado (plano de negócios).',
+	},
 ];
