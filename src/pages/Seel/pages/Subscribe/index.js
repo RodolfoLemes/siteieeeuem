@@ -193,8 +193,8 @@ function Subscribe() {
 						onChange={setRg}
 					/>
 					<FormInput
-						labelText="E-mail"
-						placeholderText="seuemail@dominio.com"
+						labelText="E-mail (domínio google)"
+						placeholderText="seuemail@gmail.com"
 						type="email"
 						rowWidth={65}
 						value={email}
