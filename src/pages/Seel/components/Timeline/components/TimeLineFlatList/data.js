@@ -8,7 +8,7 @@ export const Monday = [
 	},
 	{
 		hour: '9h00 - 10h00',
-		name: 'TEMA EM BREVE',
+		name: 'O pós universidade',
 		panelist: 'Nailor Marques Jr.',
 		description:
 			'Sendo formado em Direito e Letras, com 30 livros, 2 audios-livros e 8 DVDs publicados e realizado mais de 2500 palestras. Tem um assento como Conselheiro externo no Comex do Grupo Bellinati Perez e também no Conselho da Fenauto. Já participou de alguns programas, como o "Programa do Jô".',
@@ -223,7 +223,7 @@ export const Wednesday = [
 	{
 		hour: '18h00 - 19h00',
 		name: 'ENCERRAMENTO',
-		panelist: '',
+		panelist: 'Luan Crozatti',
 		description: '',
 	},
 ];
