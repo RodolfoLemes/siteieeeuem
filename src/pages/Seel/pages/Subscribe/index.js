@@ -251,8 +251,9 @@ function Subscribe() {
 									type="radio"
 									checked={!productSelector}
 									onClick={() => setProductSelector(false)}
+									disabled={true}
 								/>
-								<OptionText>Evento + kit - R$50,00</OptionText>
+								<OptionText>(ESGOTADO) Evento + kit - R$50,00</OptionText>
 							</OptionContainer>
 						</OptionsContainer>
 					</FormSelectorContainer>

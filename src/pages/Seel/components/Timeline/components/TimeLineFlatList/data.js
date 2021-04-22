@@ -25,7 +25,7 @@ export const Monday = [
 		name: 'ABINC e Internet das Coisas',
 		panelist: 'Aleksandro Montanha',
 		description:
-			'É aluno de doutorado da Universidade de Sevilla. Atualmente, é gerente de tecnologia da IOT Hyundai no Brasil e membro da Intel Internet of Things Board. Possui 3 empresas na área de desenvolvimento de Hardware e Software, com vasta experiência em gestão de equipes de alta performance.',
+			'É aluno de doutorado da Universidade de Sevilla. Atualmente, é CEO da Allk e presidente do comitê de smart cities da Abinc. Possui 3 empresas na área de desenvolvimento de Hardware e Software, com vasta experiência em gestão de equipes de alta performance.',
 	},
 	{
 		hour: '12h00 - 13h30',
