@@ -25,7 +25,7 @@ export const Monday = [
 		name: 'ABINC e Internet das Coisas',
 		panelist: 'Aleksandro Montanha',
 		description:
-			'É aluno de doutorado da Universidade de Sevilla. Atualmente, é CEO da Allk e presidente do comitê de smart cities da Abinc. Possui 3 empresas na área de desenvolvimento de Hardware e Software, com vasta experiência em gestão de equipes de alta performance.',
+			'Atualmente é CEO da Allk e presidente do comitê de smart cities da Abinc. Possui 3 empresas na área de desenvolvimento de hardware e software, com vasta experiência em gestão de equipes de alta performance, além de ser aluno de doutorado da Universidade de Sevilla, Es.',
 	},
 	{
 		hour: '12h00 - 13h30',
@@ -167,9 +167,10 @@ export const Wednesday = [
 	},
 	{
 		hour: '09h00 - 10h00',
-		name: 'TEMA EM BREVE',
+		name: 'GeForce RTX Serie 30 e tecnologias NVIDIA (Brasil)',
 		panelist: 'Alexandre Ziebert',
-		description: 'DESCRIÇÃO EM BREVE',
+		description:
+			'Atualmente é marketing técnico da América Latina na NVIDIA. Com mais de 10 anos de experiência no ramo de tecnologia, possui conhecimentos sobre diversas ferramentas e conceitos gerenciais que permitiram evoluir e auxiliar as empresas a obterem os melhores resultados. Possui um vasto conhecimento técnico em arquiteturas de CPU e GPU, overclocking e underclocking, redes com e sem fio, PASCAL, C, JAVA e PHP.',
 	},
 	{
 		hour: '10h00 - 11h00',
