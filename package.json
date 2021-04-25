@@ -2,6 +2,11 @@
   "name": "siteieeeuem",
   "version": "0.1.0",
   "private": true,
+	"contributors": [
+		"Rodolfo Lemes <rodolfo_fero@hotmail.com>",
+		"Leonardo Armelin <leonardo.armelin99@gmail.com>",
+		"Leonichel Guimarães <leonichelg@gmail.com>"
+	],
   "dependencies": {
     "@material-ui/core": "^4.10.0",
     "@material-ui/icons": "^4.9.1",
